@@ -1,0 +1,11 @@
+{
+  "createProject": {
+    "Project Name" : "PRMS Test",
+    "Project Type" : "Small Business",
+    "Description": " User should able to create new >> account"
+  },
+ "createBoard": {
+    "Board Name" : "Plan",
+    "Description": " User should able to create new >> account"
+  }
+}
