@@ -1,0 +1,14 @@
+{
+  "createIssue": {
+    "issueTitle" : "Name should be valid",
+    "issueType" : "Task",
+    "Priority": "Low",
+     "Sprint": "abc",
+    "Start Date": "2023-06-01",
+    "End Date": "2023-06-06",
+     "Story Point": "6",
+    "Assignee": "Gaurav Dubey",
+    "Link Issue": "per",
+    "Description": " User should able to create new >> account hftfghjbdjhcbh"
+  }
+}
