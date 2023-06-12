@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1,953.431" tests="13" errors="0" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="webdriver.chrome.driver" value="/Users/gauravdubey/.m2/repository/webdriver/chromedriver/mac64/114.0.5735.16/chromedriver"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/gauravdubey/Downloads/test-automation-framework/target/test-classes:/Users/gauravdubey/Downloads/test-automation-framework/target/classes:/Users/gauravdubey/.m2/repository/org/json/json/20190722/json-20190722.jar:/Users/gauravdubey/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar:/Users/gauravdubey/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/gauravdubey/.m2/repository/com/eclipsesource/minimal-json/minimal-json/0.9.5/minimal-json-0.9.5.jar:/Users/gauravdubey/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar:/Users/gauravdubey/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar:/Users/gauravdubey/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/gauravdubey/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/gauravdubey/.m2/repository/org/apache/logging/log4j/log4j-api/2.9.0/log4j-api-2.9.0.jar:/Users/gauravdubey/.m2/repository/org/apache/logging/log4j/log4j-core/2.9.0/log4j-core-2.9.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-java/3.12.0/selenium-java-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.12.0/selenium-chrome-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.12.0/selenium-edge-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.12.0/selenium-firefox-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.12.0/selenium-ie-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.12.0/selenium-opera-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.12.0/selenium-safari-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/net/bytebuddy/byte-buddy/1.8.3/byte-buddy-1.8.3.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/gauravdubey/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/gauravdubey/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/gauravdubey/.m2/repository/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar:/Users/gauravdubey/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar:/Users/gauravdubey/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/gauravdubey/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/gauravdubey/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/gauravdubey/.m2/repository/com/google/guava/guava/23.0/guava-23.0.jar:/Users/gauravdubey/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/gauravdubey/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar:/Users/gauravdubey/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/gauravdubey/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-server/3.4.0/selenium-server-3.4.0.jar:/Users/gauravdubey/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/Users/gauravdubey/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.22/cssparser-0.9.22.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.26/htmlunit-2.26.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.26/htmlunit-core-js-2.26.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.25/neko-htmlunit-2.25.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/gauravdubey/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/jetty-repacked/9.4.1.v20170120/jetty-repacked-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-io/9.4.1.v20170120/jetty-io-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-util/9.4.1.v20170120/jetty-util-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/Users/gauravdubey/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/Users/gauravdubey/.m2/repository/com/codeborne/phantomjsdriver/1.4.0/phantomjsdriver-1.4.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/2.26/htmlunit-driver-2.26.jar:/Users/gauravdubey/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.3.v20170317/websocket-api-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.3.v20170317/websocket-client-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-client/9.4.3.v20170317/jetty-client-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-http/9.4.3.v20170317/jetty-http-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.3.v20170317/websocket-common-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar:/Users/gauravdubey/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/Users/gauravdubey/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/Users/gauravdubey/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/gauravdubey/.m2/repository/org/yaml/snakeyaml/1.15/snakeyaml-1.15.jar:/Users/gauravdubey/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar:/Users/gauravdubey/.m2/repository/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1.jar:/Users/gauravdubey/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/gauravdubey/.m2/repository/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/mongodb/bson/3.0.4/bson-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/jsoup/jsoup/1.10.3/jsoup-1.10.3.jar:/Users/gauravdubey/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/Users/gauravdubey/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/Users/gauravdubey/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/gauravdubey/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar:/Users/gauravdubey/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/Users/gauravdubey/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/Users/gauravdubey/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/gauravdubey/.m2/repository/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar:/Users/gauravdubey/.m2/repository/org/openpnp/opencv/3.2.0-1/opencv-3.2.0-1.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar:/Users/gauravdubey/.m2/repository/com/google/inject/guice/4.2.1/guice-4.2.1.jar:/Users/gauravdubey/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/gauravdubey/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/gauravdubey/.m2/repository/com/github/javafaker/javafaker/0.16/javafaker-0.16.jar:/Users/gauravdubey/.m2/repository/org/yaml/snakeyaml/1.20/snakeyaml-1.20-android.jar:/Users/gauravdubey/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/gauravdubey/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/gauravdubey/.m2/repository/com/opencsv/opencsv/4.1/opencsv-4.1.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-text/1.1/commons-text-1.1.jar:/Users/gauravdubey/.m2/repository/io/github/bonigarcia/webdrivermanager/4.0.0/webdrivermanager-4.0.0.jar:/Users/gauravdubey/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0/httpclient5-5.0.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0/httpcore5-5.0.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0/httpcore5-h2-5.0.jar:/Users/gauravdubey/.m2/repository/org/rauschig/jarchivelib/1.0.0/jarchivelib-1.0.0.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/Users/gauravdubey/.m2/repository/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="webdriver.chrome.silentOutput" value="true"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="/Users/gauravdubey/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_17.0.5.v20221102-0933/jre/lib"/>
+    <property name="sun.java.command" value="/Users/gauravdubey/Downloads/test-automation-framework/target/surefire/surefirebooter-20230610150014336_3.jar /Users/gauravdubey/Downloads/test-automation-framework/target/surefire 2023-06-10T15-00-14_278-jvmRun1 surefire-20230610150014336_1tmp surefire_0-20230610150014336_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/gauravdubey/Downloads/test-automation-framework/target/test-classes:/Users/gauravdubey/Downloads/test-automation-framework/target/classes:/Users/gauravdubey/.m2/repository/org/json/json/20190722/json-20190722.jar:/Users/gauravdubey/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar:/Users/gauravdubey/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/gauravdubey/.m2/repository/com/eclipsesource/minimal-json/minimal-json/0.9.5/minimal-json-0.9.5.jar:/Users/gauravdubey/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.60/bcprov-jdk15on-1.60.jar:/Users/gauravdubey/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.60/bcpkix-jdk15on-1.60.jar:/Users/gauravdubey/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/gauravdubey/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/gauravdubey/.m2/repository/org/apache/logging/log4j/log4j-api/2.9.0/log4j-api-2.9.0.jar:/Users/gauravdubey/.m2/repository/org/apache/logging/log4j/log4j-core/2.9.0/log4j-core-2.9.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-java/3.12.0/selenium-java-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.12.0/selenium-chrome-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.12.0/selenium-edge-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.12.0/selenium-firefox-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.12.0/selenium-ie-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.12.0/selenium-opera-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.12.0/selenium-safari-driver-3.12.0.jar:/Users/gauravdubey/.m2/repository/net/bytebuddy/byte-buddy/1.8.3/byte-buddy-1.8.3.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/gauravdubey/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/Users/gauravdubey/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/Users/gauravdubey/.m2/repository/com/squareup/okhttp3/okhttp/3.9.1/okhttp-3.9.1.jar:/Users/gauravdubey/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar:/Users/gauravdubey/.m2/repository/org/testng/testng/6.14.3/testng-6.14.3.jar:/Users/gauravdubey/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/gauravdubey/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar:/Users/gauravdubey/.m2/repository/com/google/guava/guava/23.0/guava-23.0.jar:/Users/gauravdubey/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/gauravdubey/.m2/repository/com/google/errorprone/error_prone_annotations/2.0.18/error_prone_annotations-2.0.18.jar:/Users/gauravdubey/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/gauravdubey/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-server/3.4.0/selenium-server-3.4.0.jar:/Users/gauravdubey/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/Users/gauravdubey/.m2/repository/org/w3c/css/sac/1.3/sac-1.3.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/cssparser/cssparser/0.9.22/cssparser-0.9.22.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/htmlunit/2.26/htmlunit-2.26.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/htmlunit-core-js/2.26/htmlunit-core-js-2.26.jar:/Users/gauravdubey/.m2/repository/net/sourceforge/htmlunit/neko-htmlunit/2.25/neko-htmlunit-2.25.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/Users/gauravdubey/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/jetty-repacked/9.4.1.v20170120/jetty-repacked-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-io/9.4.1.v20170120/jetty-io-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-util/9.4.1.v20170120/jetty-util-9.4.1.v20170120.jar:/Users/gauravdubey/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/Users/gauravdubey/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/Users/gauravdubey/.m2/repository/com/codeborne/phantomjsdriver/1.4.0/phantomjsdriver-1.4.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/htmlunit-driver/2.26/htmlunit-driver-2.26.jar:/Users/gauravdubey/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.3.v20170317/websocket-api-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.3.v20170317/websocket-client-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-client/9.4.3.v20170317/jetty-client-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/jetty-http/9.4.3.v20170317/jetty-http-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.3.v20170317/websocket-common-9.4.3.v20170317.jar:/Users/gauravdubey/.m2/repository/xalan/serializer/2.7.2/serializer-2.7.2.jar:/Users/gauravdubey/.m2/repository/xalan/xalan/2.7.2/xalan-2.7.2.jar:/Users/gauravdubey/.m2/repository/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar:/Users/gauravdubey/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/gauravdubey/.m2/repository/org/yaml/snakeyaml/1.15/snakeyaml-1.15.jar:/Users/gauravdubey/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar:/Users/gauravdubey/.m2/repository/org/xerial/sqlite-jdbc/3.8.11.1/sqlite-jdbc-3.8.11.1.jar:/Users/gauravdubey/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/gauravdubey/.m2/repository/org/mongodb/mongodb-driver/3.0.4/mongodb-driver-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/mongodb/bson/3.0.4/bson-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/mongodb/mongodb-driver-core/3.0.4/mongodb-driver-core-3.0.4.jar:/Users/gauravdubey/.m2/repository/org/jsoup/jsoup/1.10.3/jsoup-1.10.3.jar:/Users/gauravdubey/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/Users/gauravdubey/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/Users/gauravdubey/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/Users/gauravdubey/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/gauravdubey/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar:/Users/gauravdubey/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/Users/gauravdubey/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/Users/gauravdubey/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar:/Users/gauravdubey/.m2/repository/org/aspectj/aspectjweaver/1.9.1/aspectjweaver-1.9.1.jar:/Users/gauravdubey/.m2/repository/org/openpnp/opencv/3.2.0-1/opencv-3.2.0-1.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar:/Users/gauravdubey/.m2/repository/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar:/Users/gauravdubey/.m2/repository/com/google/inject/guice/4.2.1/guice-4.2.1.jar:/Users/gauravdubey/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/gauravdubey/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/gauravdubey/.m2/repository/com/github/javafaker/javafaker/0.16/javafaker-0.16.jar:/Users/gauravdubey/.m2/repository/org/yaml/snakeyaml/1.20/snakeyaml-1.20-android.jar:/Users/gauravdubey/.m2/repository/com/github/mifmif/generex/1.0.2/generex-1.0.2.jar:/Users/gauravdubey/.m2/repository/dk/brics/automaton/automaton/1.11-8/automaton-1.11-8.jar:/Users/gauravdubey/.m2/repository/com/opencsv/opencsv/4.1/opencsv-4.1.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-text/1.1/commons-text-1.1.jar:/Users/gauravdubey/.m2/repository/io/github/bonigarcia/webdrivermanager/4.0.0/webdrivermanager-4.0.0.jar:/Users/gauravdubey/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.0/httpclient5-5.0.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.0/httpcore5-5.0.jar:/Users/gauravdubey/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.0/httpcore5-h2-5.0.jar:/Users/gauravdubey/.m2/repository/org/rauschig/jarchivelib/1.0.0/jarchivelib-1.0.0.jar:/Users/gauravdubey/.m2/repository/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar:/Users/gauravdubey/.m2/repository/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/gauravdubey"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/Users/gauravdubey/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_17.0.5.v20221102-0933/jre"/>
+    <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="/Users/gauravdubey/Downloads/test-automation-framework"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/gauravdubey/Downloads/test-automation-framework/target/surefire/surefirebooter-20230610150014336_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.5+8"/>
+    <property name="user.name" value="gauravdubey"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.5+8"/>
+    <property name="localRepository" value="/Users/gauravdubey/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/8d/600b7xt15rv4f9d863bn9kgm0000gp/T/"/>
+    <property name="java.version" value="17.0.5"/>
+    <property name="user.dir" value="/Users/gauravdubey/Downloads/test-automation-framework"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/gauravdubey/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.5+8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="verifyAddMemberFromProjectSetting" classname="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript" time="132.476">
+    <system-out><![CDATA[...
+... TestNG 6.14.3 by Cédric Beust (cedric@beust.com)
+...
+
+Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+]]></system-out>
+    <system-err><![CDATA[ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console. Set system property 'log4j2.debug' to show Log4j2 internal initialization logging.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+ChromeDriver was started successfully.
+Jun 10, 2023 3:00:27 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="verifyCreateNewProject" classname="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript" time="36.834">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+Workspace already exists with this name
+]]></system-out>
+  </testcase>
+  <testcase name="verifyCreateTeamBoard" classname="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript" time="54.009">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+Workspace already created with this name.
+]]></system-out>
+  </testcase>
+  <testcase name="moveTicketFromOneBoardToAnother" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="194.259">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at com.PlanIT.WitsLab.tests.BacklogTestScript.moveTicketFromOneBoardToAnother(BacklogTestScript.java:313)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+JPR855
+]]></system-out>
+    <system-err><![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on MAC (8fecad11f038b1cb397240c0c4f0e8f7)] -> xpath: //input[@type='search']] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'WILASSETA0041.local', ip: '2405:201:5014:a96c:7c37:c003:dbef:6e85%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.106, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: /var/folders/8d/600b7xt15rv...}, goog:chromeOptions: {debuggerAddress: localhost:63320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fecad11f038b1cb397240c0c4f0e8f7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+	at com.PlanIT.WitsLab.ui.selenium.DriverActions.webDriverWait(DriverActions.java:283)
+	at com.PlanIT.WitsLab.ui.selenium.DriverActions.clickElement(DriverActions.java:418)
+	at com.PlanIT.WitsLab.pages.BacklogModule.clickOnMoveToBoard(BacklogModule.java:460)
+	at com.PlanIT.WitsLab.tests.BacklogTestScript.moveTicketFromOneBoardToAnother(BacklogTestScript.java:295)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
+  <testcase name="verifyAddMemberFunctionalityFromBoard" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="107.492">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at com.PlanIT.WitsLab.tests.BacklogTestScript.verifyAddMemberFunctionalityFromBoard(BacklogTestScript.java:165)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on MAC (8fecad11f038b1cb397240c0c4f0e8f7)] -> xpath: (//input[@type='search'])[1]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'WILASSETA0041.local', ip: '2405:201:5014:a96c:7c37:c003:dbef:6e85%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.106, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: /var/folders/8d/600b7xt15rv...}, goog:chromeOptions: {debuggerAddress: localhost:63320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fecad11f038b1cb397240c0c4f0e8f7
+]]></system-out>
+  </testcase>
+  <testcase name="verifyCloneIssueFunctionality" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="126.244">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+]]></system-out>
+  </testcase>
+  <testcase name="verifyCreateIssueFromBacklogFunctionality" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="118.107">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+]]></system-out>
+  </testcase>
+  <testcase name="verifyCreateIssueFromBoard" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="172.69">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+]]></system-out>
+  </testcase>
+  <testcase name="verifyCreateSprintFunctionality" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="86.634">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+]]></system-out>
+  </testcase>
+  <testcase name="verifySprintActivation" classname="com.PlanIT.WitsLab.tests.BacklogTestScript" time="81.386">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+Sprint Activated successfully
+]]></system-out>
+  </testcase>
+  <testcase name="verifyAddNewLane" classname="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" time="195.57">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+ABC
+]]></system-out>
+  </testcase>
+  <testcase name="verifyChangeTicketStageFromDropdown" classname="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" time="176.171">
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+IN PROGRESS
+]]></system-out>
+  </testcase>
+  <testcase name="verifyUpdateDetailsOfTickets" classname="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" time="100.747">
+    <failure message="expected [false] but found [true]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyUpdateDetailsOfTickets(TicketLandingPageTestScripts.java:80)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Project Header visible
+https://projectmanagement-uat.thewitslab.com/
+Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on MAC (8fecad11f038b1cb397240c0c4f0e8f7)] -> xpath: (//input[@type='search'])[1]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'WILASSETA0041.local', ip: '2405:201:5014:a96c:7c37:c003:dbef:6e85%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.4', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.106, chrome: {chromedriverVersion: 114.0.5735.16 (7e1ff058633f..., userDataDir: /var/folders/8d/600b7xt15rv...}, goog:chromeOptions: {debuggerAddress: localhost:63320}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8fecad11f038b1cb397240c0c4f0e8f7
+]]></system-out>
+  </testcase>
+</testsuite>

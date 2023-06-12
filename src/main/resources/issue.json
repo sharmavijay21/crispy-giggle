@@ -1,0 +1,22 @@
+{
+  "createIssue": {
+    "issueTitle" : "Create Sprint Functionality",
+    "issueType" : "Bug",
+    "Priority": "Critical",
+     "Sprint": "abc",
+    "Start Date": "2023-06-20",
+    "End Date": "2023-06-20",
+     "Story Point": "6",
+    "Assignee": "Gaurav Dubey",
+    "Link Issue": "per",
+    "Description": " User should able to create new >> account hftfghjbdjhcbh"
+  },
+  "update Issue" : {
+  
+  "Assignee" : "sunil",
+  "Type" : "Bug",
+  "StoryPoint" : 4,
+  "Priority" : "Medium"
+  
+  }
+}
