@@ -9,7 +9,7 @@
 
 <classes >
 	
-	  
+	 
 
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
@@ -34,7 +34,6 @@
 </class>
 
  
- 
 <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">   
 	
 	<methods>
@@ -45,6 +44,8 @@
           <exclude name="verifyLinkIssueFunctionalityFromTicket"/>
            
         </methods>
+        
+        <!-- Add new Script for board Deletion-->
         
 </class> 
         

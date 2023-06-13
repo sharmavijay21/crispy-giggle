@@ -146,11 +146,12 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 
 	@Test(enabled = true)
 	public void verifyAddNewLane() {
+		
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
 
 		try {
-			ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-
+			
 			WebElement newCreatedProject=projectBoard.createNewProject();
 			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
@@ -184,6 +185,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			//			
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
+			projectBoard.popupClose();
 			das.etest.log(Status.FAIL, "Lane is not added");
 			Assert.assertEquals(true, false);
 		}
