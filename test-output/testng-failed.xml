@@ -9,9 +9,14 @@
           <include name="logout"/>
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
+<<<<<<< HEAD
           <include name="setUp"/>
           <include name="verifyAddNewLane"/>
           <include name="verifyTicketDeletionFromTicket"/>
+=======
+          <include name="verifyLinkIssueFunctionalityFromTicket"/>
+          <include name="setUp"/>
+>>>>>>> main
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
