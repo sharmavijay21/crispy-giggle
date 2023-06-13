@@ -10,13 +10,5 @@
     "Assignee": "Gaurav Dubey",
     "Link Issue": "per",
     "Description": " User should able to create new >> account hftfghjbdjhcbh"
-  },
-  "update Issue" : {
-  
-  "Assignee" : "sunil",
-  "Type" : "Bug",
-  "StoryPoint" : 4,
-  "Priority" : "Medium"
-  
   }
 }
