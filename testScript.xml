@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Wil_Plannet" verbose="2"  >
+	
+	
+<test name="TestCases" preserve-order="true" >
+	
+	<parameter name = "browser" value="chrome"/>
+
+<classes >
+	
+	 <!-- 
+
+<class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
+<methods>
+          <include name="verifyCreateNewProject"/>
+          <include name="verifyCreateTeamBoard"/>
+          <include name="verifyAddMemberFromProjectSetting"/>
+        </methods>
+
+</class>
+
+<class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
+	
+	<methods>
+          <include name="verifyCreateIssueFromBacklogFunctionality"/>
+          <include name="verifyCreateSprintFunctionality"/>
+          <include name="verifyAddMemberFunctionalityFromBoard"/>
+           <include name="verifySprintActivation"/>
+          <include name="verifyCreateIssueFromBoard"/>
+          <include name="moveTicketFromOneBoardToAnother"/>
+          <include name="verifyCloneIssueFunctionality"/>
+        </methods>
+</class>
+
+ -->
+ 
+<class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">   
+	
+	<methods>
+          <exclude name="verifyUpdateDetailsOfTickets"/>
+          <exclude name="verifyChangeTicketStageFromDropdown"/>
+          <exclude name="verifyAddNewLane"/>
+          <exclude name="verifyTicketDeletionFromTicket"/>
+          <include name="verifyLinkIssueFunctionalityFromTicket"/>
+           
+        </methods>
+        
+</class> 
+        
+ </classes>
+</test>
+
+
+</suite>
