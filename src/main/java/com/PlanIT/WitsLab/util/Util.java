@@ -313,7 +313,7 @@ public class Util {
      * @return List<String[]> - file data in list format
      */
     public static List<String[]> readCSVFile(String filePath) {
-        List<String[]> csvFileData = new ArrayList<>();
+        List<String[]> csvFileData = new ArrayList<String[]>();
         try {
             FileReader filereader = new FileReader(filePath);
             CSVParser parser = new CSVParserBuilder().withSeparator(';').build();

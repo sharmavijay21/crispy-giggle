@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Wil_Plannet" class="show-methods passed suite-Wil_Plannet"> (show)</a> <!-- show-methods passed suite-Wil_Plannet -->
                     </span>
                     <div class="method-list-content passed suite-Wil_Plannet">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Wil_Plannet" title="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" class="method navigator-link" hash-for-method="verifyAddNewLane">verifyAddNewLane</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Wil_Plannet" title="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" class="method navigator-link" hash-for-method="verifyTicketDeletionFromTicket">verifyTicketDeletionFromTicket</a> <!-- method navigator-link -->
@@ -125,6 +130,13 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyAddNewLane">
+                  </a> <!-- verifyAddNewLane -->
+                  <span class="method-name">verifyAddNewLane</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyTicketDeletionFromTicket">
                   </a> <!-- verifyTicketDeletionFromTicket -->
                   <span class="method-name">verifyTicketDeletionFromTicket</span>
@@ -147,10 +159,11 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts&quot;&gt;
         &lt;methods&gt;
+          &lt;include name=&quot;verifyAddNewLane&quot;/&gt;
           &lt;include name=&quot;verifyTicketDeletionFromTicket&quot;/&gt;
           &lt;exclude name=&quot;verifyUpdateDetailsOfTickets&quot;/&gt;
           &lt;exclude name=&quot;verifyChangeTicketStageFromDropdown&quot;/&gt;
-          &lt;exclude name=&quot;verifyAddNewLane&quot;/&gt;
+          &lt;exclude name=&quot;verifyLinkIssueFunctionalityFromTicket&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts --&gt;
     &lt;/classes&gt;
@@ -192,16 +205,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyTicketDeletionFromTicket')
+data.setCell(0, 1, 'verifyAddNewLane')
 data.setCell(0, 2, 'com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts')
-data.setCell(0, 3, 112055);
+data.setCell(0, 3, 192707);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyTicketDeletionFromTicket')
+data.setCell(1, 2, 'com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts')
+data.setCell(1, 3, 87333);
 window.suiteTableData['Wil_Plannet']= { tableData: data, tableDiv: 'times-div-Wil_Plannet'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Wil_Plannet">
               </div> <!-- times-div-Wil_Plannet -->
             </div> <!-- times-div -->
@@ -224,7 +241,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">verifyChangeTicketStageFromDropdown</span>
                 <br/>
-                <span class="ignored-method-name">verifyAddNewLane</span>
+                <span class="ignored-method-name">verifyLinkIssueFunctionalityFromTicket</span>
                 <br/>
                 <span class="ignored-method-name">verifyUpdateDetailsOfTickets</span>
                 <br/>
@@ -248,24 +265,36 @@ return data;
                 <span class="method-start">53 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
+                <span class="method-name">verifyloginPage(public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane())</span>
+                <span class="method-start">13211 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyAddNewLane</span>
+                <span class="method-start">38636 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logout([TestResult name=verifyAddNewLane status=SUCCESS method=TicketLandingPageTestScripts.verifyAddNewLan...)</span>
+                <span class="method-start">231351 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
                 <span class="method-name">verifyloginPage(public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDeletionFromTicket())</span>
-                <span class="method-start">15863 ms</span>
+                <span class="method-start">236114 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyTicketDeletionFromTicket</span>
-                <span class="method-start">40601 ms</span>
+                <span class="method-start">254196 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logout([TestResult name=verifyTicketDeletionFromTicket status=SUCCESS method=TicketLandingPageTestScripts.v...)</span>
-                <span class="method-start">152660 ms</span>
+                <span class="method-start">341535 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTestThreadContextCleanup</span>
-                <span class="method-start">157327 ms</span>
+                <span class="method-start">346125 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">162563 ms</span>
+                <span class="method-start">351410 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

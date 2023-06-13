@@ -146,11 +146,12 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 
 	@Test(enabled = true)
 	public void verifyAddNewLane() {
+		
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
 
 		try {
-			ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-
+			
 			WebElement newCreatedProject=projectBoard.createNewProject();
 			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
@@ -184,6 +185,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			//			
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
+			projectBoard.popupClose();
 			das.etest.log(Status.FAIL, "Lane is not added");
 			Assert.assertEquals(true, false);
 		}
@@ -232,42 +234,40 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 
 	}
 	
-//	@Test(enabled =true )
-//    public void verifyLinkIssueFunctionalityFromTicket() {
-//        
-//       
-//        try {
-//
-//            ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-//
-//            projectBoard.openFirstProject();
-//            WebElement firstBoard=projectBoard.createNewBoard();
-//            das.clickElement(firstBoard, firstBoard.getText());
-//        
-//            BacklogModule backlog=new BacklogModule(das);
-//           WebElement firstIssue= backlog.createNewIssueFromBacklog();
-//            backlog.createNewIssueFromBacklog();
-//            
-//            das.clickElement(firstIssue, firstIssue.getText());
-//            
-//            backlog.clickOnLinkIssueButton();
-//            
-//            try {
-//                Thread.sleep(2000);
-//            } catch (InterruptedException e) {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//            }
-//            String LinkIssueUpdationMessage=backlog.getTextLinkUpdatedSuccessfullyConfirmationMessage();
-//            backlog.closePopUp();
-//            das.uiText_validation(LinkIssueUpdationMessage, "link Updated Successfully");
-//            Assert.assertEquals(LinkIssueUpdationMessage, "link Updated Successfully");
-//            
-//            
-//        }catch (Exception e) {
-//            das.etest.log(Status.FAIL, "link is not Updated Successfully");
-//            Assert.assertEquals(true, false);            
-//        }
-//        }
+	@Test(enabled =true )
+    public void verifyLinkIssueFunctionalityFromTicket() {
+        
+       
+        try {
 
+            ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+
+            projectBoard.openFirstProject();
+            WebElement firstBoard=projectBoard.createNewBoard();
+            das.clickElement(firstBoard, firstBoard.getText());
+        
+            BacklogModule backlog=new BacklogModule(das);
+           WebElement firstIssue= backlog.createNewIssueFromBacklog();
+            backlog.createNewIssueFromBacklog();
+            
+//            das.clickElement(firstIssue, firstIssue.getText());
+            backlog.openFirstTicket();
+            
+            TicketLandingPage tlp=new TicketLandingPage(das);
+            tlp.clickOnLinkIssueButton();
+           String linkedIssueConfirmationMessage= tlp.selectIssueForLink();
+          
+           das.uiText_validation(linkedIssueConfirmationMessage, "link Updated Successfully");
+           Assert.assertEquals(linkedIssueConfirmationMessage, "link Updated Successfully");
+           
+            
+        }catch (Exception e) {
+        	System.out.println(e.getMessage());
+            das.etest.log(Status.FAIL, "link is not Updated Successfully");
+            Assert.assertEquals(true, false);            
+        }
+        }
+
+	
+	
 }

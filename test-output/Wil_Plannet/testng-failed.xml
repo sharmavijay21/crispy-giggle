@@ -10,6 +10,7 @@
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
+          <include name="verifyAddNewLane"/>
           <include name="verifyTicketDeletionFromTicket"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>

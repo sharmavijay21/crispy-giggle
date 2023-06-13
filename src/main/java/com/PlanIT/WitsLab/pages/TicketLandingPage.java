@@ -177,8 +177,21 @@ public class TicketLandingPage extends TicketLandingPageOR{
 		da.webDriverWait(okButtonOnDeletePopup);
 		da.clickElement(okButtonOnDeletePopup, "OK Button");
 	}
+	public void clickOnLinkIssueButton() {
 
+		da.clickElement(linkIssueButton, "Link Issue");
 
+	}
+
+	public String selectIssueForLink() {
+		da.clickElement(linkIssueTextField, "LinkIssueField");
+		da.clickElement(ticketForLinkIssue, "ticket");
+		da.clickElement(linkIssueSubmitButton, "Link");
+		
+		return da.getText(linkIssueConfirmationMessage);
+	}
+
+	
 	public TicketLandingPage(DriverActions das) {
 		this.da=das;
 		PageFactory.initElements(da.getWebDriver(), this);

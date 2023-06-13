@@ -9,7 +9,7 @@
 
 <classes >
 	
-	<!-- 
+	 
 
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
@@ -32,7 +32,8 @@
           <include name="verifyCloneIssueFunctionality"/>
         </methods>
 </class>
--->
+
+
  
 <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">   
 	
@@ -41,6 +42,7 @@
           <include name="verifyChangeTicketStageFromDropdown"/>
           <include name="verifyAddNewLane"/>
           <include name="verifyTicketDeletionFromTicket"/>
+          <exclude name="verifyLinkIssueFunctionalityFromTicket"/>
            
         </methods>
         
