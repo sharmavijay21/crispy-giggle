@@ -1,0 +1,13 @@
+<suite name="Wil_Plannet" verbose="2">
+<test name="TestCases">
+	
+	<parameter name = "browser" value="chrome"/>
+
+<classes>
+<!-- <class name="com.wits.testscript.TestScript_LoginAndSignUp"></class>-->
+<!--<class name="com.automation.ui.selenium.BaseTestSuite"></class>-->
+<class name="com.PlanIT.WitsLab.tests.prmsTestScript"></class>
+</classes>
+</test>
+
+</suite>

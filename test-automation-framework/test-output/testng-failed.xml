@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Wil_Plannet]" verbose="2">
+  <test thread-count="5" name="TestCases(failed)" verbose="2">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.PlanIT.WitsLab.tests.prmsTestScript">
+        <methods>
+          <include name="beforeTestThreadContextSetup"/>
+          <include name="logout"/>
+          <include name="afterTestThreadContextCleanup"/>
+          <include name="verifyUpdateDetailsOfTickets"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="verifyloginPage"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- com.PlanIT.WitsLab.tests.prmsTestScript -->
+    </classes>
+  </test> <!-- TestCases(failed) -->
+</suite> <!-- Failed suite [Wil_Plannet] -->
