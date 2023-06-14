@@ -144,7 +144,7 @@ public class DriverActions{
 			//            driver = getChromeDriver();
 			ChromeOptions chromeOptions = new ChromeOptions();
 
-			//	        chromeOptions.addArguments("--headless");
+				        chromeOptions.addArguments("--headless");
 //			chromeOptions.addArguments("--incognito");
 //			chromeOptions.addArguments("--start-fullscreen");
 
