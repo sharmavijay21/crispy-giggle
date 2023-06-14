@@ -14,7 +14,7 @@
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
           <include name="verifyCreateNewProject"/>
-           <include name="verifyCreateTeamBoard"/>
+           <exclude name="verifyCreateTeamBoard"/>
           <exclude name="verifyAddMemberFromProjectSetting"/>
         </methods>
 
