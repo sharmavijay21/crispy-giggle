@@ -88,7 +88,7 @@ public class BaseTestSuite{
 			//			das.getWebDriver().get("https://projectmanagement-uat.thewitslab.com/");;
 			String url=das.getProperties().getProperty("url");
 			
-			das.getWebDriver().navigate().to(url);;
+			das.getWebDriver().get(url);;
 			
 		}
 	}

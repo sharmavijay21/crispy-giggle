@@ -14,7 +14,7 @@
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
           <include name="verifyCreateNewProject"/>
-          <include name="verifyCreateTeamBoard"/>
+           <include name="verifyCreateTeamBoard"/>
           <include name="verifyAddMemberFromProjectSetting"/>
         </methods>
 
@@ -24,7 +24,7 @@
 	
 	<methods>
           <include name="verifyCreateIssueFromBacklogFunctionality"/>
-          <include name="verifyCreateSprintFunctionality"/>
+           <include name="verifyCreateSprintFunctionality"/>
           <include name="verifyAddMemberFunctionalityFromBoard"/>
            <include name="verifySprintActivation"/>
           <include name="verifyCreateIssueFromBoard"/>
@@ -33,7 +33,7 @@
         </methods>
 </class>
 
- 
+
 <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">   
 	
 	<methods>
@@ -45,7 +45,7 @@
            
         </methods>
         
-        <!-- Add new Script for board Deletion-->
+        
         
 </class> 
         

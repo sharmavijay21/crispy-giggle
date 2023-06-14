@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-14T08:12:13Z" name="Wil_Plannet" finished-at="2023-06-14T08:18:19Z" duration-ms="366051">
+    <groups>
+    </groups>
+    <test started-at="2023-06-14T08:12:13Z" name="TestCases" finished-at="2023-06-14T08:18:19Z" duration-ms="366051">
+      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:12:13Z" name="createObject" finished-at="2023-06-14T08:12:13Z" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createObject -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:12:13Z" name="setUp" finished-at="2023-06-14T08:12:30Z" duration-ms="17223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:12:30Z" name="verifyloginPage" finished-at="2023-06-14T08:13:07Z" duration-ms="37221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyloginPage -->
+        <test-method signature="verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:13:07Z" name="verifyAddNewLane" finished-at="2023-06-14T08:16:20Z" duration-ms="192890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddNewLane -->
+        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:16:20Z" name="logout" finished-at="2023-06-14T08:16:25Z" duration-ms="4680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddNewLane status=SUCCESS method=TicketLandingPageTestScripts.verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:16:25Z" name="verifyloginPage" finished-at="2023-06-14T08:16:43Z" duration-ms="18105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyloginPage -->
+        <test-method signature="verifyTicketDeletionFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:16:43Z" name="verifyTicketDeletionFromTicket" finished-at="2023-06-14T08:18:14Z" duration-ms="91075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTicketDeletionFromTicket -->
+        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:18:14Z" name="logout" finished-at="2023-06-14T08:18:19Z" duration-ms="4580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTicketDeletionFromTicket status=SUCCESS method=TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:18:19Z" name="afterTestThreadContextCleanup" finished-at="2023-06-14T08:18:19Z" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestThreadContextCleanup -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2d9caaeb]" started-at="2023-06-14T08:18:24Z" name="generateReport" finished-at="2023-06-14T08:18:24Z" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
+    </test> <!-- TestCases -->
+  </suite> <!-- Wil_Plannet -->
+</testng-results>
