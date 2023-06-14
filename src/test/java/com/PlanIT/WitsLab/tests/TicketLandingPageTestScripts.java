@@ -237,10 +237,9 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 	@Test(enabled =true )
     public void verifyLinkIssueFunctionalityFromTicket() {
         
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
        
         try {
-
-            ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
             projectBoard.openFirstProject();
             WebElement firstBoard=projectBoard.createNewBoard();
@@ -262,6 +261,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
            
             
         }catch (Exception e) {
+        	projectBoard.popupClose();
         	System.out.println(e.getMessage());
             das.etest.log(Status.FAIL, "link is not Updated Successfully");
             Assert.assertEquals(true, false);            
