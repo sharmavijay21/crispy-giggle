@@ -156,12 +156,12 @@ public class DriverActions{
 			//            chromeOptions.addArguments("--headless"); //for headless mode
 			//            chromeOptions.addArguments("--window-size=800,600");//The invisible browser window is only 800x600 in size
 			//            chromeOptions.addArguments("--start-fullscreen");
-			            chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
-			            chromeOptions.addArguments("disable-infobars"); // disabling infobars
-			            chromeOptions.addArguments("--disable-extensions"); // disabling extensions
-			            chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
-			            chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-			            chromeOptions.addArguments("--no-sandbox");
+//			            chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
+//			            chromeOptions.addArguments("disable-infobars"); // disabling infobars
+//			            chromeOptions.addArguments("--disable-extensions"); // disabling extensions
+//			            chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
+//			            chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//			            chromeOptions.addArguments("--no-sandbox");
 
 
 			driver= new ChromeDriver(chromeOptions);
@@ -174,6 +174,7 @@ public class DriverActions{
 
 		// Setting Driver Implicit Time out for An Element
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.MINUTES);
 		//        String url=openUrl();
 		//        driver.navigate().to("https://projectmanagement-uat.thewitslab.com/");
 		//        driver.get("https://projectmanagement-uat.thewitslab.com/");
