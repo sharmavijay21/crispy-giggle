@@ -178,7 +178,7 @@ public class BaseTestSuite{
 			e1.printStackTrace();
 		}
 		try {
-//			das.webDriverWait(lp.loginPageHeader);
+			das.webDriverWait(lp.loginPageHeader);
 			boolean bb=das.isDisplayed(lp.loginPageHeader);
 //			System.out.println(lp.loginPageHeader.getText());
 			if(bb) {
