@@ -193,9 +193,10 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "(//button[contains(@class,'Button__StyledButton')])[1]")
 	protected WebElement stageOfTicket;
 
-	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]")
+//	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]")
+	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]//div//div")
 	protected WebElement lastStageName;
-
+	
 	@FindBy(xpath = "//a[text()='Clone']")
 	protected WebElement cloneButton;
 

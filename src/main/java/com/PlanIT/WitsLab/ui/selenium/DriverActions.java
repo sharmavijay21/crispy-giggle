@@ -81,14 +81,14 @@ public class DriverActions{
 	public ExtentTest etest;
 	private Properties prop;
 
-	//	public DriverActions(WebDriver webDriver) {
-	//		this.driver = webDriver;
-	//		actions = new Actions(webDriver);
-	//		this.webDriverWait = new FluentWait<WebDriver>(driver)                            
-	//				.withTimeout(Duration.ofSeconds(DEFAULT_WAIT_TIME))          
-	//				.pollingEvery(Duration.ofSeconds(POOLING_WAIT_TIME))          
-	//				.ignoring(NoSuchElementException.class);
-	//	}
+		public DriverActions(WebDriver webDriver) {
+			this.driver = webDriver;
+			actions = new Actions(webDriver);
+			this.webDriverWait = new FluentWait<WebDriver>(driver)                            
+					.withTimeout(Duration.ofSeconds(DEFAULT_WAIT_TIME))          
+					.pollingEvery(Duration.ofSeconds(POOLING_WAIT_TIME))          
+					.ignoring(NoSuchElementException.class);
+		}
 
 
 	public  String openUrl() {
@@ -198,7 +198,7 @@ public class DriverActions{
 	public void createReport() {
 
 		ExtentHtmlReporter ereport=new ExtentHtmlReporter("extentReport//report.html");
-		ereport.config().setReportName("WilProjectManagement");
+		ereport.config().setReportName("PlanIT");
 		ereport.config().setTheme(Theme.DARK);
 		er=new ExtentReports();
 		er.attachReporter(ereport);

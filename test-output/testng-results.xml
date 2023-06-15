@@ -1,33 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="3" total="5" passed="2" failed="0" skipped="0">
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T09:18:39Z" name="Wil_Plannet" finished-at="2023-06-13T09:24:25Z" duration-ms="346314">
+  <suite started-at="2023-06-15T11:28:35Z" name="Wil_Plannet" finished-at="2023-06-15T11:33:42Z" duration-ms="306678">
     <groups>
     </groups>
-    <test started-at="2023-06-13T09:18:39Z" name="TestCases" finished-at="2023-06-13T09:24:25Z" duration-ms="346314">
+    <test started-at="2023-06-15T11:28:35Z" name="TestCases" finished-at="2023-06-15T11:33:42Z" duration-ms="306678">
       <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
-        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:18:39Z" name="createObject" finished-at="2023-06-13T09:18:39Z" duration-ms="53" status="PASS">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:28:35Z" name="createObject" finished-at="2023-06-15T11:28:35Z" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:18:39Z" name="setUp" finished-at="2023-06-13T09:18:52Z" duration-ms="13152" status="PASS">
-=======
-<testng-results ignored="4" total="5" passed="0" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2023-06-12T14:42:42Z" name="Wil_Plannet" finished-at="2023-06-12T14:47:01Z" duration-ms="259028">
-    <groups>
-    </groups>
-    <test started-at="2023-06-12T14:42:42Z" name="TestCases" finished-at="2023-06-12T14:47:01Z" duration-ms="259028">
-      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
-        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:42:42Z" name="createObject" finished-at="2023-06-12T14:42:42Z" duration-ms="47" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:42:42Z" name="setUp" finished-at="2023-06-12T14:42:57Z" duration-ms="15167" status="PASS">
->>>>>>> main
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:28:35Z" name="setUp" finished-at="2023-06-15T11:28:48Z" duration-ms="12820" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,146 +22,42 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:18:52Z" name="verifyloginPage" finished-at="2023-06-13T09:19:18Z" duration-ms="25424" status="PASS">
+        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:28:48Z" name="verifyloginPage" finished-at="2023-06-15T11:29:23Z" duration-ms="34997" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane()]]>
-=======
-        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:42:57Z" name="verifyloginPage" finished-at="2023-06-12T14:43:22Z" duration-ms="24905" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyLinkIssueFunctionalityFromTicket()]]>
->>>>>>> main
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyloginPage -->
-<<<<<<< HEAD
-        <test-method signature="verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:19:18Z" name="verifyAddNewLane" finished-at="2023-06-13T09:22:30Z" duration-ms="192707" status="PASS">
+        <test-method signature="verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:29:23Z" name="verifyAddNewLane" finished-at="2023-06-15T11:33:37Z" duration-ms="253215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddNewLane -->
-        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:22:30Z" name="logout" finished-at="2023-06-13T09:22:35Z" duration-ms="4762" status="PASS">
+        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:33:37Z" name="logout" finished-at="2023-06-15T11:33:42Z" duration-ms="5378" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddNewLane status=SUCCESS method=TicketLandingPageTestScripts.verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731] output={null}]]]>
-=======
-        <test-method signature="verifyLinkIssueFunctionalityFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:43:22Z" name="verifyLinkIssueFunctionalityFromTicket" finished-at="2023-06-12T14:46:55Z" duration-ms="213433" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyLinkIssueFunctionalityFromTicket(TicketLandingPageTestScripts.java:265)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLinkIssueFunctionalityFromTicket -->
-        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:46:55Z" name="logout" finished-at="2023-06-12T14:47:01Z" duration-ms="5269" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLinkIssueFunctionalityFromTicket status=FAILURE method=TicketLandingPageTestScripts.verifyLinkIssueFunctionalityFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be] output={null}]]]>
->>>>>>> main
+                <![CDATA[[TestResult name=verifyAddNewLane status=SUCCESS method=TicketLandingPageTestScripts.verifyAddNewLane()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-<<<<<<< HEAD
                 <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane()]]>
-=======
-                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyLinkIssueFunctionalityFromTicket()]]>
->>>>>>> main
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:22:35Z" name="verifyloginPage" finished-at="2023-06-13T09:22:53Z" duration-ms="18082" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyloginPage -->
-        <test-method signature="verifyTicketDeletionFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:22:53Z" name="verifyTicketDeletionFromTicket" finished-at="2023-06-13T09:24:20Z" duration-ms="87333" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTicketDeletionFromTicket -->
-        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:24:20Z" name="logout" finished-at="2023-06-13T09:24:25Z" duration-ms="4588" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyTicketDeletionFromTicket status=SUCCESS method=TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDeletionFromTicket()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:24:25Z" name="afterTestThreadContextCleanup" finished-at="2023-06-13T09:24:25Z" duration-ms="242" status="PASS">
+        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:33:42Z" name="afterTestThreadContextCleanup" finished-at="2023-06-15T11:33:42Z" duration-ms="218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestThreadContextCleanup -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@58fb7731]" started-at="2023-06-13T09:24:30Z" name="generateReport" finished-at="2023-06-13T09:24:30Z" duration-ms="44" status="PASS">
-=======
-        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:47:01Z" name="afterTestThreadContextCleanup" finished-at="2023-06-12T14:47:01Z" duration-ms="202" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestThreadContextCleanup -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-12T14:47:06Z" name="generateReport" finished-at="2023-06-12T14:47:06Z" duration-ms="36" status="PASS">
->>>>>>> main
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@2f4205be]" started-at="2023-06-15T11:33:47Z" name="generateReport" finished-at="2023-06-15T11:33:47Z" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

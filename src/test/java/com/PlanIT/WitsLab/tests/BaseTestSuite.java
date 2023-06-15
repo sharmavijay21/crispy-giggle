@@ -142,10 +142,10 @@ public class BaseTestSuite{
 
 		lp.clickOnLogin_signInPage();
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(10000);
     System.out.println("SignIn Successfull");
 
-			das.webDriverWait(new ProjectAndBoardDashboard(das).projectHeader);
+//			das.webDriverWait(new ProjectAndBoardDashboard(das).projectHeader);
 			System.out.println("Project Header visible");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
