@@ -19,8 +19,8 @@
         </methods>
 
 </class>
-
 <!-- 
+
 <class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
 	
 	<methods>
@@ -48,7 +48,7 @@
         
         
         
-</class> -->
+</class>   -->
        
  </classes>
 </test>
