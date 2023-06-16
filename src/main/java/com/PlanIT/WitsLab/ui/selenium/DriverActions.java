@@ -142,9 +142,7 @@ public class DriverActions{
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			//            driver = getChromeDriver();
 			ChromeOptions chromeOptions = new ChromeOptions();
-//			chromeOptions.setBinary("/Applications/Brave.app");
 			
 //	        chromeOptions.addArguments("--headless");
 	        
@@ -155,17 +153,6 @@ public class DriverActions{
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-gpu");
 			chromeOptions.addArguments("--window-size=1936,1080");
-//			chromeOptions.addArguments("--headless");
-			
-			//            chromeOptions.addArguments("--headless"); //for headless mode
-			//            chromeOptions.addArguments("--window-size=800,600");//The invisible browser window is only 800x600 in size
-			//            chromeOptions.addArguments("--start-fullscreen");
-//			            chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
-//			            chromeOptions.addArguments("disable-infobars"); // disabling infobars
-//			            chromeOptions.addArguments("--disable-extensions"); // disabling extensions
-//			            chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
-//			            chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-//			            chromeOptions.addArguments("--no-sandbox");
 
 
 			driver= new ChromeDriver(chromeOptions);

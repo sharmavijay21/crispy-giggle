@@ -14,12 +14,12 @@
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
           <include name="verifyCreateNewProject"/>
-           <exclude name="verifyCreateTeamBoard"/>
-          <exclude name="verifyAddMemberFromProjectSetting"/>
+           <include name="verifyCreateTeamBoard"/>
+          <include name="verifyAddMemberFromProjectSetting"/>
         </methods>
 
 </class>
-<!-- 
+
 
 <class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
 	
@@ -48,7 +48,7 @@
         
         
         
-</class>   -->
+</class>   
        
  </classes>
 </test>
