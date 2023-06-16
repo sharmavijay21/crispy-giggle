@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Wil_Plannet">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Wil_Plannet" title="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts" class="method navigator-link" hash-for-method="verifyAddNewLane">verifyAddNewLane</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Wil_Plannet" title="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript" class="method navigator-link" hash-for-method="verifyCreateNewProject">verifyCreateNewProject</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Wil_Plannet -->
@@ -120,14 +120,14 @@
           <div class="suite-Wil_Plannet-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts</span>
+              <span class="class-name">com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyAddNewLane">
-                  </a> <!-- verifyAddNewLane -->
-                  <span class="method-name">verifyAddNewLane</span>
+                  <a name="verifyCreateNewProject">
+                  </a> <!-- verifyCreateNewProject -->
+                  <span class="method-name">verifyCreateNewProject</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,17 +143,15 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Wil_Plannet&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;2&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;TestCases&quot; verbose=&quot;2&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts&quot;&gt;
+      &lt;class name=&quot;com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyAddNewLane&quot;/&gt;
-          &lt;exclude name=&quot;verifyUpdateDetailsOfTickets&quot;/&gt;
-          &lt;exclude name=&quot;verifyChangeTicketStageFromDropdown&quot;/&gt;
-          &lt;exclude name=&quot;verifyTicketDeletionFromTicket&quot;/&gt;
-          &lt;exclude name=&quot;verifyLinkIssueFunctionalityFromTicket&quot;/&gt;
+          &lt;include name=&quot;verifyCreateNewProject&quot;/&gt;
+          &lt;exclude name=&quot;verifyCreateTeamBoard&quot;/&gt;
+          &lt;exclude name=&quot;verifyAddMemberFromProjectSetting&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts --&gt;
+      &lt;/class&gt; &lt;!-- com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- TestCases --&gt;
 &lt;/suite&gt; &lt;!-- Wil_Plannet --&gt;
@@ -195,14 +193,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAddNewLane')
-data.setCell(0, 2, 'com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts')
-data.setCell(0, 3, 253215);
+data.setCell(0, 1, 'verifyCreateNewProject')
+data.setCell(0, 2, 'com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript')
+data.setCell(0, 3, 27169);
 window.suiteTableData['Wil_Plannet']= { tableData: data, tableDiv: 'times-div-Wil_Plannet'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Wil_Plannet">
               </div> <!-- times-div-Wil_Plannet -->
             </div> <!-- times-div -->
@@ -217,19 +215,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Wil_Plannet" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts</span>
+              <span class="ignored-class-name">com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyChangeTicketStageFromDropdown</span>
+                <span class="ignored-method-name">verifyCreateTeamBoard</span>
                 <br/>
-                <span class="ignored-method-name">verifyLinkIssueFunctionalityFromTicket</span>
-                <br/>
-                <span class="ignored-method-name">verifyUpdateDetailsOfTickets</span>
-                <br/>
-                <span class="ignored-method-name">verifyTicketDeletionFromTicket</span>
+                <span class="ignored-method-name">verifyAddMemberFromProjectSetting</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -241,34 +235,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">createObject</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">61 ms</span>
+                <span class="method-name">setUp(firefox)</span>
+                <span class="method-start">46 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">verifyloginPage(public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyAddNewLane())</span>
-                <span class="method-start">12899 ms</span>
+                <span class="method-name">verifyloginPage(public void com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript.verifyCreateNewProject())</span>
+                <span class="method-start">3090 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyAddNewLane</span>
-                <span class="method-start">47897 ms</span>
+                <span class="method-name">verifyCreateNewProject</span>
+                <span class="method-start">45693 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logout([TestResult name=verifyAddNewLane status=SUCCESS method=TicketLandingPageTestScripts.verifyAddNewLan...)</span>
-                <span class="method-start">301136 ms</span>
+                <span class="method-name">logout([TestResult name=verifyCreateNewProject status=SUCCESS method=ProjectAndBoardDashBoardTestScript.ver...)</span>
+                <span class="method-start">72871 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTestThreadContextCleanup</span>
-                <span class="method-start">306520 ms</span>
+                <span class="method-start">77049 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">generateReport</span>
-                <span class="method-start">311777 ms</span>
+                <span class="method-start">77525 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

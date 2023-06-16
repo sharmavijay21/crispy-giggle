@@ -40,6 +40,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -168,7 +169,10 @@ public class DriverActions{
 
 		} else if (browser.equalsIgnoreCase("EdgeC") || browser.equalsIgnoreCase("EdgeChromium")) {
 			driver = getEdgeChromiumDriver();
+		}else if(browser.equalsIgnoreCase("safari")){
+			 driver = new SafariDriver();
 		}
+		
 
 		driver.manage().window().maximize();
 

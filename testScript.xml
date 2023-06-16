@@ -5,7 +5,7 @@
 	
 <test name="TestCases" preserve-order="true" >
 	
-	<parameter name = "browser" value="chrome"/>
+	<parameter name = "browser" value="firefox"/>
 
 <classes >
 	
