@@ -144,7 +144,7 @@ public class DriverActions{
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 			//            driver = getChromeDriver();
 			ChromeOptions chromeOptions = new ChromeOptions();
-
+//			chromeOptions.setBinary("/Applications/Brave.app/Contents/MacOS/brave");
 				        chromeOptions.addArguments("--headless");
 //			chromeOptions.addArguments("--incognito");
 //			chromeOptions.addArguments("--start-fullscreen");
