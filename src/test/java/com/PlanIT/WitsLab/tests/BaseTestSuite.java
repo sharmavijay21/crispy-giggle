@@ -87,9 +87,9 @@ public class BaseTestSuite{
 			logger.info("WEBDRIVER IS STARTING ON LOCAL SESSION");
 			//			das.getWebDriver().get("https://projectmanagement-uat.thewitslab.com/");;
 			String url=das.getProperties().getProperty("url");
-			
+
 			das.getWebDriver().get(url);;
-			
+
 		}
 	}
 
@@ -138,17 +138,22 @@ public class BaseTestSuite{
 
 		System.out.println(lp.loginPageHeader.getText());
 		System.out.println("****");
-		
+
 		lp.inputEmail_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Email"));
 		lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Password"));
 
-
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		lp.clickOnLogin_signInPage();
 		try {
 			Thread.sleep(10000);
-    System.out.println("SignIn Successfull");
+			System.out.println("SignIn Successfull");
 
-//			das.webDriverWait(new ProjectAndBoardDashboard(das).projectHeader);
+			//			das.webDriverWait(new ProjectAndBoardDashboard(das).projectHeader);
 			System.out.println("Project Header visible");
 		} catch (InterruptedException e) {
 			e.printStackTrace();
@@ -183,7 +188,7 @@ public class BaseTestSuite{
 		try {
 			das.webDriverWait(lp.loginPageHeader);
 			boolean bb=das.isDisplayed(lp.loginPageHeader);
-//			System.out.println(lp.loginPageHeader.getText());
+			//			System.out.println(lp.loginPageHeader.getText());
 			if(bb) {
 
 			}else {
@@ -192,7 +197,7 @@ public class BaseTestSuite{
 					pboard.popupClose();
 					lp.clickOnLogoutBtn();
 				}
-				
+
 			}
 
 		}catch (Exception e) {

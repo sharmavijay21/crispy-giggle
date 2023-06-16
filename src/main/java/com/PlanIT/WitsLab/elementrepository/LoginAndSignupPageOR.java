@@ -14,7 +14,8 @@ public class LoginAndSignupPageOR {
 	@FindBy(xpath = "//input[@name='password']")
 	protected WebElement pass_signInPage;
 
-	@FindBy(xpath="//button[text()='Sign In']")
+//	@FindBy(xpath="//button[text()='Sign In']")
+	@FindBy(xpath = "//div[contains(@class,'SignIn__SignInBtn')]")
 	protected WebElement loginBtn_signInPage;
 
 ////
