@@ -4,28 +4,17 @@
   <test thread-count="5" name="TestCases(failed)" verbose="2">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
+      <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
         <methods>
-          <include name="logout"/>
-          <include name="generateReport"/>
-          <include name="afterTestThreadContextCleanup"/>
-          <include name="verifySprintActivation"/>
-          <include name="setUp"/>
-          <include name="verifyloginPage"/>
-          <include name="createObject"/>
-        </methods>
-      </class> <!-- com.PlanIT.WitsLab.tests.BacklogTestScript -->
-      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
-        <methods>
+          <include name="verifyCreateNewProject"/>
           <include name="logout"/>
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
-          <include name="verifyAddNewLane"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
-      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
+      </class> <!-- com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript -->
     </classes>
   </test> <!-- TestCases(failed) -->
 </suite> <!-- Failed suite [Wil_Plannet] -->

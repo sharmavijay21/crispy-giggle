@@ -40,6 +40,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -141,34 +142,27 @@ public class DriverActions{
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-			//            driver = getChromeDriver();
 			ChromeOptions chromeOptions = new ChromeOptions();
-
-				        chromeOptions.addArguments("--headless");
+			
+//	        chromeOptions.addArguments("--headless");
+	        
+	        
 //			chromeOptions.addArguments("--incognito");
 //			chromeOptions.addArguments("--start-fullscreen");
 
 			chromeOptions.addArguments("--no-sandbox");
 			chromeOptions.addArguments("--disable-gpu");
 			chromeOptions.addArguments("--window-size=1936,1080");
-//			chromeOptions.addArguments("--headless");
-			
-			//            chromeOptions.addArguments("--headless"); //for headless mode
-			//            chromeOptions.addArguments("--window-size=800,600");//The invisible browser window is only 800x600 in size
-			//            chromeOptions.addArguments("--start-fullscreen");
-//			            chromeOptions.addArguments("start-maximized"); // open Browser in maximized mode
-//			            chromeOptions.addArguments("disable-infobars"); // disabling infobars
-//			            chromeOptions.addArguments("--disable-extensions"); // disabling extensions
-//			            chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
-//			            chromeOptions.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
-//			            chromeOptions.addArguments("--no-sandbox");
 
 
 			driver= new ChromeDriver(chromeOptions);
 
 		} else if (browser.equalsIgnoreCase("EdgeC") || browser.equalsIgnoreCase("EdgeChromium")) {
 			driver = getEdgeChromiumDriver();
+		}else if(browser.equalsIgnoreCase("safari")){
+			 driver = new SafariDriver();
 		}
+		
 
 		driver.manage().window().maximize();
 
