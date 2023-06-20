@@ -3,7 +3,7 @@
 <suite name="Wil_Plannet" verbose="2"  >
 	
 	
-<test name="TestCases" preserve-order="true" >
+<test name="PlanIT Testcases" preserve-order="true" >
 	
 	<parameter name = "browser" value="chrome"/>
 
@@ -24,6 +24,7 @@
 <class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
 	
 	<methods>
+		<exclude name="verifyMoveAllIssueFromBacklogToSprint"/>
           <include name="verifyCreateIssueFromBacklogFunctionality"/>
            <include name="verifyCreateSprintFunctionality"/>
           <include name="verifyAddMemberFunctionalityFromBoard"/>
@@ -35,20 +36,25 @@
 </class>
 
 
+
+
 <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">   
 	
 	<methods>
+		  
           <include name="verifyUpdateDetailsOfTickets"/>
           <include name="verifyChangeTicketStageFromDropdown"/>
           <include name="verifyAddNewLane"/>
           <include name="verifyTicketDeletionFromTicket"/>
-          <exclude name="verifyLinkIssueFunctionalityFromTicket"/>
+          <include name="verifyLinkIssueFunctionalityFromTicket"/>
            
         </methods>
         
         
         
-</class>   
+</class>  
+
+ 
        
  </classes>
 </test>

@@ -81,7 +81,7 @@ public class TicketLandingPage extends TicketLandingPageOR{
 
 	}
 	public String getTextUpdatedIssueType() {
-
+		da.webDriverWait(updatedissueTypeAlertMessage);
 		//		return da.getAttribute(updatedissueTypeText, "title");
 		return da.getText(updatedissueTypeAlertMessage);
 
@@ -186,12 +186,13 @@ public class TicketLandingPage extends TicketLandingPageOR{
 	public String selectIssueForLink() {
 		da.clickElement(linkIssueTextField, "LinkIssueField");
 		da.clickElement(ticketForLinkIssue, "ticket");
+		da.webDriverWait(linkIssueSubmitButton);
 		da.clickElement(linkIssueSubmitButton, "Link");
-		
+		da.webDriverWait(linkIssueConfirmationMessage);
 		return da.getText(linkIssueConfirmationMessage);
 	}
 
-	
+
 	public TicketLandingPage(DriverActions das) {
 		this.da=das;
 		PageFactory.initElements(da.getWebDriver(), this);

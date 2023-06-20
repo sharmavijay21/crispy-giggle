@@ -264,12 +264,8 @@ public class BacklogTestScript extends BaseTestSuite{
 	@Test(enabled = true)
 	public void moveTicketFromOneBoardToAnother() {
 
-		String projectName=null;
-		String boardName=null;
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 		try {
-
-			ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-			//    
 
 			WebElement newProject=projectBoard.createNewProject();
 			
@@ -308,6 +304,7 @@ public class BacklogTestScript extends BaseTestSuite{
 			Assert.assertEquals(movedIssue.getText(), issueName);
 
 		}catch (Exception e) {
+			projectBoard.popupClose();
 			e.printStackTrace();
 			das.etest.log(Status.FAIL, "Ticket not move from one board to another");
 			Assert.assertEquals(true, false);
@@ -319,10 +316,9 @@ public class BacklogTestScript extends BaseTestSuite{
 	@Test(enabled =true )
 	public void verifyCloneIssueFunctionality() {
 
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
 		try {
-
-			ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
 			WebElement newProject=projectBoard.createNewProject();
 			das.clickElement(newProject, newProject.getText());
@@ -346,11 +342,55 @@ public class BacklogTestScript extends BaseTestSuite{
 			Assert.assertEquals(size, 2);
 			das.uiText_validation("Ticket Clone", "Ticket Clone");
 		}catch (Exception e) {
+			projectBoard.popupClose();
 			e.printStackTrace();
 			das.etest.log(Status.FAIL, "Issue not clonned");
 			Assert.assertEquals(true, false);
 		}
 	}
+	
+	
+	@Test(enabled =true )
+    public void verifyMoveAllIssueFromBacklogToSprint() {
+        
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+		
+        try {
+
+            WebElement newProject=projectBoard.createNewProject();
+            das.clickElement(newProject, newProject.getText());
+            WebElement firstBoard=projectBoard.createNewBoard();
+            das.clickElement(firstBoard, firstBoard.getText());
+            
+            BacklogModule backlog=new BacklogModule(das);
+            backlog.createNewSprint();
+            
+            backlog.createNewIssueFromBacklog();
+            backlog.createNewIssueFromBacklog();
+            backlog.createNewIssueFromBacklog();
+//            backlog.clickOnBacklogExpandIcon();
+          int totalCreatedIssue=  backlog.getSizeOfBacklogIssue();
+            backlog.clickOnBacklogSelectAllCheckbox();
+            backlog.clickOnBacklogMoveButton();
+            backlog.selectSprintForMoveAllTicketFromBacklog();
+            Thread.sleep(3000);
+          int totalMovedIssue=  backlog.getSizeOfSprintIssueOnBacklogPage();
+//            String movedAllIssueFromBacklog=backlog.getTextBacklogIssueData();
+//            String issueOnSprint= backlog.getTextSprintIssueData();
+            
+            Assert.assertEquals(totalCreatedIssue, totalMovedIssue);
+            das.uiText_validation("All issue moved on Sprint", "All issue moved on Sprint");
+           
+            
+        }catch (Exception e) {
+        	projectBoard.popupClose();
+            das.etest.log(Status.FAIL, "if baclog Data Found Successfully");
+            Assert.assertEquals(true, false);    
+            
+            
+            
+        }
+        }
 
 
 }

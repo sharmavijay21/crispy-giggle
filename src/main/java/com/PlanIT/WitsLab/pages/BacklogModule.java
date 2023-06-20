@@ -218,6 +218,8 @@ public class BacklogModule extends BacklogModuleOR{
 
 	public void clickOnBoardModule() {
 
+		da.webDriverWait(boardModule);
+
 		da.clickElement(boardModule,"Board Module");
 		try {
 			Thread.sleep(3000);
@@ -421,21 +423,21 @@ public class BacklogModule extends BacklogModuleOR{
 
 		selectIssueType("UserStory");
 
-//		selectPriority("Critical");
-//
-//		//Add Sprint
-//		inputStartDate("2023-06-12");
-//
-//		try {
-//			Thread.sleep(2000);
-//		} catch (InterruptedException e) {
-//			e.printStackTrace();
-//		}
-//		inputEndDate("2023-06-12");
-//
-//		//		inputStoryPoint("7");
-//
-//		inputDescription("Discription should be visible");
+		//		selectPriority("Critical");
+		//
+		//		//Add Sprint
+		//		inputStartDate("2023-06-12");
+		//
+		//		try {
+		//			Thread.sleep(2000);
+		//		} catch (InterruptedException e) {
+		//			e.printStackTrace();
+		//		}
+		//		inputEndDate("2023-06-12");
+		//
+		//		//		inputStoryPoint("7");
+		//
+		//		inputDescription("Discription should be visible");
 
 		clickOnCreateButton();
 
@@ -483,10 +485,43 @@ public class BacklogModule extends BacklogModuleOR{
 
 		da.clickElement(clickOnProjectLink," Project Link");
 	}
-	
+
 	public String getTextNoBacklogData() {
 		da.webDriverWait(totalNoOfIssueInBacklog);
 		return da.getText(totalNoOfIssueInBacklog);
+	}
+
+	public void clickOnBacklogSelectAllCheckbox() {
+
+		da.clickElement(backlogSelectAllCheckbox,"Backlog select All Checkbox");
+	}
+	public void clickOnBacklogMoveButton() {
+
+		da.clickElement(backlogMoveButton,"Backlog Move Button");
+	}
+
+	public void selectSprintForMoveAllTicketFromBacklog() {
+
+		da.clickElement(sprintFieldForMoveAllTicketFromBacklog,"Click on Sprint field for move all ticket");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		da.clickElement(sprintForMoveAllTicketFromBacklog,"Click To  Sprint for move all ticket from backlog");
+		clickOnSubmitMemberButton();
+	}
+
+	public int getSizeOfBacklogIssue() {
+		return da.getWebDriver().findElements(By.xpath("//div[contains(@class,'BacklogTable__TableContainer-sc-135rst5')]//div//input[contains(@name,'d')]")).size();
+
+	}
+
+	public int getSizeOfSprintIssueOnBacklogPage() {
+		da.clickElement(sprintExpandIcon, "Sprint Expand Button");
+		return da.getWebDriver().findElements(By.xpath("//div[contains(@class,'BacklogTable__TableContainer-sc')]//div[contains(@class,'BacklogTable__Box-sc-145rst5-2 g')]")).size();
+
 	}
 
 	public BacklogModule(DriverActions das) {

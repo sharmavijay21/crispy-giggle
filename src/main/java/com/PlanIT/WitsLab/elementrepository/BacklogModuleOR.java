@@ -193,10 +193,10 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "(//button[contains(@class,'Button__StyledButton')])[1]")
 	protected WebElement stageOfTicket;
 
-//	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]")
+	//	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]")
 	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]//div//div")
 	protected WebElement lastStageName;
-	
+
 	@FindBy(xpath = "//a[text()='Clone']")
 	protected WebElement cloneButton;
 
@@ -207,5 +207,28 @@ public class BacklogModuleOR {
 	//	public WebElement typeText;
 	@FindBy(xpath = "//div[text()='(0 Issue)']")
 	protected WebElement totalNoOfIssueInBacklog;
+
+	@FindBy(xpath = "//input[@name='All']")
+	public WebElement backlogSelectAllCheckbox;
+
+	@FindBy(xpath = "//button[text()='Move']")
+	public WebElement backlogMoveButton;
+
+	@FindBy(xpath = "(//div[@class='ant-select css-yp8pcc ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
+	public WebElement sprintFieldForMoveAllTicketFromBacklog;
+
+	@FindBy(xpath = "//div[@class='ant-select-item-option-content']")
+	public WebElement sprintForMoveAllTicketFromBacklog;
+
+	@FindBy(xpath = "//div[contains(@class,'BacklogTable__TableContainer-sc-135rst5')]//div//input[contains(@name,'d')]")
+	public WebElement totalIssueCountOfBacklog;
+
+	@FindBy(xpath = "//div[contains(@class,'BacklogTable__TableContainer-sc')]//div[contains(@class,'BacklogTable__Box-sc-145rst5-2 g')]")
+	public WebElement totalIssueCountOfSprint;
+
+	@FindBy(xpath = "(//div[@class='ant-collapse-expand-icon'])[2]")
+	public WebElement sprintExpandIcon;
+
+
 
 }

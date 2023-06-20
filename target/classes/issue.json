@@ -1,11 +1,11 @@
 {
   "createIssue": {
-    "issueTitle" : "Create Sprint Functionality",
+    "issueTitle" : "Issue is created successfully",
     "issueType" : "Bug",
-    "Priority": "Critical",
+    "Priority": "Low",
      "Sprint": "abc",
-    "Start Date": "2023-06-20",
-    "End Date": "2023-06-20",
+    "Start Date": "2023-06-25",
+    "End Date": "2023-06-25",
      "Story Point": "6",
     "Assignee": "Gaurav Dubey",
     "Link Issue": "per",
