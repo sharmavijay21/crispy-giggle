@@ -53,7 +53,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			Assert.assertEquals(updatedAssignee, "Sunil");
 
 			ticketLandingPage.selectUpdateIssueType("Bug");
-			Thread.sleep(3000);
+			
 			//			System.out.println(das.getAttribute(das.getWebDriver().findElement(By.xpath("//div[contains(@class,'TicketModal__SvgWrapper')]")), "title"));
 			;
 			String updatedType=ticketLandingPage.getTextUpdatedIssueType();
@@ -132,6 +132,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 
 			backlog.closePopUp();
 		}catch (Exception e) {
+			e.printStackTrace();
 			System.out.println(e.getMessage());
 			//			backlog.closePopUp();
 			projectBoard.popupClose();

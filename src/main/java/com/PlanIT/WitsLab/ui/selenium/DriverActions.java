@@ -198,6 +198,7 @@ public class DriverActions{
 		er.attachReporter(ereport);
 
 	}
+	
 
 	public void createTest(String tsName) {
 		etest=er.createTest(tsName);
@@ -300,6 +301,7 @@ public class DriverActions{
 		}
 
 	}
+	
 	
 	public void javaScriptSendKey(WebElement we,String data,String elementName) {
 		JavascriptExecutor js= (JavascriptExecutor) driver;

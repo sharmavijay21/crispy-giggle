@@ -83,7 +83,7 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//div[@class=' css-13cymwt-control']")
 	public WebElement linkIssueTextField;
 
-	@FindBy(xpath = "//div[@id='react-select-12-option-0']")
+	@FindBy(xpath = "//div[@class=' css-qr46ko']")
 	public WebElement ticketForLinkIssue;
 
 	@FindBy(xpath = "//button[text()='Link']")
