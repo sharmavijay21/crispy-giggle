@@ -78,18 +78,29 @@ public class TicketLandingPageOR {
 	protected WebElement okButtonOnDeletePopup;
 
 	@FindBy(xpath = "//button[text()='Link Issue']")
-	public WebElement linkIssueButton;
+	protected WebElement linkIssueButton;
 
 	@FindBy(xpath = "//div[@class=' css-13cymwt-control']")
-	public WebElement linkIssueTextField;
+	protected WebElement linkIssueTextField;
 
 	@FindBy(xpath = "//div[@class=' css-qr46ko']")
-	public WebElement ticketForLinkIssue;
+	protected WebElement ticketForLinkIssue;
 
 	@FindBy(xpath = "//button[text()='Link']")
-    public WebElement linkIssueSubmitButton;
+	protected WebElement linkIssueSubmitButton;
 	
 	@FindBy(xpath = "//div[text()='link Updated Successfully']")
-    public WebElement linkIssueConfirmationMessage;
+	public WebElement linkIssueConfirmationMessage;
 
+	@FindBy(xpath = "//div[contains(@class,'TicketModal__Desc-sc')]")
+	protected WebElement descriptionBox;
+
+	@FindBy(xpath = "//div[@class='ql-container ql-snow']")
+	protected WebElement inputFieldDescriptionAndComment;
+
+	@FindBy(xpath = "//div[contains(@class,'TicketModal__CommentWrap')]")
+	protected WebElement commentBox;
+
+	
+	
 }

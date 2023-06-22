@@ -114,6 +114,8 @@ public class BacklogModule extends BacklogModuleOR{
 
 	}
 	public void clickOnCreateSprintButton() {
+		
+		da.webDriverWait(createSprintBtn);
 
 		da.clickElement(createSprintBtn,"Create Sprint");
 
@@ -305,10 +307,13 @@ public class BacklogModule extends BacklogModuleOR{
 
 
 	public void openFirstTicket() {
+		if(openFirstTicket.isDisplayed()) {
+			da.clickElement(openFirstTicket, "First Ticket");
+		}else {
 		da.clickElement(backlogLane, "Backlog Lane");
 		da.webDriverWait(openFirstTicket);
 		da.clickElement(openFirstTicket, "First Ticket");
-
+		}
 	}
 
 	public void updatePriority(String priority) {
@@ -506,7 +511,6 @@ public class BacklogModule extends BacklogModuleOR{
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		da.clickElement(sprintForMoveAllTicketFromBacklog,"Click To  Sprint for move all ticket from backlog");
@@ -514,7 +518,7 @@ public class BacklogModule extends BacklogModuleOR{
 	}
 
 	public int getSizeOfBacklogIssue() {
-		return da.getWebDriver().findElements(By.xpath("//div[contains(@class,'BacklogTable__TableContainer-sc-135rst5')]//div//input[contains(@name,'d')]")).size();
+		return da.getWebDriver().findElements(By.xpath("//div[contains(@class,'BacklogTable__TableContainer-sc')]//div//input[contains(@name,'d')]")).size();
 
 	}
 

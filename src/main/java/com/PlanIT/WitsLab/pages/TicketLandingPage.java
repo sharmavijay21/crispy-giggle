@@ -61,7 +61,6 @@ public class TicketLandingPage extends TicketLandingPageOR{
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		String Text=da.getText(da.getWebDriver().findElement(By.xpath("(//h2[text()='"+text+"'])[1]")));
@@ -192,6 +191,40 @@ public class TicketLandingPage extends TicketLandingPageOR{
 		return da.getText(linkIssueConfirmationMessage);
 	}
 
+	public String addDescription(String descriptionData) {
+
+		da.actionClick(descriptionBox, "Description Box");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		da.actionSendKey(inputFieldDescriptionAndComment, descriptionData, "Description Field");
+  
+		da.actionClick(SaveButton, "Save Button");
+
+		return da.getWebDriver().findElement(By.xpath("//p[text()='"+descriptionData+"']")).getText();
+	}
+
+	public String addComment(String commentData) {
+
+		da.actionClick(commentBox, "comment Box");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		da.scrollToElement(inputFieldDescriptionAndComment," Comment Field");
+		da.actionSendKey(inputFieldDescriptionAndComment, commentData, "comment Field");
+		da.scrollToElement(SaveButton,"Save Button");
+
+		da.actionClick(SaveButton, "Save Button");
+		
+		return da.getWebDriver().findElement(By.xpath("//p[text()='"+commentData+"']")).getText();
+
+		
+	}
 
 	public TicketLandingPage(DriverActions das) {
 		this.da=das;

@@ -79,12 +79,12 @@ public class BacklogTestScript extends BaseTestSuite{
 			projectBoard.openFirstProject();
 			WebElement we=projectBoard.createNewBoard();
 			das.clickElement(we, we.getText());
-			Thread.sleep(3000);
+			
 			backlog.clickOnCreateSprintButton();
 			backlog.selectSprintDuration("2");
 			//		backlog.inputStartDate("2023-05-31");
 			//		backlog.inputEndDate("2023-06-20");
-			backlog.inputSprintGoal("completed");
+			backlog.inputSprintGoal("Sprint should be complete within 7 days");
 			backlog.clickOnSubmitSprintButton();
 			//			String message=null;
 			//			try {
@@ -377,14 +377,16 @@ public class BacklogTestScript extends BaseTestSuite{
           int totalMovedIssue=  backlog.getSizeOfSprintIssueOnBacklogPage();
 //            String movedAllIssueFromBacklog=backlog.getTextBacklogIssueData();
 //            String issueOnSprint= backlog.getTextSprintIssueData();
-            
-            Assert.assertEquals(totalCreatedIssue, totalMovedIssue);
+          System.out.println(totalCreatedIssue);
+          System.out.println(totalMovedIssue);
+          
+            Assert.assertEquals(totalMovedIssue,totalCreatedIssue );
             das.uiText_validation("All issue moved on Sprint", "All issue moved on Sprint");
            
             
         }catch (Exception e) {
         	projectBoard.popupClose();
-            das.etest.log(Status.FAIL, "if baclog Data Found Successfully");
+            das.etest.log(Status.FAIL, "Issue not moved in Sprint");
             Assert.assertEquals(true, false);    
             
             
