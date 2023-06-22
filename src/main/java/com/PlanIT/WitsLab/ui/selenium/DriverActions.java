@@ -347,6 +347,20 @@ public class DriverActions{
 		return prop;
 	}
 
+	
+	public void actionClick(WebElement we, String elementName) {
+		actions=new Actions(driver);
+		etest.log(Status.INFO, " Clicked on "+elementName);
+		actions.click(we).build().perform();
+		
+	}
+	public void actionSendKey(WebElement we,String data ,String elementName) {
+		actions=new Actions(driver);
+		etest.log(Status.INFO, " input data in "+elementName);
+		actions.sendKeys(we,data).build().perform();
+		
+	}
+	
 	/**
 	 * Open the given Url
 	 * 

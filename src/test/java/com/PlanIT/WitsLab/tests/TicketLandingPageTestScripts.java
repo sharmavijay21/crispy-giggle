@@ -2,6 +2,7 @@ package com.PlanIT.WitsLab.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -269,6 +270,50 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
         }
         }
 
-	
+	@Test
+	public void verifyTicketDescriptionAndComment() {
+		
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+	       
+        try {
+
+            projectBoard.openFirstProject();
+            
+            
+            WebElement firstBoard=projectBoard.createNewBoard();
+            das.clickElement(firstBoard, firstBoard.getText());
+        
+            BacklogModule backlog=new BacklogModule(das);
+          
+            backlog.createNewIssueFromBacklog();
+          
+            backlog.openFirstTicket();
+            
+            TicketLandingPage tlp=new TicketLandingPage(das);
+            
+           String actualDescription= tlp.addDescription("Dashboard should be visible");
+           
+           
+           
+           das.uiText_validation(actualDescription, "Dashboard should be visible");
+           Assert.assertEquals(actualDescription, "Dashboard should be visible");
+           
+           
+           String actualComment=tlp.addComment("fixed");
+           
+           projectBoard.popupClose();
+           
+           das.uiText_validation(actualComment, "fixed");
+           Assert.assertEquals(actualComment, "fixed");
+           
+                    
+	}catch (Exception e) {
+		
+    	projectBoard.popupClose();
+    	System.out.println(e.getMessage());
+        das.etest.log(Status.FAIL, "Discription and comment not added");
+        Assert.assertEquals(true, false,"Discription and comment not added");            
+    }
+        }
 	
 }
