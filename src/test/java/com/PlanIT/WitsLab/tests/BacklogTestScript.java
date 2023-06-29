@@ -37,14 +37,14 @@ public class BacklogTestScript extends BaseTestSuite{
 			backlog.selectPriority(createIssue.getJSONObject("createIssue").getString("Priority"));
 
 			//Add Sprint
-			backlog.inputStartDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
+			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("End Date"));
 
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End Date"));
+			//			backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End Date"));
 
 			backlog.inputStoryPoint(createIssue.getJSONObject("createIssue").getString("Story Point"));
 
@@ -79,7 +79,7 @@ public class BacklogTestScript extends BaseTestSuite{
 			projectBoard.openFirstProject();
 			WebElement we=projectBoard.createNewBoard();
 			das.clickElement(we, we.getText());
-			
+
 			backlog.clickOnCreateSprintButton();
 			backlog.selectSprintDuration("2");
 			//		backlog.inputStartDate("2023-05-31");
@@ -232,14 +232,14 @@ public class BacklogTestScript extends BaseTestSuite{
 			backlog.selectPriority(createIssue.getJSONObject("createIssue").getString("Priority"));
 
 
-			backlog.inputStartDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
+			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
 
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End Date"));
+			//			backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End Date"));
 
 			backlog.inputStoryPoint(createIssue.getJSONObject("createIssue").getString("Story Point"));
 
@@ -268,7 +268,7 @@ public class BacklogTestScript extends BaseTestSuite{
 		try {
 
 			WebElement newProject=projectBoard.createNewProject();
-			
+
 			das.webDriverWait(newProject);
 			das.clickElement(newProject, newProject.getText());
 			WebElement firstBoard=projectBoard.createNewBoard();
@@ -286,6 +286,7 @@ public class BacklogTestScript extends BaseTestSuite{
 
 			String issueName=    backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
 			backlog.clickOnCreateButton();
+			das.clickElement(backlog.backlogLane, "Backlog Lane");
 			backlog.openFirstTicket();
 			backlog.clickOnTicketKebabMenu();
 			backlog.clickOnMoveToBoard(secondBoardName);
@@ -348,51 +349,51 @@ public class BacklogTestScript extends BaseTestSuite{
 			Assert.assertEquals(true, false);
 		}
 	}
-	
-	
-	@Test(enabled =true )
-    public void verifyMoveAllIssueFromBacklogToSprint() {
-        
-		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-		
-        try {
 
-            WebElement newProject=projectBoard.createNewProject();
-            das.clickElement(newProject, newProject.getText());
-            WebElement firstBoard=projectBoard.createNewBoard();
-            das.clickElement(firstBoard, firstBoard.getText());
-            
-            BacklogModule backlog=new BacklogModule(das);
-            backlog.createNewSprint();
-            
-            backlog.createNewIssueFromBacklog();
-            backlog.createNewIssueFromBacklog();
-            backlog.createNewIssueFromBacklog();
-//            backlog.clickOnBacklogExpandIcon();
-          int totalCreatedIssue=  backlog.getSizeOfBacklogIssue();
-            backlog.clickOnBacklogSelectAllCheckbox();
-            backlog.clickOnBacklogMoveButton();
-            backlog.selectSprintForMoveAllTicketFromBacklog();
-            Thread.sleep(3000);
-          int totalMovedIssue=  backlog.getSizeOfSprintIssueOnBacklogPage();
-//            String movedAllIssueFromBacklog=backlog.getTextBacklogIssueData();
-//            String issueOnSprint= backlog.getTextSprintIssueData();
-          System.out.println(totalCreatedIssue);
-          System.out.println(totalMovedIssue);
-          
-            Assert.assertEquals(totalMovedIssue,totalCreatedIssue );
-            das.uiText_validation("All issue moved on Sprint", "All issue moved on Sprint");
-           
-            
-        }catch (Exception e) {
-        	projectBoard.popupClose();
-            das.etest.log(Status.FAIL, "Issue not moved in Sprint");
-            Assert.assertEquals(true, false);    
-            
-            
-            
-        }
-        }
+
+	@Test(enabled =true )
+	public void verifyMoveAllIssueFromBacklogToSprint() {
+
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newProject=projectBoard.createNewProject();
+			das.clickElement(newProject, newProject.getText());
+			WebElement firstBoard=projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
+
+			BacklogModule backlog=new BacklogModule(das);
+			backlog.createNewSprint();
+
+			backlog.createNewIssueFromBacklog();
+			backlog.createNewIssueFromBacklog();
+			backlog.createNewIssueFromBacklog();
+			//            backlog.clickOnBacklogExpandIcon();
+			int totalCreatedIssue=  backlog.getSizeOfBacklogIssue();
+			backlog.clickOnBacklogSelectAllCheckbox();
+			backlog.clickOnBacklogMoveButton();
+			backlog.selectSprintForMoveAllTicketFromBacklog();
+			Thread.sleep(3000);
+			int totalMovedIssue=  backlog.getSizeOfSprintIssueOnBacklogPage();
+			//            String movedAllIssueFromBacklog=backlog.getTextBacklogIssueData();
+			//            String issueOnSprint= backlog.getTextSprintIssueData();
+			System.out.println(totalCreatedIssue);
+			System.out.println(totalMovedIssue);
+
+			Assert.assertEquals(totalMovedIssue,totalCreatedIssue );
+			das.uiText_validation("All issue moved on Sprint", "All issue moved on Sprint");
+
+
+		}catch (Exception e) {
+			projectBoard.popupClose();
+			das.etest.log(Status.FAIL, "Issue not moved in Sprint");
+			Assert.assertEquals(true, false);    
+
+
+
+		}
+	}
 
 
 }

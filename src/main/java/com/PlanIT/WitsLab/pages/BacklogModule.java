@@ -84,19 +84,19 @@ public class BacklogModule extends BacklogModuleOR{
 
 	}
 
-	public void inputStartDate(String inputStartDate) {
+	public void inputDueDate(String inputStartDate) {
 
-		da.sendKeysWithoutClearingExistingData(startDate, inputStartDate,"Start Date");
-		da.sendKeys(startDate, Keys.ENTER);
+		da.sendKeysWithoutClearingExistingData(dueDate, inputStartDate,"Start Date");
+		da.sendKeys(dueDate, Keys.ENTER);
 
 	}
 
-	public void inputEndDate(String inputEndDate) {
-
-		da.clickElement(endDate, "End Date");
-		da.sendKeysWithoutClearingExistingData(endDate, inputEndDate,"End Date");
-		da.sendKeys(endDate, Keys.ENTER);
-	}
+//	public void inputEndDate(String inputEndDate) {
+//
+//		da.clickElement(endDate, "End Date");
+//		da.sendKeysWithoutClearingExistingData(endDate, inputEndDate,"End Date");
+//		da.sendKeys(endDate, Keys.ENTER);
+//	}
 	public void inputStoryPoint(String inputStoryPoint) {
 
 		da.sendKeys(storyPoint, inputStoryPoint,"Story Point");
@@ -307,12 +307,12 @@ public class BacklogModule extends BacklogModuleOR{
 
 
 	public void openFirstTicket() {
-		if(openFirstTicket.isDisplayed()) {
-			da.clickElement(openFirstTicket, "First Ticket");
+		if(openFirstTickets.isDisplayed()) {
+			da.clickElement(openFirstTickets, "First Ticket");
 		}else {
 		da.clickElement(backlogLane, "Backlog Lane");
-		da.webDriverWait(openFirstTicket);
-		da.clickElement(openFirstTicket, "First Ticket");
+		da.webDriverWait(openFirstTickets);
+		da.clickElement(openFirstTickets, "First Ticket");
 		}
 	}
 
