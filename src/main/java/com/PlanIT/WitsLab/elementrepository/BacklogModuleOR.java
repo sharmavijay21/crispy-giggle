@@ -42,7 +42,7 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='SubTask']")
 	public WebElement subTask;
 
-	@FindBy(xpath = "//div[text()='UserStory']")
+	@FindBy(xpath = "//div[text()='User Story']")
 	public WebElement userStory;
 
 	@FindBy(xpath = "(//div[text()='Critical'])[last()]")
@@ -58,10 +58,10 @@ public class BacklogModuleOR {
 	public WebElement low;
 
 	@FindBy(xpath = "(//input[@placeholder='Select date'])[1]")
-	protected WebElement startDate;
+	protected WebElement dueDate;
 
-	@FindBy(xpath = "(//input[@placeholder='Select date'])[2]")
-	protected WebElement endDate;
+//	@FindBy(xpath = "(//input[@placeholder='Select date'])[2]")
+//	protected WebElement endDate;
 
 	@FindBy(xpath = "//div[text()='End Date']")
 	protected WebElement endDateText;
@@ -126,7 +126,7 @@ public class BacklogModuleOR {
 
 
 	@FindBy(xpath = "//h3[text()='Backlog']")
-	protected WebElement backlogLane;
+	public WebElement backlogLane;
 
 
 
@@ -138,7 +138,7 @@ public class BacklogModuleOR {
 
 
 	@FindBy(xpath = "(//div[contains(@class,'BacklogTable__')]//div//div)[4]")
-	protected WebElement openFirstTicket;
+	protected WebElement openFirstTickets;
 
 	@FindBy(xpath = "//span[contains(@class,'ant-select-selection')]")
 	protected WebElement sprintDuration;

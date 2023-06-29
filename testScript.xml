@@ -13,24 +13,24 @@
 
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
-          <include name="verifyCreateNewProject"/>
+            <include name="verifyCreateNewProject"/>
            <include name="verifyCreateTeamBoard"/>  
           <include name="verifyAddMemberFromProjectSetting"/>
         </methods>
 
-</class>
+</class>  
 
-
+ 
 
 <class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
 	
 	<methods>
-		<include name="verifyMoveAllIssueFromBacklogToSprint"/>
+	 	<include name="verifyMoveAllIssueFromBacklogToSprint"/>  
            <include name="verifyCreateIssueFromBacklogFunctionality"/>
            <include name="verifyCreateSprintFunctionality"/>
-          <include name="verifyAddMemberFunctionalityFromBoard"/>
+          <include name="verifyAddMemberFunctionalityFromBoard"/>  
            <include name="verifySprintActivation"/>
-          <include name="verifyCreateIssueFromBoard"/>
+           <include name="verifyCreateIssueFromBoard"/>  
           <include name="moveTicketFromOneBoardToAnother"/>
           <include name="verifyCloneIssueFunctionality"/> 
         </methods>
@@ -52,6 +52,7 @@
         </methods>
         
 </class>  
+
 
        
  </classes>

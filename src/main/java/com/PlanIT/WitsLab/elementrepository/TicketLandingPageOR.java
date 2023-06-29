@@ -52,15 +52,11 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//h2[text()='Update Story Points']")
 	protected WebElement updateStoryPointText;
 
-
-
 	@FindBy(xpath = "//span[text()='Member']")
 	protected WebElement updateMember;
 
-
 	@FindBy(xpath = "//span[@class='ant-select-selection-item']")
 	public WebElement ticketStage;
-
 
 	@FindBy(xpath = "//div[contains(@class,'ant-select-dropdown')]//div[@title='TODO']")
 	protected WebElement todoStage;

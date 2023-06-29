@@ -54,7 +54,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			Assert.assertEquals(updatedAssignee, "Sunil");
 
 			ticketLandingPage.selectUpdateIssueType("Bug");
-			
+
 			//			System.out.println(das.getAttribute(das.getWebDriver().findElement(By.xpath("//div[contains(@class,'TicketModal__SvgWrapper')]")), "title"));
 			;
 			String updatedType=ticketLandingPage.getTextUpdatedIssueType();
@@ -148,12 +148,12 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 
 	@Test(enabled = true)
 	public void verifyAddNewLane() {
-		
+
 		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
 
 
 		try {
-			
+
 			WebElement newCreatedProject=projectBoard.createNewProject();
 			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
@@ -204,22 +204,22 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			TicketLandingPage tlp=new TicketLandingPage(das);
 
 			projectBoard.openFirstProject();
-			
+
 			WebElement teamBoard=projectBoard.createNewBoard();
 			das.clickElement(teamBoard, teamBoard.getText());
-			
+
 			BacklogModule backlog=new BacklogModule(das);
-			
+
 			WebElement createdIssue=backlog.createNewIssueFromBacklog();
 
 			das.clickElement(createdIssue, createdIssue.getText());
-			
-//			backlog.openFirstTicket();
+
+			//			backlog.openFirstTicket();
 
 			backlog.clickOnTicketKebabMenu();  
 
 			tlp.ticketDelete();
-			
+
 			String nobacklogDataMessage=backlog.getTextNoBacklogData();
 
 			das.uiText_validation(nobacklogDataMessage, "(0 Issue)");
@@ -235,85 +235,85 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 		}
 
 	}
-	
-	@Test(enabled =true )
-    public void verifyLinkIssueFunctionalityFromTicket() {
-        
-		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-       
-        try {
 
-            projectBoard.openFirstProject();
-            WebElement firstBoard=projectBoard.createNewBoard();
-            das.clickElement(firstBoard, firstBoard.getText());
-        
-            BacklogModule backlog=new BacklogModule(das);
-           WebElement firstIssue= backlog.createNewIssueFromBacklog();
-            backlog.createNewIssueFromBacklog();
-            
-//            das.clickElement(firstIssue, firstIssue.getText());
-            backlog.openFirstTicket();
-            
-            TicketLandingPage tlp=new TicketLandingPage(das);
-            tlp.clickOnLinkIssueButton();
-           String linkedIssueConfirmationMessage= tlp.selectIssueForLink();
-          
-           das.uiText_validation(linkedIssueConfirmationMessage, "link Updated Successfully");
-           Assert.assertEquals(linkedIssueConfirmationMessage, "link Updated Successfully");
-           
-            
-        }catch (Exception e) {
-        	projectBoard.popupClose();
-        	System.out.println(e.getMessage());
-            das.etest.log(Status.FAIL, "link is not Updated Successfully");
-            Assert.assertEquals(true, false);            
-        }
-        }
+	@Test(enabled =true )
+	public void verifyLinkIssueFunctionalityFromTicket() {
+
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+
+		try {
+
+			projectBoard.openFirstProject();
+			WebElement firstBoard=projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
+
+			BacklogModule backlog=new BacklogModule(das);
+			WebElement firstIssue= backlog.createNewIssueFromBacklog();
+			backlog.createNewIssueFromBacklog();
+
+			//            das.clickElement(firstIssue, firstIssue.getText());
+			backlog.openFirstTicket();
+
+			TicketLandingPage tlp=new TicketLandingPage(das);
+			tlp.clickOnLinkIssueButton();
+			String linkedIssueConfirmationMessage= tlp.selectIssueForLink();
+
+			das.uiText_validation(linkedIssueConfirmationMessage, "link Updated Successfully");
+			Assert.assertEquals(linkedIssueConfirmationMessage, "link Updated Successfully");
+
+
+		}catch (Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "link is not Updated Successfully");
+			Assert.assertEquals(true, false);            
+		}
+	}
 
 	@Test
 	public void verifyTicketDescriptionAndComment() {
-		
-		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
-	       
-        try {
 
-            projectBoard.openFirstProject();
-            
-            
-            WebElement firstBoard=projectBoard.createNewBoard();
-            das.clickElement(firstBoard, firstBoard.getText());
-        
-            BacklogModule backlog=new BacklogModule(das);
-          
-            backlog.createNewIssueFromBacklog();
-          
-            backlog.openFirstTicket();
-            
-            TicketLandingPage tlp=new TicketLandingPage(das);
-            
-           String actualDescription= tlp.addDescription("Dashboard should be visible");
-           
-           
-           
-           das.uiText_validation(actualDescription, "Dashboard should be visible");
-           Assert.assertEquals(actualDescription, "Dashboard should be visible");
-           
-           
-           String actualComment=tlp.addComment("fixed");
-           
-           projectBoard.popupClose();
-           
-           das.uiText_validation(actualComment, "fixed");
-           Assert.assertEquals(actualComment, "fixed");
-           
-                    
-	}catch (Exception e) {
-		
-    	projectBoard.popupClose();
-    	System.out.println(e.getMessage());
-        das.etest.log(Status.FAIL, "Discription and comment not added");
-        Assert.assertEquals(true, false,"Discription and comment not added");            
-    }
-        }
-	
+		ProjectAndBoardDashboard projectBoard=new ProjectAndBoardDashboard(das);
+
+		try {
+
+			projectBoard.openFirstProject();
+
+
+			WebElement firstBoard=projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
+
+			BacklogModule backlog=new BacklogModule(das);
+
+			backlog.createNewIssueFromBacklog();
+
+			backlog.openFirstTicket();
+
+			TicketLandingPage tlp=new TicketLandingPage(das);
+
+			String actualDescription= tlp.addDescription("Dashboard should be visible");
+
+
+
+			das.uiText_validation(actualDescription, "Dashboard should be visible");
+			Assert.assertEquals(actualDescription, "Dashboard should be visible");
+
+
+			String actualComment=tlp.addComment("fixed");
+
+			projectBoard.popupClose();
+
+			das.uiText_validation(actualComment, "fixed");
+			Assert.assertEquals(actualComment, "fixed");
+
+
+		}catch (Exception e) {
+
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Discription and comment not added");
+			Assert.assertEquals(true, false,"Discription and comment not added");            
+		}
+	}
+
 }
