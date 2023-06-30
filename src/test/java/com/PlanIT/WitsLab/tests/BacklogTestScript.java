@@ -286,7 +286,7 @@ public class BacklogTestScript extends BaseTestSuite{
 
 			String issueName=    backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
 			backlog.clickOnCreateButton();
-			das.clickElement(backlog.backlogLane, "Backlog Lane");
+//			das.clickElement(backlog.backlogLane, "Backlog Lane");
 			backlog.openFirstTicket();
 			backlog.clickOnTicketKebabMenu();
 			backlog.clickOnMoveToBoard(secondBoardName);

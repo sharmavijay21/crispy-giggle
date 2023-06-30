@@ -54,6 +54,7 @@ public class TicketLandingPage extends TicketLandingPageOR{
 
 	public void updateAssignee(String text) {
 		da.clickElement(updateMember, "Update Member");
+		da.inputData(updateMember, "Sunil", "Update Member");
 
 		da.getWebDriver().findElement(By.xpath("//div[@title='"+text+"']")).click();
 	}
