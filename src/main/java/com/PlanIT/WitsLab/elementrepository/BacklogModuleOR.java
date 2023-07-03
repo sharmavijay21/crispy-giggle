@@ -72,7 +72,7 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//button[text()='Create']")
 	protected WebElement createButton;
 
-	@FindBy(xpath = "//p[text()='Create Sprint']")
+	@FindBy(xpath = "//div[text()='Create Sprint']")
 	protected WebElement createSprintBtn;
 
 	@FindBy(xpath = "//textarea[@name='sprintGoal']")
@@ -84,10 +84,12 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Sprint created successfully']")
 	protected WebElement sprintConfirmationmessage;
 
-	@FindBy(xpath = "//p[text()='Add Members']")
+	@FindBy(xpath = "(//div[text()='Add Members'])[1]")
 	protected WebElement addMembersBtn;
 
-	@FindBy(xpath = "(//p[text()='Add Members'])[last()]")
+	
+	
+	@FindBy(xpath = "(//div[text()='Add Members'])[last()]")
 	protected WebElement addMembersBtnOnBoard;
 
 

@@ -307,13 +307,13 @@ public class BacklogModule extends BacklogModuleOR{
 
 
 	public void openFirstTicket() {
-		if(openFirstTickets.isDisplayed()) {
-			da.clickElement(openFirstTickets, "First Ticket");
-		}else {
+//		if(openFirstTickets.isDisplayed()) {
+//			da.clickElement(openFirstTickets, "First Ticket");
+//		}else {
 		da.clickElement(backlogLane, "Backlog Lane");
 		da.webDriverWait(openFirstTickets);
 		da.clickElement(openFirstTickets, "First Ticket");
-		}
+//		}
 	}
 
 	public void updatePriority(String priority) {

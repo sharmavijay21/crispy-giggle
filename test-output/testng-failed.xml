@@ -6,15 +6,42 @@
     <classes>
       <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
         <methods>
-          <include name="moveTicketFromOneBoardToAnother"/>
           <include name="logout"/>
-          <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
+          <include name="generateReport"/>
+          <include name="verifySprintActivation"/>
           <include name="setUp"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- com.PlanIT.WitsLab.tests.BacklogTestScript -->
+      <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
+        <methods>
+          <include name="logout"/>
+          <include name="afterTestThreadContextCleanup"/>
+          <include name="generateReport"/>
+          <include name="setUp"/>
+          <include name="verifyAddMemberFromProjectSetting"/>
+          <include name="verifyloginPage"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript -->
+      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
+        <methods>
+          <include name="verifyChangeTicketStageFromDropdown"/>
+          <include name="logout"/>
+          <include name="afterTestThreadContextCleanup"/>
+          <include name="generateReport"/>
+          <include name="verifyLinkIssueFunctionalityFromTicket"/>
+          <include name="setUp"/>
+          <include name="verifyAddNewLane"/>
+          <include name="verifyUpdateDetailsOfTickets"/>
+          <include name="verifyTicketDeletionFromTicket"/>
+          <include name="verifyTicketDescriptionAndComment"/>
+          <include name="verifyloginPage"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
     </classes>
   </test> <!-- PlanIT Testcases(failed) -->
 </suite> <!-- Failed suite [Wil_Plannet] -->
