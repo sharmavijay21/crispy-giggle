@@ -15,7 +15,7 @@
 <methods>
             <include name="verifyCreateNewProject"/>
            <include name="verifyCreateTeamBoard"/>  
-          <include name="verifyAddMemberFromProjectSetting"/>
+           <include name="verifyAddMemberFromProjectSetting"/>
         </methods>
 
 </class>  

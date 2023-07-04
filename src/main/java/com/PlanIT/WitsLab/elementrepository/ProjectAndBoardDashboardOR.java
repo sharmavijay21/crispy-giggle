@@ -20,7 +20,7 @@ public class ProjectAndBoardDashboardOR {
 	@FindBy(xpath = "//textarea[@name='description']")
 	protected WebElement description;
 
-	@FindBy(xpath = "//div[text()='Workspace already exists with this name']")
+	@FindBy(xpath = "//div[text()='Workspace name has been taken by someone else']")
 	protected WebElement projectExists;
 
 	//	@FindBy(xpath = "//div[text()='Workspace already created with this name.']")

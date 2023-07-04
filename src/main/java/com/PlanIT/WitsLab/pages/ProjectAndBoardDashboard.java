@@ -70,7 +70,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		try {
 
 			String str=da.getText(projectExists);
-			if(str.equalsIgnoreCase("Workspace already exists with this name")) {
+			if(str.equalsIgnoreCase("Workspace name has been taken by someone else")) {
 				da.etest.log(Status.INFO,str);
 				//				da.clickElement(projectCancelButton, "Cancel Button");
 				return true;
