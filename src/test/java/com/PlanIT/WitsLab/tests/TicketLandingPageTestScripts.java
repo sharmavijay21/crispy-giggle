@@ -58,8 +58,8 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			//			System.out.println(das.getAttribute(das.getWebDriver().findElement(By.xpath("//div[contains(@class,'TicketModal__SvgWrapper')]")), "title"));
 			;
 			String updatedType=ticketLandingPage.getTextUpdatedIssueType();
-			das.uiText_validation(updatedType, "type Updated Successfully");
-			Assert.assertEquals(updatedType, "type Updated Successfully");
+			das.uiText_validation(updatedType, "Type Updated Successfully");
+			Assert.assertEquals(updatedType, "Type Updated Successfully");
 
 			ticketLandingPage.inputUpdatedStoryPoint("9");
 			ticketLandingPage.clickOnStoryPointText();
@@ -258,14 +258,14 @@ public class TicketLandingPageTestScripts extends BaseTestSuite{
 			tlp.clickOnLinkIssueButton();
 			String linkedIssueConfirmationMessage= tlp.selectIssueForLink();
 
-			das.uiText_validation(linkedIssueConfirmationMessage, "link Updated Successfully");
-			Assert.assertEquals(linkedIssueConfirmationMessage, "link Updated Successfully");
+			das.uiText_validation(linkedIssueConfirmationMessage, "Link Updated Successfully");
+			Assert.assertEquals(linkedIssueConfirmationMessage, "Link Updated Successfully");
 
 
 		}catch (Exception e) {
 			projectBoard.popupClose();
 			System.out.println(e.getMessage());
-			das.etest.log(Status.FAIL, "link is not Updated Successfully");
+			das.etest.log(Status.FAIL, "Link is not Updated Successfully");
 			Assert.assertEquals(true, false);            
 		}
 	}

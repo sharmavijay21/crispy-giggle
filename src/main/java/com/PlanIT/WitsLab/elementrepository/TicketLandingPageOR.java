@@ -15,7 +15,7 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//span[text()='Priority']")
 	protected WebElement updatePriority;
 
-	@FindBy(xpath = "(//div[contains(@class,'TicketModal__UserDetails')]//h2[contains(@class,'TicketModal__Heading')])[5]")
+	@FindBy(xpath = "//div[contains(@class,'ant-ribbon ant-ribbon-placement')]//span")
 	protected WebElement priorityText;
 
 
@@ -37,7 +37,7 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//div[contains(@class,'TicketModal__RoleManagement')]//div")
 	protected WebElement updatedissueTypeText;
 
-	@FindBy(xpath = "//div[@role='alert']//div[text()='type Updated Successfully']")
+	@FindBy(xpath = "//div[@role='alert']//div[text()='Type Updated Successfully']")
 	protected WebElement updatedissueTypeAlertMessage;
 
 	@FindBy(xpath = "//div[@class='quill ']//div[2]")
@@ -85,7 +85,7 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//button[text()='Link']")
 	protected WebElement linkIssueSubmitButton;
 	
-	@FindBy(xpath = "//div[text()='link Updated Successfully']")
+	@FindBy(xpath = "//div[text()='Link Updated Successfully']")
 	public WebElement linkIssueConfirmationMessage;
 
 	@FindBy(xpath = "//div[contains(@class,'TicketModal__Desc-sc')]")
