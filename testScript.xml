@@ -9,7 +9,7 @@
 
 <classes >
 	
-	 
+	
 
 <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 <methods>
@@ -21,17 +21,18 @@
 </class>  
 
  
+ 
 
 <class name="com.PlanIT.WitsLab.tests.BacklogTestScript"> 
 	
 	 
 	<methods>
-	 	   <include name="verifyMoveAllIssueFromBacklogToSprint"/>  
+	 	    <include name="verifyMoveAllIssueFromBacklogToSprint"/>  
             <include name="verifyCreateIssueFromBacklogFunctionality"/>
-           <include name="verifyCreateSprintFunctionality"/>
-          <include name="verifyAddMemberFunctionalityFromBoard"/>  
+            <include name="verifyCreateSprintFunctionality"/>
+          <include name="verifyAddMemberFunctionalityFromBoard"/> 
            <include name="verifySprintActivation"/>
-            <include name="verifyCreateIssueFromBoard"/>  
+           <include name="verifyCreateIssueFromBoard"/>  
           <include name="moveTicketFromOneBoardToAnother"/>
             <include name="verifyCloneIssueFunctionality"/> 
         </methods>    
@@ -44,12 +45,12 @@
 	
 	<methods>
 		  
-         <include name="verifyUpdateDetailsOfTickets"/>
-           <include name="verifyChangeTicketStageFromDropdown"/>
+          <include name="verifyUpdateDetailsOfTickets"/>
+         <include name="verifyChangeTicketStageFromDropdown"/>
           <include name="verifyAddNewLane"/>
-          <include name="verifyTicketDeletionFromTicket"/>
+          <include name="verifyTicketDeletionFromTicket"/> 
           <include name="verifyLinkIssueFunctionalityFromTicket"/>   
-          <include name="verifyTicketDescriptionAndComment"/> 
+            <include name="verifyTicketDescriptionAndComment"/> 
            
         </methods>
         
