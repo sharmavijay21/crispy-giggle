@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Wil_Plannet]" guice-stage="DEVELOPMENT" verbose="2">
-  <test thread-count="5" name="PlanIT Testcases(failed)" verbose="2">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
+      <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
         <methods>
+          <include name="moveTicketFromOneBoardToAnother"/>
+          <include name="verifyCreateIssueFromBoard"/>
           <include name="logout"/>
-          <include name="generateReport"/>
+          <include name="verifyMoveAllIssueFromBacklogToSprint"/>
           <include name="afterTestThreadContextCleanup"/>
-          <include name="verifyLinkIssueFunctionalityFromTicket"/>
           <include name="setUp"/>
+          <include name="verifyAddMemberFunctionalityFromBoard"/>
+          <include name="verifyCloneIssueFunctionality"/>
+          <include name="generateReport"/>
+          <include name="verifyCreateSprintFunctionality"/>
+          <include name="verifySprintActivation"/>
+          <include name="verifyCreateIssueFromBacklogFunctionality"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
-      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
+      </class> <!-- com.PlanIT.WitsLab.tests.BacklogTestScript -->
     </classes>
-  </test> <!-- PlanIT Testcases(failed) -->
-</suite> <!-- Failed suite [Wil_Plannet] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

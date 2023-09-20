@@ -141,6 +141,8 @@ public class DriverActions{
 			driver = getFirefoxDriver();
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
+//			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Gurcharan Singh\\chromedriver\\chromedriver.exe");
+////		WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			
