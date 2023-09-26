@@ -1,7 +1,9 @@
 package com.PlanIT.WitsLab.pages;
 
+import java.time.LocalDate;
 import java.util.List;
 
+import org.apache.bcel.generic.DASTORE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -11,10 +13,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.server.handler.GetTagName;
 import org.openqa.selenium.support.PageFactory;
 //import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.PlanIT.WitsLab.elementrepository.BacklogModuleOR;
 import com.PlanIT.WitsLab.ui.selenium.DriverActions;
 import com.aventstack.extentreports.Status;
+import java.text.SimpleDateFormat;
+
 
 public class BacklogModule extends BacklogModuleOR{
 
@@ -404,7 +409,7 @@ public class BacklogModule extends BacklogModuleOR{
 	}
 
 	public void moveToKebabMenuInBacklog() {
-		da.mouseOver(backlogKebabMenu);
+		da.clickElement(backlogKebabMenu,"Click on Kebab Menu");
 	}
 	public void clickOnMoveToSprintButton() {
 		da.clickElement(moveToSprint,"Move To Sprint");
@@ -418,6 +423,9 @@ public class BacklogModule extends BacklogModuleOR{
 	}
 	public String textOfTicketStage() {
 		return da.getText(stageOfTicket);
+	}
+	public boolean isTicketStageVisible() {
+		return stageOfTicket.isDisplayed();
 	}
 
 	public WebElement createNewIssueFromBacklog() {
@@ -442,7 +450,7 @@ public class BacklogModule extends BacklogModuleOR{
 		//
 		//		//		inputStoryPoint("7");
 		//
-		//		inputDescription("Discription should be visible");
+				inputDescription("Discription should be visible");
 
 		clickOnCreateButton();
 
@@ -532,4 +540,27 @@ public class BacklogModule extends BacklogModuleOR{
 		this.da=das;
 		PageFactory.initElements(da.getWebDriver(), this);
 	}
+	
+	public void chooseAttachment() {
+
+		da.sendKeys(choosefile,System.getProperty("user.dir")+"/src/main/resources/Attachments/wilImage.png","choosefile");
+	}
+	
+	public void enterCurrentDate() {
+		String monthValue=null;
+		WebElement click= da.getWebDriver().findElement(By.xpath("//input[@placeholder=\"Select date\"]")); 
+		click.click();
+		LocalDate currentdate= LocalDate.now();
+		int year = currentdate.getYear();
+		int month = currentdate.getMonthValue();
+		if(month<10)
+			monthValue="0"+month;
+		int day = currentdate.getDayOfMonth();
+		System.out.println("//td[@title='"+year+"-"+month+"-"+day+"']");
+		WebElement date= da.getWebDriver().findElement(By.xpath("//td[@title='"+year+"-"+monthValue+"-"+day+"']"));
+		date.click();
+		
+	}
+	
+	
 }

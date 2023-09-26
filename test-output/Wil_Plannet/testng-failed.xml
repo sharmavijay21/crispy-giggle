@@ -4,17 +4,52 @@
   <test thread-count="5" name="PlanIT Testcases(failed)" verbose="2">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
+        <methods>
+          <include name="moveTicketFromOneBoardToAnother"/>
+          <include name="verifyCreateIssueFromBoard"/>
+          <include name="logout"/>
+          <include name="verifyMoveAllIssueFromBacklogToSprint"/>
+          <include name="afterTestThreadContextCleanup"/>
+          <include name="setUp"/>
+          <include name="verifyAddMemberFunctionalityFromBoard"/>
+          <include name="verifyCloneIssueFunctionality"/>
+          <include name="generateReport"/>
+          <include name="verifyCreateSprintFunctionality"/>
+          <include name="verifySprintActivation"/>
+          <include name="verifyCreateIssueFromBacklogFunctionality"/>
+          <include name="verifyloginPage"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- com.PlanIT.WitsLab.tests.BacklogTestScript -->
       <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
         <methods>
+          <include name="verifyChangeTicketStageFromDropdown"/>
           <include name="logout"/>
-          <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
+          <include name="generateReport"/>
           <include name="verifyLinkIssueFunctionalityFromTicket"/>
           <include name="setUp"/>
+          <include name="verifyAddNewLane"/>
+          <include name="verifyUpdateDetailsOfTickets"/>
+          <include name="verifyTicketDeletionFromTicket"/>
+          <include name="verifyTicketDescriptionAndComment"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
       </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
+      <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
+        <methods>
+          <include name="verifyCreateTeamBoard"/>
+          <include name="logout"/>
+          <include name="afterTestThreadContextCleanup"/>
+          <include name="generateReport"/>
+          <include name="setUp"/>
+          <include name="verifyAddMemberFromProjectSetting"/>
+          <include name="verifyloginPage"/>
+          <include name="createObject"/>
+        </methods>
+      </class> <!-- com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript -->
     </classes>
   </test> <!-- PlanIT Testcases(failed) -->
 </suite> <!-- Failed suite [Wil_Plannet] -->

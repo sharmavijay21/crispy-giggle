@@ -5,17 +5,10 @@
     <classes>
       <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
         <methods>
-          <include name="moveTicketFromOneBoardToAnother"/>
-          <include name="verifyCreateIssueFromBoard"/>
           <include name="logout"/>
-          <include name="verifyMoveAllIssueFromBacklogToSprint"/>
+          <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
-          <include name="verifyAddMemberFunctionalityFromBoard"/>
-          <include name="verifyCloneIssueFunctionality"/>
-          <include name="generateReport"/>
-          <include name="verifyCreateSprintFunctionality"/>
-          <include name="verifySprintActivation"/>
           <include name="verifyCreateIssueFromBacklogFunctionality"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
