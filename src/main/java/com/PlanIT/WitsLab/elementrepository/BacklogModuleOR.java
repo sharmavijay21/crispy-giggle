@@ -123,7 +123,7 @@ public class BacklogModuleOR {
 	protected WebElement sprintActivateConfirmationmessage;
 
 
-	@FindBy(xpath = "(//div[contains(@class,'ant-tabs-tab-btn')])[2]//p[text()=' Board']")
+	@FindBy(xpath ="//div[text()='Board']") // "(//div[contains(@class,'ant-tabs-tab-btn')])[2]//p[text()=' Board']")
 	protected WebElement boardModule;
 
 
@@ -216,7 +216,7 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//button[text()='Move']")
 	public WebElement backlogMoveButton;
 
-	@FindBy(xpath = "(//div[@class='ant-select css-yp8pcc ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
+	@FindBy(xpath = "(//span[@class=\"ant-select-selection-item\"])[2]")//(//div[@class='ant-select css-yp8pcc ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
 	public WebElement sprintFieldForMoveAllTicketFromBacklog;
 
 	@FindBy(xpath = "//div[@class='ant-select-item-option-content']")
@@ -234,6 +234,8 @@ public class BacklogModuleOR {
 	@FindBy (xpath="//input[@type='file']")
 	public WebElement choosefile;
 	
+	@FindBy(xpath = "//div[text()='Members already exist in the project']")
+	public WebElement MemberAlreadyExistConfirmationmessage;
 
 
 }

@@ -22,6 +22,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByCssSelector;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -1979,4 +1980,21 @@ public class DriverActions{
 		//				.pollingEvery(Duration.ofSeconds(POOLING_WAIT_TIME))          
 		//				.ignoring(NoSuchElementException.class);
 	}
+	
+	public void clearDataFromInputBox(WebElement element) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		WebElement element = driver.findElement(By.cssSelector(".DraftEditor-root > .DraftEditor-editorContainer"));
+		js.executeScript("arguments[0].innerHTML = '';", element);
+		
+
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
 }

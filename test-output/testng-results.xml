@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="7" total="8" passed="1" failed="0" skipped="0">
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-26T13:25:38Z" name="Default suite" finished-at="2023-09-26T13:27:50Z" duration-ms="132359">
+  <suite started-at="2023-10-13T11:17:15Z" name="Default suite" finished-at="2023-10-13T11:19:28Z" duration-ms="132753">
     <groups>
     </groups>
-    <test started-at="2023-09-26T13:25:38Z" name="Default test" finished-at="2023-09-26T13:27:50Z" duration-ms="132359">
-      <class name="com.PlanIT.WitsLab.tests.BacklogTestScript">
-        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:25:38Z" name="createObject" finished-at="2023-09-26T13:25:38Z" duration-ms="115" status="PASS">
+    <test started-at="2023-10-13T11:17:15Z" name="Default test" finished-at="2023-10-13T11:19:28Z" duration-ms="132753">
+      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
+        <test-method is-config="true" signature="createObject()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:17:15Z" name="createObject" finished-at="2023-10-13T11:17:15Z" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createObject -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:25:38Z" name="setUp" finished-at="2023-09-26T13:25:40Z" duration-ms="1866" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:17:15Z" name="setUp" finished-at="2023-10-13T11:17:19Z" duration-ms="3231" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,46 +22,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:25:40Z" name="verifyloginPage" finished-at="2023-09-26T13:26:06Z" duration-ms="26208" status="PASS">
+        <test-method is-config="true" signature="verifyloginPage(java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:17:19Z" name="verifyloginPage" finished-at="2023-10-13T11:17:44Z" duration-ms="25953" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.PlanIT.WitsLab.tests.BacklogTestScript.verifyCreateIssueFromBacklogFunctionality()]]>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDescriptionAndComment()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyloginPage -->
-        <test-method signature="verifyCreateIssueFromBacklogFunctionality()[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:26:06Z" name="verifyCreateIssueFromBacklogFunctionality" finished-at="2023-09-26T13:27:45Z" duration-ms="99319" status="PASS">
+        <test-method signature="verifyTicketDescriptionAndComment()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:17:44Z" name="verifyTicketDescriptionAndComment" finished-at="2023-10-13T11:19:23Z" duration-ms="98741" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCreateIssueFromBacklogFunctionality -->
-        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:27:45Z" name="logout" finished-at="2023-09-26T13:27:50Z" duration-ms="4694" status="PASS">
+        </test-method> <!-- verifyTicketDescriptionAndComment -->
+        <test-method is-config="true" signature="logout(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:19:23Z" name="logout" finished-at="2023-10-13T11:19:28Z" duration-ms="4542" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCreateIssueFromBacklogFunctionality status=SUCCESS method=BacklogTestScript.verifyCreateIssueFromBacklogFunctionality()[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTicketDescriptionAndComment status=SUCCESS method=TicketLandingPageTestScripts.verifyTicketDescriptionAndComment()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6] output={null}]]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.PlanIT.WitsLab.tests.BacklogTestScript.verifyCreateIssueFromBacklogFunctionality()]]>
+                <![CDATA[public void com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts.verifyTicketDescriptionAndComment()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:27:50Z" name="afterTestThreadContextCleanup" finished-at="2023-09-26T13:27:50Z" duration-ms="254" status="PASS">
+        <test-method is-config="true" signature="afterTestThreadContextCleanup()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:19:28Z" name="afterTestThreadContextCleanup" finished-at="2023-10-13T11:19:28Z" duration-ms="255" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestThreadContextCleanup -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.BacklogTestScript@51a06cbe]" started-at="2023-09-26T13:27:50Z" name="generateReport" finished-at="2023-09-26T13:27:50Z" duration-ms="36" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts@f5c79a6]" started-at="2023-10-13T11:19:28Z" name="generateReport" finished-at="2023-10-13T11:19:28Z" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-      </class> <!-- com.PlanIT.WitsLab.tests.BacklogTestScript -->
+      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

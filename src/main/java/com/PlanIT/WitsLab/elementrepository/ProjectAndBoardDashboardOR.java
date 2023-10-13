@@ -126,8 +126,8 @@ public class ProjectAndBoardDashboardOR {
 	@FindBy(xpath = "//button[text()='Cancel']")
 	public WebElement cancelButon;
 
-	@FindBy(xpath = "//div[text()='Team Board Settings']")
-	protected WebElement teamBoardSetting;
+	@FindBy(xpath = "//div[text()='Team Boards']")
+	protected WebElement teamBoard;
 
 	@FindBy(xpath = "//div[text()='+ Add New List']")
 	protected WebElement addNewList;
@@ -140,6 +140,10 @@ public class ProjectAndBoardDashboardOR {
 
 	@FindBy(xpath = "//div[text()='Boards']")
 	protected WebElement boardModule;
+	
+	@FindBy(xpath="//button[@class='ReportBackButton']")
+	protected WebElement backToProjectButton;
+	
 
 	
 

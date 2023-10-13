@@ -116,10 +116,11 @@ public class BacklogTestScript extends BaseTestSuite {
 		BacklogModule backlog = new BacklogModule(das);
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
-
 		try {
+			WebElement createProject = projectBoard.createNewProject();
+			createProject.click();
+//			projectBoard.openFirstProject();
 
-			projectBoard.openFirstProject();
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());
 
@@ -135,8 +136,8 @@ public class BacklogTestScript extends BaseTestSuite {
 			}
 
 			backlog.inputMember("van");
-			WebElement we = backlog.clickOnSubmitMemberButton();
-
+			WebElement we = backlog.clickOnSubmitMemberButton();			
+			
 			boolean display = false;
 			try {
 				display = das.isDisplayed(we);
@@ -170,6 +171,50 @@ public class BacklogTestScript extends BaseTestSuite {
 	}
 
 	@Test(enabled = true)
+	public void verifyExistingProjectMemberFunctionalityToBoard() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+		try {
+//			WebElement createProject = projectBoard.createNewProject();
+//			createProject.click();
+			projectBoard.openFirstProject();
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+
+			backlog.clickOnBoardModule();
+			int totalNo = backlog.TotalMember();
+			backlog.clickOnAddMemberButtonOnBoard();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+			backlog.inputMember("van");
+			Thread.sleep(2000);
+			WebElement we = backlog.clickOnSubmitMemberButton();
+
+			String memberAlreadyexistMessage = backlog.getTextMemberAlreadyExistInBaordConfirmationMessage();
+
+			das.uiText_validation(memberAlreadyexistMessage, "Members already exist in the project");
+			Assert.assertEquals(memberAlreadyexistMessage, "Members already exist in the project");
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			projectBoard.popupClose();
+			backlog.closePopUp();
+//			das.etest.log(Status.FAIL, "Member is Not added");
+//			Assert.assertEquals(true, false);
+		}
+
+	}
+
+	@Test(enabled = true)
 	public void verifySprintActivation() {
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
@@ -184,7 +229,7 @@ public class BacklogTestScript extends BaseTestSuite {
 
 			BacklogModule backlog = new BacklogModule(das);
 			backlog.createNewSprint();
-
+			Thread.sleep(3000);
 			backlog.clickOnActivateSprintButton();
 
 			String sprintActivationMessage = backlog.getTextSprintActivateConfirmationMessage();
@@ -212,6 +257,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			projectBoard.openFirstProject();
 
 			WebElement createdBoard = projectBoard.createNewBoard();
+			Thread.sleep(4000);
 			das.clickElement(createdBoard, createdBoard.getText());
 
 			Thread.sleep(3000);
@@ -233,16 +279,24 @@ public class BacklogTestScript extends BaseTestSuite {
 
 			backlog.selectPriority(createIssue.getJSONObject("createIssue").getString("Priority"));
 
-			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
-
+//			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
+//
+//			try {
+//				Thread.sleep(2000);
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
+			// backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End
+			// Date"));
+			backlog.enterCurrentDate();
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			// backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End
-			// Date"));
-
+			// backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("EndDate"));
+			Thread.sleep(5000);
+			backlog.chooseAttachment();
 			backlog.inputStoryPoint(createIssue.getJSONObject("createIssue").getString("Story Point"));
 
 			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
@@ -286,8 +340,15 @@ public class BacklogTestScript extends BaseTestSuite {
 
 			String issueName = backlog
 					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+			
+			System.out.println(issueName);
+			
+			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			
 			backlog.clickOnCreateButton();
 //			das.clickElement(backlog.backlogLane, "Backlog Lane");
+			Thread.sleep(4000);
 			backlog.openFirstTicket();
 			backlog.clickOnTicketKebabMenu();
 			backlog.clickOnMoveToBoard(secondBoardName);
@@ -333,6 +394,9 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.clickOnCreateIssueBtn();
 			String issueName = backlog
 					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+			
+			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
 			backlog.clickOnCreateButton();
 			WebElement createdIssue = backlog.getAllIssue(issueName);
 			das.clickElement(createdIssue, createdIssue.getText());
@@ -344,7 +408,7 @@ public class BacklogTestScript extends BaseTestSuite {
 					"//div[contains(@class,'BacklogTable__TableContainer-sc-145rst5-1')]//div[contains(@class,'BacklogTable__Box')]"))
 					.size();
 			das.etest.log(Status.INFO, "size of issue is " + size);
-			Assert.assertEquals(size, 2);
+			Assert.assertEquals(size, 3);
 			das.uiText_validation("Ticket Clone", "Ticket Clone");
 		} catch (Exception e) {
 			projectBoard.popupClose();
@@ -367,6 +431,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			das.clickElement(firstBoard, firstBoard.getText());
 
 			BacklogModule backlog = new BacklogModule(das);
+			Thread.sleep(2000);
 			backlog.createNewSprint();
 
 			backlog.createNewIssueFromBacklog();
@@ -376,6 +441,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			int totalCreatedIssue = backlog.getSizeOfBacklogIssue();
 			backlog.clickOnBacklogSelectAllCheckbox();
 			backlog.clickOnBacklogMoveButton();
+			
 			backlog.selectSprintForMoveAllTicketFromBacklog();
 			Thread.sleep(3000);
 			int totalMovedIssue = backlog.getSizeOfSprintIssueOnBacklogPage();

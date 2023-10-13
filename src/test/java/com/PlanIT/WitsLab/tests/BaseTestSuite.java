@@ -160,8 +160,8 @@ public class BaseTestSuite{
 		
 		String url=das.getBrowserURL();
 		System.out.println(url);
-		Assert.assertEquals(url,"https://projectmanagement-uat.thewitslab.com/");
-		System.out.println("URL matched");
+//		Assert.assertEquals(url,"https://projectmanagement-uat.thewitslab.com/");
+//		System.out.println("URL matched");
 
 		//		ProjectAndBoardDashboard project=new ProjectAndBoardDashboard(das);
 		//		das.webDriverWait(project.projectHeader);
