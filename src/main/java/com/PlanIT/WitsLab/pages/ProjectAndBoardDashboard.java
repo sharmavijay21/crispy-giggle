@@ -230,9 +230,9 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 
 
 
-	public void clickOnTeamBoardSetting() {
-		da.webDriverWait(teamBoardSetting);
-		da.clickElement(teamBoardSetting, "ProjectSetting");
+	public void clickOnTeamBoard() {
+		da.webDriverWait(teamBoard);
+		da.clickElement(teamBoard, "teamBoardInProjectSetting");
 	}
 
 	public void clickOnAddNewList() {
@@ -266,7 +266,13 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 
 	public void clickOnBoardModule() {
 		da.clickElement(boardModule, "Board Module");
+		
 	}
+
+	public void clickOnBackToProjectButton() {
+		da.clickElement(backToProjectButton, "Back to project button");
+	}
+	
 	public String getTextMemberAlreadyAddedMessage() {
 
 		String text= da.getText(memberAlreadyAddedMessage);
@@ -274,10 +280,11 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		return text;
 	}
 
-	public void AddNewStageFromTeamBoardSetting(String inputNewStageName) {
+	public void AddNewStageFromTeamBoardSetting(String inputNewStageName) throws InterruptedException {
 		clickOnAddNewList();
 		da.clickElement(inputNewStage, "Input Stage Text");
-		da.sendKeys(inputNewStage,inputNewStageName , "New Stage");;
+		da.sendKeys(inputNewStage,inputNewStageName , "New Stage");
+		Thread.sleep(3000);
 		da.clickElement(addNewStageButton, "Add New Stage Button");
 	}
 
@@ -298,7 +305,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 			clickOnCreateButton();
 
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(4000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -311,7 +318,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 				clickOnCreateButton();
 
 			}
-
+			Thread.sleep(3000);
 			createdProjectName=getAllProject(projectName);
 
 			return createdProjectName;
@@ -337,7 +344,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 
 			clickOnCreateButton();
 
-
+			Thread.sleep(4000);
 			createdboardName=getAllBoard(boardName);
 			//			return createdboardName;
 
@@ -354,4 +361,5 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		PageFactory.initElements(da.getWebDriver(), this);
 	}
 
+	
 }

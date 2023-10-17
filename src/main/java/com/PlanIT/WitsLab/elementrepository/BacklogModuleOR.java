@@ -123,7 +123,7 @@ public class BacklogModuleOR {
 	protected WebElement sprintActivateConfirmationmessage;
 
 
-	@FindBy(xpath = "(//div[contains(@class,'ant-tabs-tab-btn')])[2]//p[text()=' Board']")
+	@FindBy(xpath ="//div[text()='Board']") // "(//div[contains(@class,'ant-tabs-tab-btn')])[2]//p[text()=' Board']")
 	protected WebElement boardModule;
 
 
@@ -138,8 +138,8 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Issue Created Successfully']")
 	protected WebElement createIssueConfirmationmessage;
 
-
-	@FindBy(xpath = "(//div[contains(@class,'BacklogTable__')]//div//div)[4]")
+	
+	@FindBy(xpath = "//button[contains(@class,'BacklogTable__TableDataScrollSection')]//div[contains(@class,'BacklogTable__Box')]")
 	protected WebElement openFirstTickets;
 
 	@FindBy(xpath = "//span[contains(@class,'ant-select-selection')]")
@@ -192,7 +192,7 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "(//span[@class='ant-breadcrumb-link'])[2]")
 	public WebElement clickOnProjectLink;
 
-	@FindBy(xpath = "(//button[contains(@class,'Button__StyledButton')])[1]")
+	@FindBy(xpath = "//*[text()='TODO']")
 	protected WebElement stageOfTicket;
 
 	//	@FindBy(xpath = "(//h4[contains(@class,' p-3 flex justify-between')])[last()]")
@@ -216,7 +216,7 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//button[text()='Move']")
 	public WebElement backlogMoveButton;
 
-	@FindBy(xpath = "(//div[@class='ant-select css-yp8pcc ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
+	@FindBy(xpath = "(//span[@class=\"ant-select-selection-item\"])[2]")//(//div[@class='ant-select css-yp8pcc ant-select-single ant-select-allow-clear ant-select-show-arrow'])[2]")
 	public WebElement sprintFieldForMoveAllTicketFromBacklog;
 
 	@FindBy(xpath = "//div[@class='ant-select-item-option-content']")
@@ -230,7 +230,12 @@ public class BacklogModuleOR {
 
 	@FindBy(xpath = "(//div[@class='ant-collapse-expand-icon'])[2]")
 	public WebElement sprintExpandIcon;
-
+	
+	@FindBy (xpath="//input[@type='file']")
+	public WebElement choosefile;
+	
+	@FindBy(xpath = "//div[text()='Members already exist in the project']")
+	public WebElement MemberAlreadyExistConfirmationmessage;
 
 
 }
