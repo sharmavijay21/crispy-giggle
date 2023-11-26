@@ -6,13 +6,13 @@ Automation:
     script:
         - DEPLOYMENT_ON_DEV2=$(echo $DEPLOYMENT_ON_DEV2 | tr '[A-Z]' '[a-z]')
         - |
-            ssh -X $DEV_SERVER_USER@$DEV2_HOST "
+            ssh $DEV_SERVER_USER@$DEV2_HOST "
                 if [[ -d /home/wiladmin/backend/"WIL-"$CI_PROJECT_NAME"-dev" ]]; then
                     rm -rf ./backend/"WIL-"$CI_PROJECT_NAME"-dev"
                 fi "
         - ssh -tt $DEV_SERVER_USER@$DEV2_HOST "mkdir -p ./backend/"WIL-"$CI_PROJECT_NAME"-dev""
         - sshpass -p $DEV2_PASSWORD scp -r * $DEV_SERVER_USER@$DEV2_HOST:/home/$DEV_SERVER_USER/backend/"WIL-"$CI_PROJECT_NAME"-dev"
-        - ssh -X $DEV_SERVER_USER@$DEV2_HOST "cd ./backend/"WIL-"$CI_PROJECT_NAME"-dev" && mvn clean test -Dmaven.test.failure.ignore=true"
+        - ssh $DEV_SERVER_USER@$DEV2_HOST "cd ./backend/"WIL-"$CI_PROJECT_NAME"-dev" && mvn clean test -Dmaven.test.failure.ignore=true"
 # image: maven:latest
 
 # stages:
