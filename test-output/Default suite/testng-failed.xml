@@ -5,7 +5,7 @@
     <classes>
       <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
         <methods>
-          <include name="verifyChangeTicketStageFromDropdown"/>
+          <include name="verifySubTaskFromCreatedTicket"/>
           <include name="logout"/>
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>

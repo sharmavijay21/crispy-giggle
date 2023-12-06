@@ -7,9 +7,15 @@ public class TicketLandingPageOR {
 
 	@FindBy(xpath = "//span[text()='Update fields']")
 	protected WebElement updateFields;
-
-	// @FindBy(xpath = "//span[text()='Priority']")
-	// protected WebElement updatePriorityType;
+	
+	@FindBy(xpath = "(//div[@class='ant-picker-input'])[2]")
+	protected WebElement EstimatedTime;
+	
+	@FindBy(xpath = "(//div[text()='06' or class='ant-picker-time-panel-cell-inner'])[1]")
+	protected WebElement selectEstimatedTime;
+	
+	@FindBy(xpath = "//span[text()='OK']")
+    protected WebElement OkButton;
 
 	@FindBy(xpath = "(//div[contains(@class,'TicketModal__DetailWrapper')]/h2[text()='Priority']/following-sibling::div/div)[2]/span")
 	protected WebElement updatePriority;
@@ -20,10 +26,10 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//div[contains(@class,'ant-ribbon ant-ribbon-placement')]//span")
 	protected WebElement priorityText;
 
-	@FindBy(xpath = "(//div[contains(@class,'TicketModal__DetailWrapper')]/h2[text()='StoryPoints']/following-sibling::div)//span")
+	@FindBy(xpath = "(*//*[@data-icon='edit'])[3]")
 	protected WebElement clickOnStoryPointsEditbutton;
 
-	@FindBy(xpath = "//div[@class='ant-input-number-input-wrap']/input")
+	@FindBy(xpath = "//input[@role='spinbutton']")
 	protected WebElement selectStoryPointInputBox;
 
 	@FindBy(xpath = "//div[contains(@class,'TicketM')]/div/span/span")

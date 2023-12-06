@@ -26,8 +26,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 
 			dlp.clickOnCreateNewProject();
 
-			projectName = dlp
-					.inputProjectName(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name"));
+			projectName = dlp.inputProjectName(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name"));
 
 			dlp.selectProjectType(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Type"));
 
@@ -75,10 +74,10 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			boardName = projectBoard
 					.inputBoardTitle(CreateProjectAndBoard.getJSONObject("createBoard").getString("Board Name"));
 			projectBoard
-					.inputBoardDescription(CreateProjectAndBoard.getJSONObject("createBoard").getString("Description"));
+			.inputBoardDescription(CreateProjectAndBoard.getJSONObject("createBoard").getString("Description"));
 
 			projectBoard.clickOnCreateButton();
-			
+
 
 			if (projectBoard.boardAlreadyExists()) {
 
@@ -111,14 +110,16 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 	@Test(enabled = true)
 	public void verifyAddMemberFromProjectSetting() {
 
-		String memberName = "rohit c";
+		String memberName = "Vijay Kumar";
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 
 		try {
 
 			WebElement newCreatedProject = projectBoard.createNewProject();
+
 			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
 			projectBoard.createNewBoard();
 			Thread.sleep(3000);
 			projectBoard.clickOnProjectSetting();
@@ -129,6 +130,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			projectBoard.clickOnAddMemberButton();
 			BacklogModule backlog = new BacklogModule(das);
 			backlog.inputMemberOnProjectSetting(memberName);
+			
 			projectBoard.selectMemberRole("Admin");
 			WebElement we = backlog.clickOnSubmitMemberButton();
 			try {
@@ -143,7 +145,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 				System.out.println(display);
 				if (display) {
 
-//					das.etest.log(Status.FAIL, projectBoard.getTextMemberAlreadyAddedMessage());
+					//					das.etest.log(Status.FAIL, projectBoard.getTextMemberAlreadyAddedMessage());
 					das.etest.log(Status.FAIL, "Member is not added");
 
 					backlog.closePopUp();
@@ -167,4 +169,166 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 		}
 	}
 
+	@Test(enabled = true)
+	public void verifyAddCustomFieldAndDelete() {
+		ProjectAndBoardDashboard dlp = new ProjectAndBoardDashboard(das);
+		//verifyCreateNewProject();
+		try {
+			WebElement newCreatedProject = dlp.createNewProject();
+
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+			dlp.clickOnWorkspaceSetting();
+			dlp.clickOnFieldConfiguration();
+			dlp.clickOnCreate();
+			dlp.clickOnCheckbox();
+			dlp.clickOnTitle("New Field");
+			dlp.clickOnIssueType();
+			dlp.selectIssueTypeCheckBox();
+			dlp.clickOnAddMoreOption();
+			dlp.clickOnEnterMoreOptions("Test");
+			dlp.clickOnAddFieldOption();
+			dlp.clickOnDeleteButton();
+			String text = dlp.getTextCustomfieldSuccessfully();
+			das.uiText_validation(text, "Custom field deleted successfully");
+			Assert.assertEquals(text, "Custom field deleted successfully");
+		}catch (Exception e){
+			dlp.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Custom field Not deleted successfully");
+			Assert.assertEquals(true, false);	
+
+		}
+	}
+
+	@Test(enabled = true)
+	public void verifyAddBoardAndDelete() {
+		ProjectAndBoardDashboard projectBoardDelete = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoardDelete.createNewProject();
+
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			projectBoardDelete.createNewBoard();
+			projectBoardDelete.clickOnThreedotSetting();
+			projectBoardDelete.clickOnDeleteIcon();
+			projectBoardDelete.clickOnWorkspaceSetting();
+			projectBoardDelete.clickOnArchivedSetting();
+			projectBoardDelete.clickOnThreedotSetting();
+			projectBoardDelete.clickOnRevertBack();
+			String reverttext= projectBoardDelete.getTextNoBoardDeletedSuccessfully();
+			das.uiText_validation(reverttext, "No board is deleted");
+			Assert.assertEquals(reverttext, "No board is deleted");
+
+
+		}catch (Exception e) {
+			projectBoardDelete.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Deleted Sussessfully");
+			Assert.assertEquals(true, false);	
+		}
+	}
+
+	@Test(enabled = true)
+	public void verifyNotificationsSettings() {
+		ProjectAndBoardDashboard notifications = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = notifications.createNewProject();
+
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+			notifications.clickOnWorkspaceSetting();
+			notifications.clickOnNotificationSetting();
+			notifications.clickOnAdminCheckbox();
+			notifications.clickOnSubmitbutton();
+			String Notification = notifications.getTextNotificationSavedSuccessfully();
+			das.uiText_validation(Notification, "Notification data saved successfully");
+			Assert.assertEquals(Notification, "Notification data saved successfully");
+
+			Thread.sleep(5000);
+		}catch (Exception e) {
+			notifications.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Notification data Not saved successfully");
+			Assert.assertEquals(true, false);	
+		}
+	}
+
+	// working fine
+	@Test(enabled = true)
+	public void verifyNotificationandMarkAllasRead() {
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newProject = projectBoard.createNewProject();
+			das.clickElement(newProject, newProject.getText());
+			WebElement firstBoard = projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
+
+			BacklogModule backlog = new BacklogModule(das);
+			Thread.sleep(2000);
+			backlog.createNewSprint();
+			backlog.createNewIssueFromBacklog();
+			projectBoard.clickOnNotificationbutton();
+			projectBoard.clickOnNotificationThreeDot();
+			projectBoard.clickOnMarkAllAsRead();
+			projectBoard.clickOnUnread();
+			String UnreadNotification = projectBoard.getTextNoUnreadNotification();
+			das.uiText_validation(UnreadNotification, "No unread notifications");
+			Assert.assertEquals(UnreadNotification, "No unread notifications");
+
+		}catch (Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Notification Available");
+			Assert.assertEquals(true, false);	
+		}
+
+	}
+
+	@Test(enabled = true)
+	public void verifyAddandDeleteMemberFromProjectSetting() {
+
+		String memberName = "Vritika Kalra";
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoard.createNewProject();
+
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			projectBoard.createNewBoard();
+			Thread.sleep(3000);
+			projectBoard.clickOnProjectSetting();
+			Thread.sleep(3000);
+
+			int size = projectBoard.ProjectSettingMemberSize();
+
+			projectBoard.clickOnAddMemberButton();
+			BacklogModule backlog = new BacklogModule(das);
+			backlog.inputMemberOnProjectSetting(memberName);
+			Thread.sleep(6000);
+			projectBoard.selectMemberRole("Admin");
+			WebElement we = backlog.clickOnSubmitMemberButton();
+			projectBoard.clickOnDeleteIconSetting();
+			String DeletemessageSuccessful = projectBoard.getTextDeleteSuccessfullyMessage();
+			das.uiText_validation(DeletemessageSuccessful, "Member has been deleted successfully");
+			Assert.assertEquals(DeletemessageSuccessful, "Member has been deleted successfully");	
+
+		}catch(Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Member has not been deleted successfully");
+			Assert.assertEquals(true, false);	
+		}
+
+	}
+
+	
 }

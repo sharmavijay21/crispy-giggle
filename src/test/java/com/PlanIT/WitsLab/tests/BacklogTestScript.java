@@ -10,7 +10,7 @@ import com.PlanIT.WitsLab.pages.ProjectAndBoardDashboard;
 import com.aventstack.extentreports.Status;
 
 public class BacklogTestScript extends BaseTestSuite {
-
+//WORKING FINE
 	@Test(enabled = true)
 	public void verifyCreateIssueFromBacklogFunctionality() {
 
@@ -68,7 +68,7 @@ public class BacklogTestScript extends BaseTestSuite {
 		}
 
 	}
-
+//working fine
 	@Test(enabled = true)
 	public void verifyCreateSprintFunctionality() {
 		BacklogModule backlog = new BacklogModule(das);
@@ -109,7 +109,7 @@ public class BacklogTestScript extends BaseTestSuite {
 
 		}
 	}
-
+// working fine
 	@Test(enabled = true)
 	public void verifyAddMemberFunctionalityFromBoard() {
 
@@ -120,6 +120,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			WebElement createProject = projectBoard.createNewProject();
 			createProject.click();
 //			projectBoard.openFirstProject();
+			
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());
@@ -169,7 +170,7 @@ public class BacklogTestScript extends BaseTestSuite {
 		}
 
 	}
-
+// working fine
 	@Test(enabled = true)
 	public void verifyExistingProjectMemberFunctionalityToBoard() {
 
@@ -178,7 +179,7 @@ public class BacklogTestScript extends BaseTestSuite {
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 		try {
 //			WebElement createProject = projectBoard.createNewProject();
-//			createProject.click();
+//	    	createProject.click();
 			projectBoard.openFirstProject();
 
 			WebElement createdBoard = projectBoard.createNewBoard();
@@ -213,7 +214,7 @@ public class BacklogTestScript extends BaseTestSuite {
 		}
 
 	}
-
+//working fine
 	@Test(enabled = true)
 	public void verifySprintActivation() {
 
@@ -246,7 +247,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-
+//working fine
 	@Test(enabled = true)
 	public void verifyCreateIssueFromBoard() {
 
@@ -315,7 +316,7 @@ public class BacklogTestScript extends BaseTestSuite {
 		}
 
 	}
-
+//working fine
 	@Test(enabled = true)
 	public void moveTicketFromOneBoardToAnother() {
 
@@ -375,7 +376,7 @@ public class BacklogTestScript extends BaseTestSuite {
 
 		}
 	}
-
+// working fine
 	@Test(enabled = true)
 	public void verifyCloneIssueFunctionality() {
 
@@ -417,7 +418,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-
+// working fine
 	@Test(enabled = true)
 	public void verifyMoveAllIssueFromBacklogToSprint() {
 
@@ -461,4 +462,4 @@ public class BacklogTestScript extends BaseTestSuite {
 		}
 	}
 
-}
+}       

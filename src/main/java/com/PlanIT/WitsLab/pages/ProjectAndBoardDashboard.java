@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 //import org.testng.Assert;
 
@@ -188,6 +189,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 	}
 
 	public void openFirstProject() {
+		da.webDriverWait(openFirstProject);
 		da.clickElement(openFirstProject,"First Project");
 		try {
 			Thread.sleep(3000);
@@ -195,8 +197,10 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 
+	
 	public void openFirstBoard() {
 		try {
 			Thread.sleep(2000);
@@ -204,6 +208,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		da.webDriverWait(openFirstBoard);
 		da.clickElement(openFirstBoard,"First Board");
 	}
 
@@ -236,12 +241,16 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 	}
 
 	public void clickOnAddNewList() {
+		da.webDriverWait(addNewList);
 		da.clickElement(addNewList, "Add New List");
 	}
 
-	public void selectMemberRole(String projectType) {
-
-		da.clickElement(memberRole,"Type");
+	public void selectMemberRole(String projectType) throws InterruptedException {
+//		Actions ac = new Actions(da.getWebDriver());
+//		Thread.sleep(5000);
+		da.webDriverWait(memberRole);
+		da.ClickElementJavaScript(memberRole,"");
+//		da.clickElement(memberRole,"Type");
 
 		if(projectType.equalsIgnoreCase("Admin")) {
 			da.clickElement(adminRole,"Admin");
@@ -287,6 +296,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		Thread.sleep(3000);
 		da.clickElement(addNewStageButton, "Add New Stage Button");
 	}
+	
 
 	public WebElement createNewProject() {
 
@@ -296,7 +306,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 
 			clickOnCreateNewProject();
 
-			projectName=inputProjectName("NIT"+da.getRandomNo());
+			projectName=inputProjectName("IIT"+da.getRandomNo());
 
 			selectProjectType("Marketing");
 
@@ -313,7 +323,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 			if(projectAlreadyExists()) {
 
 
-				projectName=inputProjectName("LTM"+da.getRandomNo());
+				projectName=inputProjectName("ATM"+da.getRandomNo());
 
 				clickOnCreateButton();
 
@@ -354,8 +364,269 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		return createdboardName;
 
 	}
+	public void clickOnWorkspaceSetting() {
+		
+		da.webDriverWait(projectSettingsButton);
+		da.clickElement(projectSettingsButton, "ProjectWorkspace");
+	}
+
+	public void clickOnFieldConfiguration() {
 
 
+		da.webDriverWait(fieldconfiguration);
+		da.clickElement(fieldconfiguration, "Field Configuration");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void clickOnCreate() {
+
+
+		da.webDriverWait(Createbutton);
+		da.clickElement(Createbutton, "Create button");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	 
+	public void clickOnCheckbox() {
+
+
+		da.webDriverWait(Checkbox);
+		da.clickElement(Checkbox, "Check box");
+		
+	}
+	
+	public void clickOnTitle(String Titlename) {
+		da.sendKeys(Title, Titlename,"Title Description");;
+	}
+	
+	public void clickOnIssueType() {
+
+
+		//da.webDriverWait(Checkbox);
+		da.clickElement(Issuetype, "Issue Type");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void selectIssueType() {
+
+
+		da.webDriverWait(Checkbox);
+		da.clickElement(Checkbox, "Check box");
+		
+	}
+	
+	public void selectIssueTypeCheckBox() {
+
+
+		da.webDriverWait(IssuetypeCheckbox);
+		da.clickElement(IssuetypeCheckbox, "Issuetype Checkbox");
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public void clickOnAddMoreOption() {
+
+
+		da.webDriverWait(AddMoreOption);
+		da.clickElement(AddMoreOption, "Add More Option");
+		da.clickElement(BeforeAddMoreOption, "Before More Option");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		da.clickElement(AddMoreOption, "Add More Option");
+	}
+	public void clickOnEnterMoreOptions(String Entername) {
+		da.sendKeys(EnterOption, Entername,"Name Description");;
+	}
+	
+	
+	public void clickOnEnterTitle(String Titlename) {
+		da.sendKeys(Title, Titlename,"Title Description");;
+	}
+	
+	public void clickOnAddFieldOption() {
+		da.webDriverWait(Addfield);
+		da.clickElement(Addfield, "Add More Option");
+		try {
+			Thread.sleep(7000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public void clickOnDeleteButton() {
+		da.webDriverWait(Deleteicon);
+		da.clickElement(Deleteicon, "Delete icon");
+		
+			da.webDriverWait(OKButton);
+			da.clickElement(OKButton, "OK button");
+
+          // da.invisibilityOfElement(CustomfieldSuccessfully);
+			
+		
+	}
+	public String getTextCustomfieldSuccessfully() {
+		da.webDriverWait(CustomfieldSuccessfully);
+
+		String text = da.getText(CustomfieldSuccessfully);
+
+//		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+		// da.moveToElement(activateSprintBtn);
+		return text;	
+	}
+	
+       public void clickOnThreedotSetting() {
+		
+		da.webDriverWait(Addmore);
+		da.clickElement(Addmore, "Addmore");
+	}
+       public void clickOnDeleteIcon() {
+   		
+   		da.webDriverWait(DeleteiconOption);
+   		da.clickElement(DeleteiconOption, "Delete icon Option");
+   		da.webDriverWait(OKButton);
+   		da.clickElement(OKButton, "OK Button");
+   	}
+           
+       public void clickOnArchivedSetting() {
+   		
+   		da.webDriverWait(Archived);
+   		da.clickElement(Archived, "Archived");
+   	}
+       
+       public void clickOnRevertBack() {
+      		
+      		da.webDriverWait(RevertBack);
+      		da.clickElement(RevertBack, "Revert Back");
+      		da.webDriverWait(OKButton);
+       		da.clickElement(OKButton, "OK Button");
+      	} 
+       public String getTextNoBoardDeletedSuccessfully() {
+      		da.webDriverWait(BoardisDeleted);
+
+      		String text = da.getText(BoardisDeleted);
+
+//      		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+      		// da.moveToElement(activateSprintBtn);
+      		return text;	
+      	}
+       
+       
+       
+       
+       public void clickOnNotificationSetting() {
+      		
+      		da.webDriverWait(notification);
+      		da.clickElement(notification, "notification");
+      	}
+       public void clickOnAdminCheckbox() {
+     		
+     		da.webDriverWait(WatcherAdmin);
+     		da.clickElement(WatcherAdmin, "Watcher Admin");
+     	}
+       
+       public void clickOnSubmitbutton() {
+    		
+    		da.webDriverWait(Submit);
+    		da.clickElement(Submit, "Submit");
+    	}
+       
+       public String getTextNotificationSavedSuccessfully() {
+   		da.webDriverWait(NotificationSavedMessage);
+
+   		String text = da.getText(NotificationSavedMessage);
+
+//   		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+   		// da.moveToElement(activateSprintBtn);
+   		return text;	
+   	}
+   	
+       public void clickOnNotificationbutton() {
+   		
+   		da.webDriverWait(NotificationButton);
+   		da.clickElement(NotificationButton, "Notification Button");
+   	}
+       
+       public void clickOnNotificationThreeDot() {
+      		
+      		da.webDriverWait(notificationThreeDot);
+      		da.clickElement(notificationThreeDot, "notification ThreeDot");
+      		try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+      	
+       }
+       
+       public void clickOnMarkAllAsRead() {
+      		
+      		da.webDriverWait(MarkAllRead);
+      		da.clickElement(MarkAllRead, "MarkAllRead");
+      	}
+       
+       public void clickOnUnread() {
+     		
+     		da.webDriverWait(Unread);
+     		da.clickElement(Unread, "Unread");
+     	}
+       
+       public String getTextNoUnreadNotification() {
+   		da.webDriverWait(NoUnreadnotification);
+
+   		String text = da.getText(NoUnreadnotification);
+
+   		return text;	
+   	}
+       
+       public void clickOnDeleteIconSetting() {
+     		
+     		da.webDriverWait(deleteIcon);
+     		da.clickElement(deleteIcon, "delete Icon");
+     		da.webDriverWait(OKButton);
+       		da.clickElement(OKButton, "OK Button");
+     	
+     	} 
+       
+       public void clickOnAdminCheckboxSettings() {
+    		
+    		da.webDriverWait(Admincheckbox);
+    		da.clickElement(Admincheckbox, "Admin checkbox");
+    	}
+       
+       public String getTextDeleteSuccessfullyMessage() {
+      		da.webDriverWait(DeleteSuccessfully);
+
+      		String text = da.getText(DeleteSuccessfully);
+
+//      		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+      		// da.moveToElement(activateSprintBtn);
+      		return text;	
+      	}
+       
 	public ProjectAndBoardDashboard(DriverActions das) {
 		this.da=das;
 		PageFactory.initElements(da.getWebDriver(), this);
