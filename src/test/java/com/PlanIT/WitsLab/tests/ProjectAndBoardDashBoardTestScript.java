@@ -313,7 +313,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			projectBoard.clickOnAddMemberButton();
 			BacklogModule backlog = new BacklogModule(das);
 			backlog.inputMemberOnProjectSetting(memberName);
-			Thread.sleep(6000);
+			
 			projectBoard.selectMemberRole("Admin");
 			WebElement we = backlog.clickOnSubmitMemberButton();
 			projectBoard.clickOnDeleteIconSetting();

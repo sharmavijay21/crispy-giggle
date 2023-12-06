@@ -1,5 +1,5 @@
-com/PlanIT/WitsLab/tests/PlanITLoginAndSignUpTestScript.class
-com/PlanIT/WitsLab/tests/ProjectAndBoardDashBoardTestScript.class
-com/PlanIT/WitsLab/tests/TicketLandingPageTestScripts.class
-com/PlanIT/WitsLab/tests/BacklogTestScript.class
-com/PlanIT/WitsLab/tests/BaseTestSuite.class
+com\PlanIT\WitsLab\tests\PlanITLoginAndSignUpTestScript.class
+com\PlanIT\WitsLab\tests\BacklogTestScript.class
+com\PlanIT\WitsLab\tests\ProjectAndBoardDashBoardTestScript.class
+com\PlanIT\WitsLab\tests\BaseTestSuite.class
+com\PlanIT\WitsLab\tests\TicketLandingPageTestScripts.class

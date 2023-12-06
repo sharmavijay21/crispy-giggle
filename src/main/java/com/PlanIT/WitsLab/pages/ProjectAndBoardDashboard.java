@@ -249,7 +249,7 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 //		Actions ac = new Actions(da.getWebDriver());
 //		Thread.sleep(5000);
 		da.webDriverWait(memberRole);
-		da.ClickElementJavaScript(memberRole,"");
+		da.clickElement(memberRole,"member role");
 //		da.clickElement(memberRole,"Type");
 
 		if(projectType.equalsIgnoreCase("Admin")) {

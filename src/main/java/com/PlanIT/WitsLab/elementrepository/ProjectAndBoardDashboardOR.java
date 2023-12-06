@@ -111,7 +111,7 @@ public class ProjectAndBoardDashboardOR {
 	@FindBy(xpath = "//button[text()='Add Members']")
 	protected WebElement AddMemberButtonprojectSetting;
 
-	@FindBy(xpath = "(//input[@type='search'])[2]")
+	@FindBy(xpath = "(//span[@class='ant-select-arrow'])[2]//*[name()='svg']")
 	protected WebElement memberRole;
 
 	@FindBy(xpath = "//div[text()='Admin']")
