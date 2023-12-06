@@ -19,9 +19,29 @@ public class TicketLandingPage extends TicketLandingPageOR {
 		da.webDriverWait(updateFields);
 		da.clickElement(updateFields, "UpdateFields");
 	}
+	
+	public void clickOnEstimatedTime() {
+		da.webDriverWait(EstimatedTime);
+		da.clickElement(EstimatedTime, "Estimated Time");
+		da.webDriverWait(selectEstimatedTime);
+		da.clickElement(selectEstimatedTime, "select Estimated Time");
+		da.webDriverWait(OkButton);
+		da.clickElement(OkButton, "Ok Button");
+		try {
+			Thread.sleep(7000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	
+	
 
 	public void inputUpdatedStoryPoint(String inputUpdatedstoryPoint) {
-
+		da.webDriverWait(clickOnStoryPointsEditbutton);
 //		updateStoryPoint.clear();
 		da.clickElement(clickOnStoryPointsEditbutton, "Click on Edit button");
 
@@ -39,7 +59,7 @@ public class TicketLandingPage extends TicketLandingPageOR {
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-		da.clickElement(storyPointsSelectTickButton, "Click on TickButton");
+		//da.clickElement(storyPointsSelectTickButton, "Click on TickButton");
 
 //		da.sendKeys(updateStoryPoint, inputUpdatedstoryPoint,"Updated Story Point");
 //		da.getWebDriver().findElement(By.xpath("//h2[text()='Update Story Points']")).click();
@@ -140,6 +160,7 @@ public class TicketLandingPage extends TicketLandingPageOR {
 
 		clickOnUpdateIssueTypeField();
 
+		
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {

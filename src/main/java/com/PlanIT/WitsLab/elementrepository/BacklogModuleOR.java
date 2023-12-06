@@ -71,7 +71,27 @@ public class BacklogModuleOR {
 
 	@FindBy(xpath = "//button[text()='Create']")
 	protected WebElement createButton;
+	
+	@FindBy(xpath = "//button[@placeholder='Create Sub Task']")
+	protected WebElement createSubtask;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Name of SubTask']")
+	protected WebElement EnterSubtask;
 
+	@FindBy(xpath = "//button[text()='Save']")
+	protected WebElement EnterSave;
+	
+	
+	@FindBy(xpath = "*//*[@data-icon='close']")
+	protected WebElement closeicon; 
+	
+	
+	@FindBy(xpath = "//div[text()='Subtask Deleted Successfully']")	
+	protected WebElement TaskCreatedSuccessfully;
+	
+	@FindBy(xpath = "//div[@id='close']")
+	protected WebElement close;
+	
 	@FindBy(xpath = "//div[text()='Create Sprint']")
 	protected WebElement createSprintBtn;
 
@@ -140,6 +160,7 @@ public class BacklogModuleOR {
 
 	
 	@FindBy(xpath = "//button[contains(@class,'BacklogTable__TableDataScrollSection')]//div[contains(@class,'BacklogTable__Box')]")
+    // @FindBy(xpath ="//div[text()='TODO']")
 	protected WebElement openFirstTickets;
 
 	@FindBy(xpath = "//span[contains(@class,'ant-select-selection')]")

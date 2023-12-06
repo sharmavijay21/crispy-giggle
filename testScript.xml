@@ -10,16 +10,18 @@
 		<classes>
 
 
-			<!-- <class
+			 <class
 			name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 			<methods>
             <include name="verifyCreateNewProject"/>
 			<include name="verifyCreateTeamBoard"/>  
-           <include
-			name="verifyAddMemberFromProjectSetting"/>
-        
+           
+        <include name="verifyAddCustomFieldAndDelete"/> 
+        <include name="verifyAddBoardAndDelete"/> 
+         <include name="verifyNotificationsSettings"/>
+         <include name="verifyNotificationandMarkAllasRead"/>
         </methods>
-			</class>  -->
+			</class>  
 
 
 			<class name="com.PlanIT.WitsLab.tests.BacklogTestScript">

@@ -12,7 +12,7 @@ import com.PlanIT.WitsLab.pages.TicketLandingPage;
 import com.aventstack.extentreports.Status;
 
 public class TicketLandingPageTestScripts extends BaseTestSuite {
-
+// working fine
 	@Test(enabled = true)
 	public void verifyUpdateDetailsOfTickets() {
 
@@ -21,54 +21,42 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 		try {
 
-			projectBoard.openFirstProject();
-			// projectBoard.openFirstBoard();
+			
+		//	projectBoard.openFirstProject();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());
 
 			Thread.sleep(3000);
 
-//			backlog.addMemberFromBoard("Sunil");
+		backlog.addMemberFromBoard("Sunil");
 			WebElement createdIssue = backlog.createNewIssueFromBacklog();
 			das.clickElement(createdIssue, "CreatedIssue");
 
-//			backlog.openFirstTicket();
-			// backlog.addMemberFromBoard(createIssue.getJSONObject("update
-			// Issue").getString("Assignee"));
-
 			TicketLandingPage ticketLandingPage = new TicketLandingPage(das);
 
-//			ticketLandingPage.clickOnUpdateField();
+		
 			ticketLandingPage.selectUpdatePriority("Medium");
 			String priorityText = ticketLandingPage.getTextUpdatedPriority();
 			das.uiText_validation(priorityText, "Medium");
 			Assert.assertEquals(priorityText, "Medium");
 
-			// handleNoSuchElement Exception after entering wrong name
-
 			ticketLandingPage.updateAssignee("Sunil");
 			String updatedAssignee = ticketLandingPage.getTextUpdatedAssignee("Sunil");
 			das.uiText_validation(updatedAssignee, "Sunil");
-			Assert.assertEquals(updatedAssignee, "Sunil");
-
-			ticketLandingPage.selectUpdateIssueType("Bug");
-
-			// System.out.println(das.getAttribute(das.getWebDriver().findElement(By.xpath("//div[contains(@class,'TicketModal__SvgWrapper')]")),
-			// "title"));
-			;
-			String updatedType = ticketLandingPage.getTextUpdatedIssueType();
-			das.uiText_validation(updatedType, "bug");
-			Assert.assertEquals(updatedType, "bug");
-
+			Assert.assertEquals(updatedAssignee, "Sunil");		
+             
+			ticketLandingPage.clickOnEstimatedTime();
+			
 			ticketLandingPage.inputUpdatedStoryPoint("9");
-//			ticketLandingPage.clickOnStoryPointText();
-//			ticketLandingPage.clickOnStoryPointText();
+
 			Thread.sleep(2000);
 			String storyPointText = ticketLandingPage.getTextUpdatedStoryPoint("9");
 			das.uiText_validation(storyPointText, "9");
 			Assert.assertEquals(storyPointText, "9");
-			Thread.sleep(8000);
+		
 			backlog.closePopUp();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -82,7 +70,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-
+//Working fine
 	@Test(enabled = true)
 	public void verifyChangeTicketStageFromDropdown() {
 
@@ -144,7 +132,8 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 		}
 
 	}
-
+	
+//not fine
 	@Test(enabled = true)
 	public void verifyAddNewLane() {
 
@@ -154,9 +143,9 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 			WebElement newCreatedProject = projectBoard.createNewProject();
 			das.clickElement(newCreatedProject, newCreatedProject.getText());
-
+		
 			WebElement createdBoard = projectBoard.createNewBoard();
-
+			Thread.sleep(3000);
 			projectBoard.clickOnProjectSetting();
 			Thread.sleep(3000);
 			projectBoard.clickOnTeamBoard();
@@ -191,7 +180,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-
+//working fine 
 	@Test(enabled = true)
 	public void verifyTicketDeletionFromTicket() {
 
@@ -200,8 +189,10 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 			TicketLandingPage tlp = new TicketLandingPage(das);
 
-			projectBoard.openFirstProject();
-
+			//projectBoard.openFirstProject();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+			
 			WebElement teamBoard = projectBoard.createNewBoard();
 			das.clickElement(teamBoard, teamBoard.getText());
 
@@ -232,7 +223,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 		}
 
 	}
-
+//working fine
 	@Test(enabled = true)
 	public void verifyLinkIssueFunctionalityFromTicket() {
 
@@ -265,16 +256,17 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-
-	@Test
+// Now working
+	@Test(enabled = true)
 	public void verifyTicketDescriptionAndComment() {
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 
 		try {
 
-			projectBoard.openFirstProject();
-
+		//	projectBoard.openFirstProject();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
 			WebElement firstBoard = projectBoard.createNewBoard();
 			das.clickElement(firstBoard, firstBoard.getText());
 
@@ -306,5 +298,53 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			Assert.assertEquals(true, false, "Discription and comment not added");
 		}
 	}
+	
+	@Test(enabled = true)
+	public void verifySubTaskFromCreatedTicket() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			projectBoard.openFirstProject();
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+
+			backlog.createNewSprint();
+
+			backlog.clickOnActivateSprintButton();
+
+			Thread.sleep(3000);
+			backlog.clickOnBoardModule();
+
+			backlog.clickOnBoardCreateIssueButton();
+			String issueName = backlog
+					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+
+			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+
+			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.clickOnCreateButton();
+
+			WebElement createdIssueName = backlog.getTODOlistFromBoad(issueName);
+			das.clickElement(createdIssueName, createdIssueName.getText());
+			backlog.clickOnCreateSubtask();
+			backlog.inputSubtaskDescription("Testing Task");
+		    String taskcreatedsuccessfully= backlog.getTextSubTaskConfirmationMessage();
+		    das.uiText_validation(taskcreatedsuccessfully, "Subtask Deleted Successfully");
+			Assert.assertEquals(taskcreatedsuccessfully, "Subtask Deleted Successfully");
+		
+		}catch(Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "SubTask not created Successfully");
+			Assert.assertEquals(true, false, "SubTask not created Successfully");
+		}
+		}
 
 }

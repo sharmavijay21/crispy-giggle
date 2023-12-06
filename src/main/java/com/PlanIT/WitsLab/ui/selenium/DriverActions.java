@@ -278,7 +278,7 @@ public class DriverActions{
 
 	public void webDriverWait(WebElement we) {
 
-		WebDriverWait wait=new WebDriverWait(driver, 50);
+		WebDriverWait wait=new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOf(we));
 
 	}

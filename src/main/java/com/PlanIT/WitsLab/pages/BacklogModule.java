@@ -1,5 +1,6 @@
 package com.PlanIT.WitsLab.pages;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -14,6 +15,7 @@ import org.openqa.selenium.remote.server.handler.GetTagName;
 import org.openqa.selenium.support.PageFactory;
 //import org.testng.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.PlanIT.WitsLab.elementrepository.BacklogModuleOR;
 import com.PlanIT.WitsLab.ui.selenium.DriverActions;
@@ -120,6 +122,34 @@ public class BacklogModule extends BacklogModuleOR {
 		da.clickElement(createButton, "Create");
 
 	}
+	
+	public void clickOnCreateSubtask() {
+		
+		da.webDriverWait(createSubtask);
+		da.clickElement(createSubtask, "create Subtask");
+
+	}
+	
+	public void inputSubtaskDescription(String inputDescription) {
+		da.webDriverWait(EnterSubtask);
+		da.sendKeys(EnterSubtask, inputDescription, "Enter Subtask");
+		
+		da.webDriverWait(EnterSave);
+		da.clickElement(EnterSave, "Enter Save");
+		da.webDriverWait(closeicon);
+		da.clickElement(closeicon, "Enter Save");
+		
+	
+	}
+	
+	public String getTextSubTaskConfirmationMessage() {
+		da.webDriverWait(TaskCreatedSuccessfully);
+
+		String text = da.getText(TaskCreatedSuccessfully);
+
+		
+		return text;
+	}
 
 	public void clickOnCreateSprintButton() {
 
@@ -190,10 +220,11 @@ public class BacklogModule extends BacklogModuleOR {
 			e.printStackTrace();
 		}
 		da.moveToElementAndClick(selectMember);
-
-		da.clickElement(addMemberText, selectMember.getText());
+		//da.webDriverWait(addMemberText);
+		//da.clickElement(addMemberText, selectMember.getText());
 		// div[@class='rc-virtual-list']
 
+		
 	}
 
 	public WebElement clickOnSubmitMemberButton() {
@@ -324,7 +355,7 @@ public class BacklogModule extends BacklogModuleOR {
 //		else {
 		da.clickElement(backlogLane, "Backlog Lane");
 		da.webDriverWait(openFirstTickets);
-		da.clickElement(openFirstTickets, "First Ticket");
+		da.clickJavaScript(openFirstTickets, "First Ticket");
 //		}
 	}
 
@@ -333,7 +364,7 @@ public class BacklogModule extends BacklogModuleOR {
 	}
 
 	public void closePopUp() {
-		// da.webDriverWait(closePopup);
+		da.webDriverWait(closePopup);
 		da.clickElement(closePopup, "Close Popup");
 	}
 
