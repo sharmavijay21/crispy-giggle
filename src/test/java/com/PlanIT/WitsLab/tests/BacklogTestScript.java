@@ -17,8 +17,12 @@ public class BacklogTestScript extends BaseTestSuite {
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 		try {
 
-			projectBoard.openFirstProject();
-			projectBoard.openFirstBoard();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			WebElement firstBoard = projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
 
 			Thread.sleep(3000);
 
@@ -178,9 +182,8 @@ public class BacklogTestScript extends BaseTestSuite {
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 		try {
-//			WebElement createProject = projectBoard.createNewProject();
-//	    	createProject.click();
-			projectBoard.openFirstProject();
+			WebElement createProject = projectBoard.createNewProject();
+	    	createProject.click();
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());
@@ -199,6 +202,17 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.inputMember("van");
 			Thread.sleep(2000);
 			WebElement we = backlog.clickOnSubmitMemberButton();
+			Thread.sleep(5000);
+			backlog.clickOnAddMemberButtonOnBoard();
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+			backlog.inputMember("van");
+			Thread.sleep(2000);
+			WebElement w1 = backlog.clickOnSubmitMemberButton();
 
 			String memberAlreadyexistMessage = backlog.getTextMemberAlreadyExistInBaordConfirmationMessage();
 
@@ -247,7 +261,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			Assert.assertEquals(true, false);
 		}
 	}
-//working fine
+//Not working fine
 	@Test(enabled = true)
 	public void verifyCreateIssueFromBoard() {
 
@@ -255,7 +269,8 @@ public class BacklogTestScript extends BaseTestSuite {
 
 		try {
 
-			projectBoard.openFirstProject();
+			WebElement createProject = projectBoard.createNewProject();
+	    	createProject.click();
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			Thread.sleep(4000);
