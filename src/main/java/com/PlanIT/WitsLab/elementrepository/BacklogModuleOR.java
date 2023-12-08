@@ -89,6 +89,9 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Subtask Deleted Successfully']")	
 	protected WebElement TaskCreatedSuccessfully;
 	
+	@FindBy(xpath = "//div[text()='Project with only Completed Spints can be Deleted ']")	
+	protected WebElement BoardDelete;
+	
 	@FindBy(xpath = "//div[@id='close']")
 	protected WebElement close;
 	
@@ -138,6 +141,12 @@ public class BacklogModuleOR {
 
 	@FindBy(xpath = "//span[@aria-label='interaction']")
 	protected WebElement activateSprintBtn;
+	
+	@FindBy(xpath = "//div[text()='X']")
+	protected WebElement crossBtn;
+	
+	@FindBy(xpath = "//a[@href='/project']")
+	protected WebElement createdProject;
 
 	@FindBy(xpath = "//div[text()='Sprint Activated successfully']")
 	protected WebElement sprintActivateConfirmationmessage;

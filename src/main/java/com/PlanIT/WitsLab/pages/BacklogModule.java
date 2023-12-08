@@ -151,6 +151,16 @@ public class BacklogModule extends BacklogModuleOR {
 		return text;
 	}
 
+
+	public String getTextBoardDeleteMessage() {
+		da.webDriverWait(BoardDelete);
+
+		String text = da.getText(BoardDelete);
+
+		
+		return text;
+	}
+	
 	public void clickOnCreateSprintButton() {
 
 		da.webDriverWait(createSprintBtn);
@@ -240,6 +250,19 @@ public class BacklogModule extends BacklogModuleOR {
 		da.clickElement(activateSprintBtn, "Activate Sprint");
 
 	}
+	
+	public void clickOnCrossSprintButton() {
+		da.webDriverWait(crossBtn);
+		da.clickElement(crossBtn, "crossBtn crossBtn");
+
+	}
+	
+	public void clickOnCreatedProject() {
+		da.webDriverWait(createdProject);
+		da.clickElement(createdProject, "created Project");
+
+	}
+	
 
 	public void verifySwimLane() {
 

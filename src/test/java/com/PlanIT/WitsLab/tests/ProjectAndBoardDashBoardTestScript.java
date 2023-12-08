@@ -272,9 +272,12 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			BacklogModule backlog = new BacklogModule(das);
 			Thread.sleep(2000);
 			backlog.createNewSprint();
+			Thread.sleep(2000);
 			backlog.createNewIssueFromBacklog();
 			projectBoard.clickOnNotificationbutton();
+		
 			projectBoard.clickOnNotificationThreeDot();
+		    Thread.sleep(4000);
 			projectBoard.clickOnMarkAllAsRead();
 			projectBoard.clickOnUnread();
 			String UnreadNotification = projectBoard.getTextNoUnreadNotification();

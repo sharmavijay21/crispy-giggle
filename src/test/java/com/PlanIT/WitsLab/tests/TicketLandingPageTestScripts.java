@@ -48,7 +48,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			das.uiText_validation(updatedAssignee, "Sunil");
 			Assert.assertEquals(updatedAssignee, "Sunil");		
              
-			ticketLandingPage.clickOnEstimatedTime();
+			//ticketLandingPage.clickOnEstimatedTime();
 			
 			ticketLandingPage.inputUpdatedStoryPoint("9");
 
@@ -318,6 +318,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			backlog.createNewSprint();
 
 			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
 
 			Thread.sleep(3000);
 			backlog.clickOnBoardModule();
@@ -333,6 +334,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 			WebElement createdIssueName = backlog.getTODOlistFromBoad(issueName);
 			das.clickElement(createdIssueName, createdIssueName.getText());
+			Thread.sleep(5000);
 			backlog.clickOnCreateSubtask();
 			backlog.inputSubtaskDescription("Testing Task");
 		    String taskcreatedsuccessfully= backlog.getTextSubTaskConfirmationMessage();
@@ -347,4 +349,47 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 		}
 		}
 
+	@Test(enabled = true)
+	public void verifyDeleteBoardfromActivatedSprint() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+
+			backlog.createNewSprint();
+
+			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
+
+			Thread.sleep(3000);
+			
+			backlog.clickOnCreatedProject();
+			ProjectAndBoardDashboard projectBoardDelete = new ProjectAndBoardDashboard(das);
+			projectBoardDelete.clickOnThreedotSetting();
+			projectBoardDelete.clickOnDeleteIcon();
+
+		    String BoardDelete= backlog.getTextBoardDeleteMessage();
+		    das.uiText_validation(BoardDelete, "Project with only Completed Spints can be Deleted");
+			Assert.assertEquals(BoardDelete, "Project with only Completed Spints can be Deleted");
+		
+		}catch(Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Project with only Completed Spints can not be Deleted");
+			Assert.assertEquals(true, false, "Project with only Completed Spints can not be Deleted");
+		}
+		}
+	
+	
+	
 }
