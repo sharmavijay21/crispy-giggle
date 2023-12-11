@@ -124,11 +124,15 @@ public class BaseTestSuite{
 	@BeforeMethod(alwaysRun = true)
 	public void verifyloginPage(Method tsName) {
 		System.out.println("going to read the jason parser");
+		try {
 		createIssue = JsonParser.parse("issue.json");
 		CreateProjectAndBoard=JsonParser.parse("projectAndBoard.json");
 		loginAndSignUp = JsonParser.parse("loginAndSignUp.json");
 
-
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		
 		String testCaseName=tsName.getName();
 		das.createTest(testCaseName);
 
