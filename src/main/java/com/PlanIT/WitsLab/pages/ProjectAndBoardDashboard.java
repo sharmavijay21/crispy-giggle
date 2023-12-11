@@ -594,6 +594,22 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
      		da.clickElement(Unread, "Unread");
      	}
        
+       public void clickOnOpenNotification() {
+     		
+     		da.webDriverWait(OpenNotification);
+     		da.clickElement(OpenNotification, "Open Notification");
+     	}
+       
+       public String getTextNotification() {
+     		da.webDriverWait(Notificationpage);
+
+     		String text = da.getText(Notificationpage);
+
+//     		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+     		// da.moveToElement(activateSprintBtn);
+     		return text;	
+     	}
+       
        public String getTextNoUnreadNotification() {
    		da.webDriverWait(NoUnreadnotification);
 
