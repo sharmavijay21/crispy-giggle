@@ -124,9 +124,9 @@ public class BaseTestSuite{
 	@BeforeMethod(alwaysRun = true)
 	public void verifyloginPage(Method tsName) {
 		System.out.println("going to read the jason parser");
-//		createIssue = JsonParser.parse("issue.json");
-//		CreateProjectAndBoard=JsonParser.parse("projectAndBoard.json");
-		//loginAndSignUp = JsonParser.parse("loginAndSignUp.json");
+		createIssue = JsonParser.parse("issue.json");
+		CreateProjectAndBoard=JsonParser.parse("projectAndBoard.json");
+		loginAndSignUp = JsonParser.parse("loginAndSignUp.json");
 
 
 		String testCaseName=tsName.getName();
