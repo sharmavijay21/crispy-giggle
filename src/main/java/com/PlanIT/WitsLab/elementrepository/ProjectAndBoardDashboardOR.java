@@ -233,6 +233,12 @@ public class ProjectAndBoardDashboardOR {
 	@FindBy(xpath = "(//li[@role='menuitem'])[2]")
 	protected WebElement MarkAllRead;
 	
+	@FindBy(xpath = "//a[text()='Open Notification']")
+	protected WebElement OpenNotification;
+	
+	@FindBy(xpath = "//div[text()='Notifications']")
+	protected WebElement Notificationpage;
+	
 	@FindBy(xpath = "//div[text()='Unread']")
 	protected WebElement Unread;
 	

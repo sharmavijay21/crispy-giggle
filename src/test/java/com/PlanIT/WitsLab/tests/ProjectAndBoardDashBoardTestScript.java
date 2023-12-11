@@ -294,40 +294,34 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 	}
 
 	@Test(enabled = true)
-	public void verifyAddandDeleteMemberFromProjectSetting() {
-
-		String memberName = "Vritika Kalra";
+	public void verifyOpenNotificationpage() {
 
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 
 		try {
+			WebElement newProject = projectBoard.createNewProject();
+			das.clickElement(newProject, newProject.getText());
+			WebElement firstBoard = projectBoard.createNewBoard();
+			das.clickElement(firstBoard, firstBoard.getText());
 
-			WebElement newCreatedProject = projectBoard.createNewProject();
-
-			das.clickElement(newCreatedProject, newCreatedProject.getText());
-
-			projectBoard.createNewBoard();
-			Thread.sleep(3000);
-			projectBoard.clickOnProjectSetting();
-			Thread.sleep(3000);
-
-			int size = projectBoard.ProjectSettingMemberSize();
-
-			projectBoard.clickOnAddMemberButton();
 			BacklogModule backlog = new BacklogModule(das);
-			backlog.inputMemberOnProjectSetting(memberName);
-			
-			projectBoard.selectMemberRole("Admin");
-			WebElement we = backlog.clickOnSubmitMemberButton();
-			projectBoard.clickOnDeleteIconSetting();
-			String DeletemessageSuccessful = projectBoard.getTextDeleteSuccessfullyMessage();
-			das.uiText_validation(DeletemessageSuccessful, "Member has been deleted successfully");
-			Assert.assertEquals(DeletemessageSuccessful, "Member has been deleted successfully");	
+			Thread.sleep(2000);
+			backlog.createNewSprint();
+			Thread.sleep(2000);
+			backlog.createNewIssueFromBacklog();
+			projectBoard.clickOnNotificationbutton();
+
+			projectBoard.clickOnNotificationThreeDot();
+		    Thread.sleep(4000);
+		    projectBoard.clickOnOpenNotification();
+			String Notification = projectBoard.getTextNotification();
+			das.uiText_validation(Notification, "Notifications");
+			Assert.assertEquals(Notification, "Notifications");	
 
 		}catch(Exception e) {
 			projectBoard.popupClose();
 			System.out.println(e.getMessage());
-			das.etest.log(Status.FAIL, "Member has not been deleted successfully");
+			das.etest.log(Status.FAIL, "Notifications page not visible");
 			Assert.assertEquals(true, false);	
 		}
 
