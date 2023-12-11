@@ -5,11 +5,11 @@
     <classes>
       <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
         <methods>
+          <include name="verifyCreateNewProject"/>
           <include name="logout"/>
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
-          <include name="verifyAddandDeleteMemberFromProjectSetting"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
         </methods>
