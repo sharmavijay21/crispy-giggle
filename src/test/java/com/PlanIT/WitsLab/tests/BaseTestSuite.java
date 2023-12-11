@@ -70,7 +70,7 @@ public class BaseTestSuite{
 	@Parameters({"browser"})
 	@BeforeTest(alwaysRun = true)
 	public void setUp(@Optional("Chrome") String browser) throws Exception{
-		System.out.println("chrome driver session hasbeen started");
+		System.out.println("chrome driver session has been started");
 		/**
 		 * this sets ThreadContext map with key THREADCONTEXT_ROUTINGKEY and value from browser param.
 	    this is needed despite setting ThreadContext in beforeTest and beforeMethod. When classes are run 
@@ -91,7 +91,7 @@ public class BaseTestSuite{
 			String url=das.getProperties().getProperty("url");
 
 			das.getWebDriver().get(url);
-			System.out.println("Url have launch successfully"+url);
+			System.out.println("Url have launch successfully :"+url);
 
 		}
 	}
@@ -123,10 +123,10 @@ public class BaseTestSuite{
 
 	@BeforeMethod(alwaysRun = true)
 	public void verifyloginPage(Method tsName) {
-
-		createIssue = JsonParser.parse("issue.json");
-		CreateProjectAndBoard=JsonParser.parse("projectAndBoard.json");
-		loginAndSignUp = JsonParser.parse("loginAndSignUp.json");
+		System.out.println("going to read the jason parser");
+//		createIssue = JsonParser.parse("issue.json");
+//		CreateProjectAndBoard=JsonParser.parse("projectAndBoard.json");
+		//loginAndSignUp = JsonParser.parse("loginAndSignUp.json");
 
 
 		String testCaseName=tsName.getName();
