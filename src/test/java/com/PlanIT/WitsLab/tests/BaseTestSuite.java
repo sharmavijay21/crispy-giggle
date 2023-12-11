@@ -70,6 +70,7 @@ public class BaseTestSuite{
 	@Parameters({"browser"})
 	@BeforeTest(alwaysRun = true)
 	public void setUp(@Optional("Chrome") String browser) throws Exception{
+		System.out.println("chrome driver session hasbeen started");
 		/**
 		 * this sets ThreadContext map with key THREADCONTEXT_ROUTINGKEY and value from browser param.
 	    this is needed despite setting ThreadContext in beforeTest and beforeMethod. When classes are run 
@@ -82,13 +83,15 @@ public class BaseTestSuite{
 		if (remoteSession.equalsIgnoreCase("true")) {
 			//			driver = DriverFactory.getRemoteInstance(browser);
 			logger.info("WEBDRIVER IS STARTING ON REMOTE SESSION");
+			
 		} else {
 			das.getLocalInstance(browser);
 			logger.info("WEBDRIVER IS STARTING ON LOCAL SESSION");
 			//			das.getWebDriver().get("https://projectmanagement-uat.thewitslab.com/");;
 			String url=das.getProperties().getProperty("url");
 
-			das.getWebDriver().get(url);;
+			das.getWebDriver().get(url);
+			System.out.println("Url have launch successfully"+url);
 
 		}
 	}
@@ -140,8 +143,9 @@ public class BaseTestSuite{
 
 		//lp.inputEmail_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Email"));
 		//lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Password"));
-	
+		System.out.println("Enterlogin");
 		lp.inputEmail_signInPage("saurabh.kumar@thewitslab.com");
+		
 		lp.inputPassword_signInPage("8448500795");
 		try {
 			Thread.sleep(3000);
