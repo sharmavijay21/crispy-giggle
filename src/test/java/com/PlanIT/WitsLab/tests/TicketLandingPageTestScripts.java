@@ -90,17 +90,18 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			backlog.createNewSprint();
 
 			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
 
 			Thread.sleep(3000);
 			backlog.clickOnBoardModule();
 
 			backlog.clickOnBoardCreateIssueButton();
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+					.inputIssueTitle("Issue is created successfully");
 
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.selectIssueType("Bug");
 
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.inputDescription("User should able to create new >> account");
 			backlog.clickOnCreateButton();
 
 			WebElement createdIssueName = backlog.getTODOlistFromBoad(issueName);
@@ -164,6 +165,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			backlog.createNewSprint();
 
 			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
 
 			Thread.sleep(3000);
 			backlog.clickOnBoardModule();
@@ -308,7 +310,8 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 		try {
 
-			projectBoard.openFirstProject();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());
@@ -325,11 +328,11 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 			backlog.clickOnBoardCreateIssueButton();
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+					.inputIssueTitle("Issue is created successfully");
 
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.selectIssueType("Bug");
 
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.inputDescription("User should able to create new >> account");
 			backlog.clickOnCreateButton();
 
 			WebElement createdIssueName = backlog.getTODOlistFromBoad(issueName);

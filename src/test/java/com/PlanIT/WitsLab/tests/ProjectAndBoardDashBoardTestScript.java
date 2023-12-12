@@ -26,12 +26,12 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 
 			dlp.clickOnCreateNewProject();
 
-			projectName = dlp.inputProjectName(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name"));
-
-			dlp.selectProjectType(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Type"));
-
-			dlp.inputDescription(CreateProjectAndBoard.getJSONObject("createProject").getString("Description"));
-
+			//projectName = dlp.inputProjectName(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name"));
+			projectName = dlp.inputProjectName("Info");
+			//dlp.selectProjectType(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Type"));
+			dlp.selectProjectType("Small Business");
+			//dlp.inputDescription(CreateProjectAndBoard.getJSONObject("createProject").getString("Description"));
+			dlp.inputDescription("User should able to create new >> account");
 			dlp.clickOnCreateButton();
 
 			try {
@@ -41,7 +41,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			}
 			if (dlp.projectAlreadyExists()) {
 
-				projectName = CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name");
+				//projectName = CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name");
 
 				projectName = dlp.inputProjectName(projectName + das.getRandomNo());
 				dlp.clickOnCreateButton();
@@ -68,25 +68,26 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
 		try {
 
-			projectBoard.openFirstProject();
+			WebElement newProject = projectBoard.createNewProject();
+			das.clickElement(newProject, newProject.getText());
 
 			projectBoard.clickOnCreateTeamBoard();
 			boardName = projectBoard
-					.inputBoardTitle(CreateProjectAndBoard.getJSONObject("createBoard").getString("Board Name"));
+					.inputBoardTitle("Trp");
 			projectBoard
-			.inputBoardDescription(CreateProjectAndBoard.getJSONObject("createBoard").getString("Description"));
+			.inputBoardDescription("User should able to create new >> account");
 
 			projectBoard.clickOnCreateButton();
 
 
 			if (projectBoard.boardAlreadyExists()) {
 
-				boardName = CreateProjectAndBoard.getJSONObject("createBoard").getString("Board Name");
+
 
 				boardName = projectBoard.inputProjectName(boardName + das.getRandomNo());
 				projectBoard.clickOnCreateButton();
 
-				// das.waitForElementPresent(projectBoard.cancelBuuton);
+
 			}
 			try {
 				if (das.isDisplayed(projectBoard.cancelButon)) {
@@ -130,7 +131,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			projectBoard.clickOnAddMemberButton();
 			BacklogModule backlog = new BacklogModule(das);
 			backlog.inputMemberOnProjectSetting(memberName);
-			
+
 			projectBoard.selectMemberRole("Admin");
 			WebElement we = backlog.clickOnSubmitMemberButton();
 			try {
@@ -275,9 +276,9 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			Thread.sleep(2000);
 			backlog.createNewIssueFromBacklog();
 			projectBoard.clickOnNotificationbutton();
-		
+
 			projectBoard.clickOnNotificationThreeDot();
-		    Thread.sleep(4000);
+			Thread.sleep(4000);
 			projectBoard.clickOnMarkAllAsRead();
 			projectBoard.clickOnUnread();
 			String UnreadNotification = projectBoard.getTextNoUnreadNotification();
@@ -312,8 +313,8 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			projectBoard.clickOnNotificationbutton();
 
 			projectBoard.clickOnNotificationThreeDot();
-		    Thread.sleep(4000);
-		    projectBoard.clickOnOpenNotification();
+			Thread.sleep(4000);
+			projectBoard.clickOnOpenNotification();
 			String Notification = projectBoard.getTextNotification();
 			das.uiText_validation(Notification, "Notifications");
 			Assert.assertEquals(Notification, "Notifications");	
@@ -327,5 +328,5 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 
 	}
 
-	
+
 }
