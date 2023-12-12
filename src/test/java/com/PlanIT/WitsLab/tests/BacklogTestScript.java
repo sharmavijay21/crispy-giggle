@@ -35,14 +35,12 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.clickOnCreateIssueBtn();
 
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+					.inputIssueTitle("Issue is created successfully");
 
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.selectIssueType("Bug");
 
-			backlog.selectPriority(createIssue.getJSONObject("createIssue").getString("Priority"));
+			backlog.selectPriority("Low");
 
-			// Add Sprint
-//			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("End Date"));
 			backlog.enterCurrentDate();
 			try {
 				Thread.sleep(2000);
@@ -53,9 +51,9 @@ public class BacklogTestScript extends BaseTestSuite {
 			Thread.sleep(5000);
 			backlog.chooseAttachment();
 			Thread.sleep(3000);
-			backlog.inputStoryPoint(createIssue.getJSONObject("createIssue").getString("Story Point"));
+			backlog.inputStoryPoint("6");
 
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.inputDescription("User should able to create new >> account");
 
 			backlog.clickOnCreateButton();
 
@@ -87,17 +85,10 @@ public class BacklogTestScript extends BaseTestSuite {
 
 			backlog.clickOnCreateSprintButton();
 			backlog.selectSprintDuration("2");
-			// backlog.inputStartDate("2023-05-31");
-			// backlog.inputEndDate("2023-06-20");
+			
 			backlog.inputSprintGoal("Sprint should be complete within 7 days");
 			backlog.clickOnSubmitSprintButton();
-			// String message=null;
-			// try {
-			// message=backlog.getTextSprintConfirmationMessage();
-			// }catch (Exception e) {
-			// das.uiText_validation(message, "");
-			// Assert.assertEquals(true, false);
-			// }
+			
 			boolean bb = das.isDisplayed(backlog.newCreatedSprint);
 
 			Assert.assertEquals(bb, true);
@@ -153,12 +144,7 @@ public class BacklogTestScript extends BaseTestSuite {
 				}
 			} catch (Exception e) {
 			}
-			// if(display) {
-			// das.etest.log(Status.FAIL,
-			// backlog.getTextMemberAlreadyAddedMessageFromBoard());
-			//
-			// Assert.assertEquals(true, false);
-			// }
+			
 			int totalNoAfterAdding = backlog.TotalMember();
 
 			Assert.assertNotEquals(totalNo, totalNoAfterAdding);
@@ -168,7 +154,6 @@ public class BacklogTestScript extends BaseTestSuite {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			projectBoard.popupClose();
-			// backlog.closePopUp();
 			das.etest.log(Status.FAIL, "Member is Not added");
 			Assert.assertEquals(true, false);
 		}
@@ -246,6 +231,8 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.createNewSprint();
 			Thread.sleep(3000);
 			backlog.clickOnActivateSprintButton();
+			//backlog.clickOnCrossSprintButton();
+
 
 			String sprintActivationMessage = backlog.getTextSprintActivateConfirmationMessage();
 
@@ -283,27 +270,19 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.createNewSprint();
 
 			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
 
 			Thread.sleep(3000);
 			backlog.clickOnBoardModule();
 
 			backlog.clickOnBoardCreateIssueButton();
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+					.inputIssueTitle("Issue is created successfully");
 
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+			backlog.selectIssueType("Bug");
 
-			backlog.selectPriority(createIssue.getJSONObject("createIssue").getString("Priority"));
+			backlog.selectPriority("Low");
 
-//			backlog.inputDueDate(createIssue.getJSONObject("createIssue").getString("Start Date"));
-//
-//			try {
-//				Thread.sleep(2000);
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
-			// backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("End
-			// Date"));
 			backlog.enterCurrentDate();
 			try {
 				Thread.sleep(2000);
@@ -313,9 +292,10 @@ public class BacklogTestScript extends BaseTestSuite {
 			// backlog.inputEndDate(createIssue.getJSONObject("createIssue").getString("EndDate"));
 			Thread.sleep(5000);
 			backlog.chooseAttachment();
-			backlog.inputStoryPoint(createIssue.getJSONObject("createIssue").getString("Story Point"));
+			backlog.inputStoryPoint("6");
 
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.inputDescription("User should able to create new >> account");
+
 			backlog.clickOnCreateButton();
 
 			WebElement createdIssueName = backlog.getTODOlistFromBoad(issueName);
@@ -355,12 +335,12 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.clickOnCreateIssueBtn();
 
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+					.inputIssueTitle("Issue is created successfully");
 			
 			System.out.println(issueName);
 			
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+			backlog.selectIssueType("Bug");
+			backlog.inputDescription(" User should able to create new >> account");
 			
 			backlog.clickOnCreateButton();
 //			das.clickElement(backlog.backlogLane, "Backlog Lane");
@@ -409,10 +389,10 @@ public class BacklogTestScript extends BaseTestSuite {
 			BacklogModule backlog = new BacklogModule(das);
 			backlog.clickOnCreateIssueBtn();
 			String issueName = backlog
-					.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
-			
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
-			backlog.inputDescription(createIssue.getJSONObject("createIssue").getString("Description"));
+					.inputIssueTitle("Issue is created successfully");
+
+			backlog.selectIssueType("Bug");
+			backlog.inputDescription(" User should able to create new >> account");
 			backlog.clickOnCreateButton();
 			WebElement createdIssue = backlog.getAllIssue(issueName);
 			das.clickElement(createdIssue, createdIssue.getText());

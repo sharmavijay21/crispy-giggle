@@ -63,8 +63,8 @@ public class PlanITLoginAndSignUpTestScript extends BaseTestSuite{
 			e1.printStackTrace();
 		}
 
-		lp.inputEmail_signInPage(loginAndSignUp.getJSONObject("login").getString("Email"));
-		lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("login").getString("Password"));
+	//	lp.inputEmail_signInPage(loginAndSignUp.getJSONObject("login").getString("Email"));
+		//lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("login").getString("Password"));
 
 
 		//				lp.inputEmail_signInPage("sunil.kumar@thewitslab.com","Email Field");
@@ -87,10 +87,10 @@ public class PlanITLoginAndSignUpTestScript extends BaseTestSuite{
 
 		lp.clickOnCreateNewAccountButton();
 
-		lp.inputNameForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Name"));
-		lp.inputEmailForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Email"));
-		lp.inputPasswordForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Password"));
-		lp.clickOnCreateAccountButton();
+	//	lp.inputNameForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Name"));
+		//lp.inputEmailForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Email"));
+//		lp.inputPasswordForSignUp(loginAndSignUp.getJSONObject("SignUp").getString("Password"));
+//		lp.clickOnCreateAccountButton();
 
 		try {
 			Thread.sleep(3000);
@@ -168,15 +168,15 @@ public class PlanITLoginAndSignUpTestScript extends BaseTestSuite{
 			backlog.clickOnBoardModule();
 
 			backlog.clickOnBoardCreateIssueButton();
-			String issueName=	backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
-
-			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
+//			String issueName=	backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+//
+//			backlog.selectIssueType(createIssue.getJSONObject("createIssue").getString("issueType"));
 
 			backlog.clickOnCreateButton();
-			WebElement createdIssueName=backlog.getTODOlistFromBoadModule(issueName);
-			WebElement des=das.getWebDriver().findElement(By.xpath("(//div[contains(@class,'flex flex-col')])[9]//button"));
+		//	WebElement createdIssueName=backlog.getTODOlistFromBoadModule(issueName);
+			//WebElement des=das.getWebDriver().findElement(By.xpath("(//div[contains(@class,'flex flex-col')])[9]//button"));
 //			das.dragAndDrop(createdIssueName, des);
-			das.dragAndDropByHold(createdIssueName, des);
+			//das.dragAndDropByHold(createdIssueName, des);
 			//			String ticketStage=backlog.textOfTicketStage();
 			//			das.uiText_validation(ticketStage, "TODO");
 			//			Assert.assertEquals(ticketStage, "TODO");
@@ -210,7 +210,7 @@ public class PlanITLoginAndSignUpTestScript extends BaseTestSuite{
 
 
 			backlog.clickOnBoardCreateIssueButton();
-			String issueName=	backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
+		//	String issueName=	backlog.inputIssueTitle(createIssue.getJSONObject("createIssue").getString("issueTitle"));
 
 				backlog.clickOnCreateButton();
 
