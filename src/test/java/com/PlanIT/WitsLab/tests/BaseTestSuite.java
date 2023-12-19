@@ -148,8 +148,9 @@ public class BaseTestSuite{
 		//lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Password"));
 		System.out.println("Enterlogin");
 		lp.inputEmail_signInPage("saurabh.kumar@thewitslab.com");
-		
+		System.out.println("username");
 		lp.inputPassword_signInPage("8448500795");
+		System.out.println("password");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e1) {
