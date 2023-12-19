@@ -89,6 +89,9 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Subtask Deleted Successfully']")	
 	protected WebElement TaskCreatedSuccessfully;
 	
+	@FindBy(xpath = "//h3[text()='Workload Seetings Successful!']")	
+	protected WebElement workloadSettingsSuccessfully;
+	
 	@FindBy(xpath = "//div[text()='Project with only Completed Spints can be Deleted ']")	
 	protected WebElement BoardDelete;
 	
@@ -142,8 +145,38 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//span[@aria-label='interaction']")
 	protected WebElement activateSprintBtn;
 	
+	@FindBy(xpath = "//div[text()='Yes, Take me to Workload settings']")
+	protected WebElement takemeToWorkloadSeetings;
+	
+	@FindBy(xpath = "//a[@class='ant-typography css-3mqfnx']")
+	protected WebElement actionWorkloadSettings;
+	
+	@FindBy(xpath = "//span[text()='Save']")
+	protected WebElement clickOnSave;
+	
 	@FindBy(xpath = "//div[text()='X']")
 	protected WebElement crossBtn;
+	
+	@FindBy(xpath = "*//*[@data-icon='edit']")
+	protected WebElement editBtn;
+	
+	@FindBy(xpath = "//div[text()='Complete']")
+	protected WebElement CompleteBtn;
+	
+	@FindBy(xpath = "//div[text()='Sprint Completed!']")
+	protected WebElement SprintCompleted;
+	
+	@FindBy(xpath = "//button[text()='Skip']")
+	protected WebElement SkipButton;
+	
+	@FindBy(xpath = "//span[@class='ant-radio ant-wave-target']")
+	protected WebElement CompleteRadioButton;
+	
+	@FindBy(xpath = "//div[text()='Reports']")
+	protected WebElement Reports;
+	
+	@FindBy(xpath = "(//div[text()='Velocity Chart'])[2]")
+	protected WebElement VelocityChart;
 	
 	@FindBy(xpath = "//a[@href='/project']")
 	protected WebElement createdProject;

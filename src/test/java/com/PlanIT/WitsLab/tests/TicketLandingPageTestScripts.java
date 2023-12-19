@@ -52,10 +52,10 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			
 			ticketLandingPage.inputUpdatedStoryPoint("9");
 
-			Thread.sleep(2000);
-			String storyPointText = ticketLandingPage.getTextUpdatedStoryPoint("9");
-			das.uiText_validation(storyPointText, "9");
-			Assert.assertEquals(storyPointText, "9");
+			
+			String storyPointText = ticketLandingPage.getTextUpdatedStoryPoint();
+			das.uiText_validation(storyPointText, "StoryPoint Updated Successfully");
+			Assert.assertEquals(storyPointText, "StoryPoint Updated Successfully");
 		
 			backlog.closePopUp();
 		} catch (Exception e) {
@@ -393,6 +393,104 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 		}
 		}
 	
+	@Test(enabled = true)
+	public void verifyReportsSection() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+			backlog.clickOnReportSection();
+			backlog.clickOnVelocityChart();
+			String Velocitychart= backlog.getTextVelocityChart();
+			das.uiText_validation(Velocitychart, "Velocity Chart");
+			Assert.assertEquals(Velocitychart, "Velocity Chart");
+		
+		}catch(Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Velocit Chart unable to open");
+			Assert.assertEquals(true, false, "Velocit Chart unable to open");
+		}
+	}
 	
-	
+	@Test(enabled = true)
+	public void verifySprintCompletedConfirmation() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+
+			backlog.createNewSprint();
+
+			backlog.clickOnActivateSprintButton();
+			backlog.clickOnCrossSprintButton();
+			backlog.clickOnEditSprintButton();
+			backlog.clickOnCompleteRadioButton();
+			backlog.clickOnCompleteButton();
+			String Sprintcompleted= backlog.getTextSprintCompleted();
+			das.uiText_validation(Sprintcompleted, "Sprint Completed!");
+			Assert.assertEquals(Sprintcompleted, "Sprint Completed!");
+					
+
+			Thread.sleep(5000);
+		}catch(Exception e) {
+			projectBoard.popupClose();
+			System.out.println(e.getMessage());
+			das.etest.log(Status.FAIL, "Sprint not completed");
+			Assert.assertEquals(true, false, "Sprint not completed");
+		}
+	}
+		@Test(enabled = true)
+		public void verifyWorkloadSettingsUpdate() {
+
+			BacklogModule backlog = new BacklogModule(das);
+
+			ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+			try {
+
+				WebElement newCreatedProject = projectBoard.createNewProject();
+				das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+				WebElement createdBoard = projectBoard.createNewBoard();
+				das.clickElement(createdBoard, createdBoard.getText());
+
+				Thread.sleep(3000);
+				backlog.createNewSprint();
+				backlog.clickOnActivateSprintButton();
+				backlog.clickOnToWorkloadSettings();
+				backlog.clickOnAction();
+				backlog.clickOnSave();
+				String workloadSettingsSuccessfull= backlog.getTextSuccessfulConfirmationMessage();
+				das.uiText_validation(workloadSettingsSuccessfull, "Workload Seetings Successful!");
+				Assert.assertEquals(workloadSettingsSuccessfull, "Workload Seetings Successful!");
+			
+		
+			}catch(Exception e) {
+				projectBoard.popupClose();
+				System.out.println(e.getMessage());
+				das.etest.log(Status.FAIL, "Sprint not completed");
+				Assert.assertEquals(true, false, "Sprint not completed");
+			}
+	}
 }

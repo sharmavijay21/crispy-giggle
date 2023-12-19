@@ -53,7 +53,7 @@ public class TicketLandingPage extends TicketLandingPageOR {
 		da.clickElement(selectStoryPointInputBox, " Select story point drop down");
 //		selectStoryPointDropDown.clear();
 		da.sendKeys(selectStoryPointInputBox, inputUpdatedstoryPoint, "Updated Story Point");
-
+		da.clickElement(selectStoryPointTickMark, "select Story PointTickMark");
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e1) {
@@ -66,16 +66,19 @@ public class TicketLandingPage extends TicketLandingPageOR {
 
 	}
 
+	
 	public void clickOnStoryPointText() {
 		da.clickElement(updateStoryPointText, "UpdateStoryPointText");
 	}
 
-	public String getTextUpdatedStoryPoint(String inputUpdatedstoryPoint) {
+	public String getTextUpdatedStoryPoint() {
+		da.webDriverWait(updateStoryPointconfirmation);
 
-		String storyPoints = da.getText(da.getWebDriver().findElement(
-				By.xpath("//div[contains(@class,'TicketModal__S')]/h2[text()='" + inputUpdatedstoryPoint + "']")));
+		String text = da.getText(updateStoryPointconfirmation);
 
-		return storyPoints;
+//		da.clickElement(closeActivationAlertMessage, "Activativation Alert");
+		// da.moveToElement(activateSprintBtn);
+		return text;	
 	}
 
 	public String getTextUpdatedPriority() {

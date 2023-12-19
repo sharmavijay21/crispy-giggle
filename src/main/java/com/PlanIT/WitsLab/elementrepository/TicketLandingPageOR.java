@@ -32,6 +32,10 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//input[@role='spinbutton']")
 	protected WebElement selectStoryPointInputBox;
 
+	@FindBy(xpath = "*//*[@data-icon='check']")
+	protected WebElement selectStoryPointTickMark;
+
+	
 	@FindBy(xpath = "//div[contains(@class,'TicketM')]/div/span/span")
 	protected WebElement storyPointsSelectTickButton;
 
@@ -74,6 +78,9 @@ public class TicketLandingPageOR {
 	@FindBy(xpath = "//h2[text()='Update Story Points']")
 	protected WebElement updateStoryPointText;
 
+	@FindBy(xpath = "//div[text()='StoryPoint Updated Successfully']")
+	protected WebElement updateStoryPointconfirmation;
+	
 	@FindBy(xpath = "//span[text()='Member']")
 	protected WebElement updateMember;
 
