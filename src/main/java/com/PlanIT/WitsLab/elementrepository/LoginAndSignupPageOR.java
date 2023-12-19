@@ -8,7 +8,7 @@ public class LoginAndSignupPageOR {
 	@FindBy(xpath="//button[text()='Google']")
 	protected WebElement googleLoginBtn;
 
-	@FindBy(xpath = "//input[@name='email']")
+	@FindBy(xpath = "//input[@placeholder='Enter Email']")
 	protected WebElement email_signInPage;
 
 	@FindBy(xpath = "//input[@name='password']")

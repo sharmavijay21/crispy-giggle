@@ -160,6 +160,29 @@ public class BacklogModule extends BacklogModuleOR {
 		
 		return text;
 	}
+	public String getTextVelocityChart() {
+		da.webDriverWait(VelocityChart);
+
+		String text = da.getText(VelocityChart);
+
+		
+		return text;
+	}
+	
+	public String getTextSprintCompleted() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		da.webDriverWait(SprintCompleted);
+
+		String text = da.getText(SprintCompleted);
+
+		//da.clickElement(SkipButton, "Skip Button");
+		return text;
+	}
 	
 	public void clickOnCreateSprintButton() {
 
@@ -251,9 +274,74 @@ public class BacklogModule extends BacklogModuleOR {
 
 	}
 	
+	public void clickOnToWorkloadSettings() {
+ 
+		da.webDriverWait(takemeToWorkloadSeetings);
+		da.clickElement(takemeToWorkloadSeetings, "take me To Workload Seetings");
+
+	}
+	
+	public void clickOnAction() {
+		 
+		da.webDriverWait(actionWorkloadSettings);
+		da.clickElement(actionWorkloadSettings, "action Workload Settings");
+
+	}
+	
+	public void clickOnSave() {
+		 
+		da.webDriverWait(clickOnSave);
+		da.clickElement(clickOnSave, "click On Save");
+
+	}
+	
 	public void clickOnCrossSprintButton() {
 		da.webDriverWait(crossBtn);
-		da.clickElement(crossBtn, "crossBtn crossBtn");
+		da.clickElement(crossBtn, "crossBtn");
+
+	}
+	
+	public void clickOnEditSprintButton() {
+		da.webDriverWait(editBtn);
+		da.clickElement(editBtn, "editBtn");
+
+	}
+	
+	public String getTextSuccessfulConfirmationMessage() {
+		da.webDriverWait(workloadSettingsSuccessfully);
+
+		String text = da.getText(workloadSettingsSuccessfully);
+
+		
+		return text;
+	}
+
+	
+	
+	public void clickOnCompleteRadioButton() {
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		da.webDriverWait(CompleteRadioButton);
+		da.clickElement(CompleteRadioButton, "CompleteRadio Button");
+
+	}
+	public void clickOnReportSection() {
+		da.webDriverWait(Reports);
+		da.clickElement(Reports, "crossBtn crossBtn");
+
+	}
+	public void clickOnCompleteButton() {
+		da.webDriverWait(CompleteBtn);
+		da.clickElement(CompleteBtn, "Complete Btn");
+
+	}
+	public void clickOnVelocityChart() {
+		da.webDriverWait(VelocityChart);
+		da.clickElement(VelocityChart, "Velocity Chart");
 
 	}
 	

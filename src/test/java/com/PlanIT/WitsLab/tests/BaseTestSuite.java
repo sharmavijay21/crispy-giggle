@@ -142,7 +142,7 @@ public class BaseTestSuite{
 			e1.printStackTrace();
 		}
 
-		System.out.println(lp.loginPageHeader.getText());
+	//	System.out.println(lp.loginPageHeader.getText());
 
 		//lp.inputEmail_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Email"));
 		//lp.inputPassword_signInPage(loginAndSignUp.getJSONObject("gauravLogin").getString("Password"));
