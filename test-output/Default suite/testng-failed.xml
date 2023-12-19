@@ -9,9 +9,9 @@
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
-          <include name="verifyUpdateDetailsOfTickets"/>
           <include name="verifyloginPage"/>
           <include name="createObject"/>
+          <include name="verifySkipSpSuccessfullySprintComplete"/>
         </methods>
       </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
     </classes>

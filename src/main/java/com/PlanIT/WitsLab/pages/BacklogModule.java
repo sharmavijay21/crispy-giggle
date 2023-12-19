@@ -281,6 +281,13 @@ public class BacklogModule extends BacklogModuleOR {
 
 	}
 	
+	public void clickOnSkipSpCuttOffDays() {
+		 
+		da.webDriverWait(skipspcutoff);
+		da.clickElement(skipspcutoff, "skip sp cut off");
+
+	}
+	
 	public void clickOnAction() {
 		 
 		da.webDriverWait(actionWorkloadSettings);

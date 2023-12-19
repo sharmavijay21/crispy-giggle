@@ -148,6 +148,9 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Yes, Take me to Workload settings']")
 	protected WebElement takemeToWorkloadSeetings;
 	
+	@FindBy(xpath = "//div[text()='Skip, SP Cut-off days will remain same!']")
+	protected WebElement skipspcutoff;
+	
 	@FindBy(xpath = "//a[@class='ant-typography css-3mqfnx']")
 	protected WebElement actionWorkloadSettings;
 	

@@ -460,6 +460,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			Assert.assertEquals(true, false, "Sprint not completed");
 		}
 	}
+	
 		@Test(enabled = true)
 		public void verifyWorkloadSettingsUpdate() {
 
@@ -493,4 +494,41 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 				Assert.assertEquals(true, false, "Sprint not completed");
 			}
 	}
+	
+		@Test(enabled = true)
+		public void verifySkipSpSuccessfullySprintComplete() {
+
+			BacklogModule backlog = new BacklogModule(das);
+
+			ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+			try {
+
+				WebElement newCreatedProject = projectBoard.createNewProject();
+				das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+				WebElement createdBoard = projectBoard.createNewBoard();
+				das.clickElement(createdBoard, createdBoard.getText());
+
+				Thread.sleep(3000);
+				backlog.createNewSprint();
+				backlog.clickOnActivateSprintButton();
+				backlog.clickOnSkipSpCuttOffDays();
+				backlog.clickOnAction();
+				backlog.clickOnSave();
+				String workloadSettingsSuccessfull= backlog.getTextSuccessfulConfirmationMessage();
+				das.uiText_validation(workloadSettingsSuccessfull, "Workload Seetings Successful!");
+				Assert.assertEquals(workloadSettingsSuccessfull, "Workload Seetings Successful!");
+			
+		
+			}catch(Exception e) {
+				projectBoard.popupClose();
+				System.out.println(e.getMessage());
+				das.etest.log(Status.FAIL, "Sprint not completed");
+				Assert.assertEquals(true, false, "Sprint not completed");
+			}
+	}
+		
+		
+		
 }
