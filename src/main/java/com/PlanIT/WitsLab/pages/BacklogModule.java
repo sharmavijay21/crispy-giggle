@@ -129,6 +129,23 @@ public class BacklogModule extends BacklogModuleOR {
 		da.clickElement(Issues, "Issues");
 
 	}
+	public void clickOnSelectIssuesType() {
+		da.webDriverWait(selectIssueType);
+		da.clickElement(selectIssueType, "select Issue Type");
+
+	}
+	
+	public void clickOnSelectBug() {
+		da.webDriverWait(Bug);
+		da.clickElement(Bug, "Bug");
+
+	}
+	
+	public void clickOnResetFilter() {
+		da.webDriverWait(resetFilter);
+		da.clickElement(resetFilter, "resetFilter");
+
+	}
 	
 	public void clickOnIssuescreated() {
 		da.webDriverWait(Issuescreated);
@@ -432,6 +449,12 @@ public class BacklogModule extends BacklogModuleOR {
 	}
 	
 	public void clickOnCrossSprintButton() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		da.webDriverWait(crossBtn);
 		da.clickElement(crossBtn, "crossBtn");
 
@@ -826,7 +849,7 @@ public class BacklogModule extends BacklogModuleOR {
 	public int getSizeOfSprintIssueOnBacklogPage() {
 		da.clickElement(sprintExpandIcon, "Sprint Expand Button");
 		return da.getWebDriver().findElements(By.xpath(
-				"//div[contains(@class,'BacklogTable__TableContainer-sc')]/button/div/div[contains(@class,'BacklogTable__Box-sc-145rst5-2 byjXVp')]")).size();
+				"//span[text()='Issue should be visible']")).size();
 			//	"//div[contains(@class,'BacklogTable__TableContainer-sc')]//div[contains(@class,'BacklogTable__Box-sc-145rst5-2 g')]
 	}
 

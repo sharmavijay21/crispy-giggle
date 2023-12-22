@@ -27,7 +27,7 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			dlp.clickOnCreateNewProject();
 
 			//projectName = dlp.inputProjectName(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name"));
-			projectName = dlp.inputProjectName("Info");
+			projectName = dlp.inputProjectName("Info"+das.getRandomNo());
 			//dlp.selectProjectType(CreateProjectAndBoard.getJSONObject("createProject").getString("Project Type"));
 			dlp.selectProjectType("Small Business");
 			//dlp.inputDescription(CreateProjectAndBoard.getJSONObject("createProject").getString("Description"));

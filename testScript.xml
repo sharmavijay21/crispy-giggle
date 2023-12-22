@@ -10,7 +10,7 @@
 		<classes>
 
 
-			 <class
+		 <class
 			name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
 			<methods>
             <include name="verifyCreateNewProject"/>
@@ -41,17 +41,17 @@
 					<include name="moveTicketFromOneBoardToAnother" />
 					<include name="verifyCloneIssueFunctionality" />
 				</methods>
-			</class>
+			</class>  
 
 
 			<class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
 
 				<methods>
 
-					<include name="verifyUpdateDetailsOfTickets" />
+				<include name="verifyUpdateDetailsOfTickets" />
 					<include name="verifyChangeTicketStageFromDropdown" />
 					<include name="verifyAddNewLane" />
-					<include name="verifyTicketDeletionFromTicket" />
+					<include name="verifyTicketDeletionFromTicket" /> 
 					<include name="verifyLinkIssueFunctionalityFromTicket" />
 					<include name="verifyTicketDescriptionAndComment" />
                     <include name="verifySubTaskFromCreatedTicket" />
@@ -61,7 +61,7 @@
                     <include name="verifyWorkloadSettingsUpdate" />
                     <include name="verifySkipSpSuccessfullySprintComplete" />
                     <include name="verifyPastSprintCompletedData" /> 
-                    <include name="verifyAddAnotherList" /> 
+                    <include name="verifyAddAnotherList" /> -->
                         
 				</methods>
 
