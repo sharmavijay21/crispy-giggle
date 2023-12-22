@@ -79,6 +79,15 @@ public class BacklogModuleOR {
 	protected WebElement Issues;
 	
 	
+	@FindBy(xpath = "//span[text()='Select Issue Type']")
+	protected WebElement selectIssueType;
+	
+	@FindBy(xpath = "//div[text()='Bug']")
+	protected WebElement Bug;
+	
+	@FindBy(xpath = "//button[text()='Reset Filter']")
+	protected WebElement resetFilter;
+	
 	@FindBy(xpath = "//td[text()='Issue is created successfully']")
 	protected WebElement Issuescreated;
 	

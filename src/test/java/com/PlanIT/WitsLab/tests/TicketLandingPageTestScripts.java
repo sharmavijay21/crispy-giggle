@@ -80,7 +80,8 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 
 		try {
 
-			projectBoard.openFirstProject();
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
 
 			WebElement createdBoard = projectBoard.createNewBoard();
 			das.clickElement(createdBoard, createdBoard.getText());

@@ -456,5 +456,50 @@ public class BacklogTestScript extends BaseTestSuite {
 
 		}
 	}
+	
+	@Test(enabled = true)
+	public void verifyIssuecreatedfromIssueSection() {
+
+		BacklogModule backlog = new BacklogModule(das);
+
+		ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+		try {
+
+			WebElement newCreatedProject = projectBoard.createNewProject();
+			das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+			WebElement createdBoard = projectBoard.createNewBoard();
+			das.clickElement(createdBoard, createdBoard.getText());
+
+			Thread.sleep(3000);
+			backlog.createNewSprint();
+			backlog.clickOnActivateSprintButton();
+			backlog.clickOnSkipSpCuttOffDays();
+			backlog.clickOnBoardCreateIssueButton();
+			String issueName = backlog
+					.inputIssueTitle("Issue is created successfully");
+
+			backlog.selectIssueType("Bug");
+
+			backlog.inputDescription("User should able to create new >> account");
+			backlog.clickOnCreateButton();
+			backlog.clickOnIssues();
+			backlog.clickOnSelectIssuesType();
+			backlog.clickOnSelectBug();
+			backlog.clickOnResetFilter();
+			
+			 String issueCreated= backlog.getTextIssueIsCreatedSuccessfully();                
+             das.uiText_validation(issueCreated, "Issue is created successfully");
+ 			Assert.assertEquals(issueCreated, "Issue is created successfully");
+		       
+			}catch(Exception e) {
+ 			projectBoard.popupClose();
+ 			System.out.println(e.getMessage());
+ 			das.etest.log(Status.FAIL, "New Issue has been created");
+ 			Assert.assertEquals(true, false, "New Issue has been created");
+		
+			}
+		}
 
 }       
