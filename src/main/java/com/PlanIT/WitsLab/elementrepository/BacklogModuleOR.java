@@ -72,6 +72,28 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//button[text()='Create']")
 	protected WebElement createButton;
 	
+	@FindBy(xpath = "//span[@class='anticon anticon-check-circle']")
+	protected WebElement completeSprint;
+	
+	@FindBy(xpath = "//div[text()='Issues']")
+	protected WebElement Issues;
+	
+	
+	@FindBy(xpath = "//td[text()='Issue is created successfully']")
+	protected WebElement Issuescreated;
+	
+	@FindBy(xpath = "//span[text()='OK']")
+	protected WebElement OkButton;
+	
+	@FindBy(xpath = "//button[text()='Skip']")
+	protected WebElement Skip;
+	
+	@FindBy(xpath = "//div[text()='Past Sprints']")
+	protected WebElement pastSprint;
+	
+	@FindBy(xpath = "*//*[@data-icon='right']")
+	protected WebElement expandicon;
+	
 	@FindBy(xpath = "//button[@placeholder='Create Sub Task']")
 	protected WebElement createSubtask;
 	
@@ -151,6 +173,29 @@ public class BacklogModuleOR {
 	@FindBy(xpath = "//div[text()='Skip, SP Cut-off days will remain same!']")
 	protected WebElement skipspcutoff;
 	
+	@FindBy(xpath = "//span[text()='ADD ANOTHER LIST']")
+	protected WebElement addAnotherList;
+	
+	@FindBy(xpath = "*//*[@data-icon='more']")
+	protected WebElement threeDoticon;
+	
+	@FindBy(xpath = "//a[text()='Delete']")
+	protected WebElement DeleteIcon;
+	
+	
+	
+	@FindBy(xpath = "//button[text()='Hide Lanes']")
+	protected WebElement hidelanes;
+	
+	@FindBy(xpath = "//div[text()='Hide']")
+	protected WebElement hide;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter list title...']")
+	protected WebElement EnterListTitle;
+	
+	@FindBy(xpath = "//button[text()='Add']")
+	protected WebElement Add;
+	
 	@FindBy(xpath = "//a[@class='ant-typography css-3mqfnx']")
 	protected WebElement actionWorkloadSettings;
 	
@@ -168,6 +213,15 @@ public class BacklogModuleOR {
 	
 	@FindBy(xpath = "//div[text()='Sprint Completed!']")
 	protected WebElement SprintCompleted;
+	
+	@FindBy(xpath = "//p[text()='No Sprint Data']")
+	protected WebElement noSprintData;
+	
+	@FindBy(xpath = "//div[text()='ADD LANE']")
+	protected WebElement newStatusLanehasbeenCreated;
+	
+	@FindBy(xpath = "//span[text()='Issue is created successfully']")
+	protected WebElement issueisCreatedSuccessfully;
 	
 	@FindBy(xpath = "//button[text()='Skip']")
 	protected WebElement SkipButton;
@@ -270,7 +324,9 @@ public class BacklogModuleOR {
 
 	@FindBy(xpath = "//span[text()='OK']")
 	protected WebElement okButton;
-
+	
+	@FindBy(xpath = "//button//span[contains(text(), 'OK')]")
+	protected WebElement okButton1;
 	//	@FindBy(xpath = "(//div[contains(@class,'TicketModal__UserDetails')]//h2[contains(@class,'TicketModal__Heading')])[1]")
 	//	public WebElement typeText;
 	@FindBy(xpath = "//div[text()='(0 Issue)']")

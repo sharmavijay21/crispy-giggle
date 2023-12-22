@@ -104,6 +104,7 @@ public class BacklogModule extends BacklogModuleOR {
 //		da.clickElement(endDate, "End Date");
 //		da.sendKeysWithoutClearingExistingData(endDate, inputEndDate,"End Date");
 //		da.sendKeys(endDate, Keys.ENTER);
+	
 //	}
 	public void inputStoryPoint(String inputStoryPoint) {
 
@@ -123,6 +124,43 @@ public class BacklogModule extends BacklogModuleOR {
 
 	}
 	
+	public void clickOnIssues() {
+		da.webDriverWait(Issues);
+		da.clickElement(Issues, "Issues");
+
+	}
+	
+	public void clickOnIssuescreated() {
+		da.webDriverWait(Issuescreated);
+		da.clickElement(Issuescreated, "Issues created");
+
+	}
+	
+	
+	public void clickOnCompleteSprint() {
+		da.webDriverWait(completeSprint);
+		da.clickElement(completeSprint, "complete Sprint");
+		da.webDriverWait(OkButton);
+		da.clickElement(OkButton, "Ok Button");
+	}
+	
+     public void clickOnSkip() {
+		
+		da.webDriverWait(Skip);
+		da.clickElement(Skip, "Skip");
+     }
+	
+     public void clickOnPastSprints() {
+ 		
+ 		da.webDriverWait(pastSprint);
+ 		da.clickElement(pastSprint, "past Sprint");
+      }
+     public void clickOnExpandicon() {
+  		
+  		da.webDriverWait(expandicon);
+  		da.clickElement(expandicon, "expandicon");
+       }
+     
 	public void clickOnCreateSubtask() {
 		
 		da.webDriverWait(createSubtask);
@@ -183,6 +221,42 @@ public class BacklogModule extends BacklogModuleOR {
 		//da.clickElement(SkipButton, "Skip Button");
 		return text;
 	}
+	
+	public String getTextNoSprintData() {
+
+
+		da.webDriverWait(noSprintData);
+
+		String text = da.getText(noSprintData);
+
+	
+		return text;
+	}
+	
+	public String getTextLaneHasBeenCreated() {
+
+
+	//	da.webDriverWait(newStatusLanehasbeenCreated);
+
+		String text = da.getText(newStatusLanehasbeenCreated);
+
+	
+		return text;
+	}
+	
+
+	public String getTextIssueIsCreatedSuccessfully() {
+
+
+	//	da.webDriverWait(newStatusLanehasbeenCreated);
+
+		String text = da.getText(issueisCreatedSuccessfully);
+
+	
+		return text;
+	}
+	
+	
 	
 	public void clickOnCreateSprintButton() {
 
@@ -285,8 +359,63 @@ public class BacklogModule extends BacklogModuleOR {
 		 
 		da.webDriverWait(skipspcutoff);
 		da.clickElement(skipspcutoff, "skip sp cut off");
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
+	
+	public void clickOnAddAnotherList() {
+		 
+		da.webDriverWait(addAnotherList);
+		da.clickElement(addAnotherList, "add Another List");
+
+	}
+	
+	public void inputEnterList(String EnterListTitle1) {
+
+		da.sendKeys(EnterListTitle, EnterListTitle1, "Enter List  Title");
+		da.clickElement(Add, "add");
+
+	}
+	
+	public void clickOnDeleteLane() {
+		 
+		da.webDriverWait(threeDoticon);
+		da.clickElement(threeDoticon, "three Dot icon");
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		da.webDriverWait(DeleteIcon);
+		da.clickElement(DeleteIcon, "DeleteIcon");
+		da.webDriverWait(DeleteIcon);
+		da.clickElement(DeleteIcon, "DeleteIcon");
+		da.webDriverWait(okButton1);
+		da.clickElement(okButton1, "okButton");
+		
+	}
+	
+	public void clickOnHideLanes() {
+		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		da.webDriverWait(hidelanes);
+		da.clickElement(hidelanes, "hide lanes");
+		da.webDriverWait(hide);
+		da.clickElement(hide, "hide");
+	}
+	
+	
 	
 	public void clickOnAction() {
 		 
