@@ -514,21 +514,152 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 				backlog.createNewSprint();
 				backlog.clickOnActivateSprintButton();
 				backlog.clickOnSkipSpCuttOffDays();
-				backlog.clickOnAction();
-				backlog.clickOnSave();
-				String workloadSettingsSuccessfull= backlog.getTextSuccessfulConfirmationMessage();
-				das.uiText_validation(workloadSettingsSuccessfull, "Workload Seetings Successful!");
-				Assert.assertEquals(workloadSettingsSuccessfull, "Workload Seetings Successful!");
-			
-		
-			}catch(Exception e) {
-				projectBoard.popupClose();
-				System.out.println(e.getMessage());
-				das.etest.log(Status.FAIL, "Sprint not completed");
-				Assert.assertEquals(true, false, "Sprint not completed");
+				backlog.clickOnBoardCreateIssueButton();
+				String issueName = backlog
+						.inputIssueTitle("Issue is created successfully");
+
+				backlog.selectIssueType("Bug");
+
+				backlog.inputDescription("User should able to create new >> account");
+				backlog.clickOnCreateButton();
+                backlog.clickOnCompleteSprint();
+                String Sprintcompleted= backlog.getTextSprintCompleted();
+    			das.uiText_validation(Sprintcompleted, "Sprint Completed!");
+    			Assert.assertEquals(Sprintcompleted, "Sprint Completed!");
+    					
+
+    			Thread.sleep(5000);
+    		}catch(Exception e) {
+    			projectBoard.popupClose();
+    			System.out.println(e.getMessage());
+    			das.etest.log(Status.FAIL, "Sprint not completed");
+    			Assert.assertEquals(true, false, "Sprint not completed");
 			}
 	}
 		
+		@Test(enabled = true)
+		public void verifyPastSprintCompletedData() {
+
+			BacklogModule backlog = new BacklogModule(das);
+
+			ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+			try {
+
+				WebElement newCreatedProject = projectBoard.createNewProject();
+				das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+				WebElement createdBoard = projectBoard.createNewBoard();
+				das.clickElement(createdBoard, createdBoard.getText());
+
+				Thread.sleep(3000);
+				backlog.createNewSprint();
+				backlog.clickOnActivateSprintButton();
+				backlog.clickOnSkipSpCuttOffDays();
+				backlog.clickOnBoardCreateIssueButton();
+				String issueName = backlog
+						.inputIssueTitle("Issue is created successfully");
+
+				backlog.selectIssueType("Bug");
+
+				backlog.inputDescription("User should able to create new >> account");
+				backlog.clickOnCreateButton();
+                backlog.clickOnCompleteSprint();
+                backlog.clickOnSkip();
+                backlog.clickOnPastSprints();
+                backlog.clickOnExpandicon();
+                String NoSprintData= backlog.getTextNoSprintData();
+                
+                das.uiText_validation(NoSprintData, "No Sprint Data");
+    			Assert.assertEquals(NoSprintData, "No Sprint Data");
+               
 		
+			}catch(Exception e) {
+    			projectBoard.popupClose();
+    			System.out.println(e.getMessage());
+    			das.etest.log(Status.FAIL, "Sprint Data Found");
+    			Assert.assertEquals(true, false, "Sprint Data Found");
+			}
+		}
+		
+		@Test(enabled = true)
+		public void verifyAddAnotherList() {
+
+			BacklogModule backlog = new BacklogModule(das);
+
+			ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+			try {
+
+				WebElement newCreatedProject = projectBoard.createNewProject();
+				das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+				WebElement createdBoard = projectBoard.createNewBoard();
+				das.clickElement(createdBoard, createdBoard.getText());
+
+				Thread.sleep(3000);
+				backlog.createNewSprint();
+				backlog.clickOnActivateSprintButton();
+				backlog.clickOnSkipSpCuttOffDays();
+		        backlog.clickOnHideLanes();
+		        backlog.clickOnAddAnotherList();
+		        backlog.inputEnterList("Add lane");
+   
+                String LaneHasBeenCreated= backlog.getTextLaneHasBeenCreated();                
+                das.uiText_validation(LaneHasBeenCreated, "ADD LANE");
+    			Assert.assertEquals(LaneHasBeenCreated, "ADD LANE");
+		       
+			}catch(Exception e) {
+    			projectBoard.popupClose();
+    			System.out.println(e.getMessage());
+    			das.etest.log(Status.FAIL, "New Lane has not been created");
+    			Assert.assertEquals(true, false, "New Lane has not been created");
+			}
+		}
+		
+		
+		@Test(enabled = true)
+		public void verifyIssuecreatedfromIssueSection() {
+
+			BacklogModule backlog = new BacklogModule(das);
+
+			ProjectAndBoardDashboard projectBoard = new ProjectAndBoardDashboard(das);
+
+			try {
+
+				WebElement newCreatedProject = projectBoard.createNewProject();
+				das.clickElement(newCreatedProject, newCreatedProject.getText());
+
+				WebElement createdBoard = projectBoard.createNewBoard();
+				das.clickElement(createdBoard, createdBoard.getText());
+
+				Thread.sleep(3000);
+				backlog.createNewSprint();
+				backlog.clickOnActivateSprintButton();
+				backlog.clickOnSkipSpCuttOffDays();
+				backlog.clickOnBoardCreateIssueButton();
+				String issueName = backlog
+						.inputIssueTitle("Issue is created successfully");
+
+				backlog.selectIssueType("Bug");
+
+				backlog.inputDescription("User should able to create new >> account");
+				backlog.clickOnCreateButton();
+				backlog.clickOnIssues();
+				backlog.clickOnIssuescreated();
+				
+
+                String issueCreated= backlog.getTextIssueIsCreatedSuccessfully();                
+                das.uiText_validation(issueCreated, "Issue is created successfully");
+    			Assert.assertEquals(issueCreated, "Issue is created successfully");
+		       
+			}catch(Exception e) {
+    			projectBoard.popupClose();
+    			System.out.println(e.getMessage());
+    			das.etest.log(Status.FAIL, "New Issue has been created");
+    			Assert.assertEquals(true, false, "New Issue has been created");
+		
+			}
+		}
 		
 }

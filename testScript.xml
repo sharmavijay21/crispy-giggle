@@ -54,8 +54,15 @@
 					<include name="verifyTicketDeletionFromTicket" />
 					<include name="verifyLinkIssueFunctionalityFromTicket" />
 					<include name="verifyTicketDescriptionAndComment" />
-                     <include name="verifySubTaskFromCreatedTicket" />
-                     <include name="verifyDeleteBoardfromActivatedSprint" />
+                    <include name="verifySubTaskFromCreatedTicket" />
+                    <include name="verifyDeleteBoardfromActivatedSprint" />
+                    <include name="verifyReportsSection" />
+                    <include name="verifySprintCompletedConfirmation" />
+                    <include name="verifyWorkloadSettingsUpdate" />
+                    <include name="verifySkipSpSuccessfullySprintComplete" />
+                    <include name="verifyPastSprintCompletedData" /> 
+                    <include name="verifyAddAnotherList" /> 
+                        
 				</methods>
 
 			</class>

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts">
+      <class name="com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript">
         <methods>
           <include name="logout"/>
           <include name="generateReport"/>
           <include name="afterTestThreadContextCleanup"/>
           <include name="setUp"/>
           <include name="verifyloginPage"/>
+          <include name="verifyOpenNotificationpage"/>
           <include name="createObject"/>
-          <include name="verifySkipSpSuccessfullySprintComplete"/>
         </methods>
-      </class> <!-- com.PlanIT.WitsLab.tests.TicketLandingPageTestScripts -->
+      </class> <!-- com.PlanIT.WitsLab.tests.ProjectAndBoardDashBoardTestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
