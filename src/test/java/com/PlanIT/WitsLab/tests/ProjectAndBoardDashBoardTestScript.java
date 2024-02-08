@@ -33,12 +33,15 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			//dlp.inputDescription(CreateProjectAndBoard.getJSONObject("createProject").getString("Description"));
 			dlp.inputDescription("User should able to create new >> account");
 			dlp.clickOnCreateButton();
+			System.out.println("error");
 
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			System.out.println("error");
+
 			if (dlp.projectAlreadyExists()) {
 
 				//projectName = CreateProjectAndBoard.getJSONObject("createProject").getString("Project Name");
@@ -49,6 +52,8 @@ public class ProjectAndBoardDashBoardTestScript extends BaseTestSuite {
 			}
 
 			WebElement createdProjectName = dlp.getAllProject(projectName);
+			System.out.println("error");
+
 			das.uiText_validation(createdProjectName.getText(), projectName);
 			Assert.assertEquals(createdProjectName.getText(), projectName, "");
 

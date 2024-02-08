@@ -60,6 +60,8 @@ public class ProjectAndBoardDashboard extends ProjectAndBoardDashboardOR{
 		da.sendKeys(description, inputDescription,"Description Field");;
 	}
 	public void clickOnCreateButton() {
+		da.webDriverWait(create);
+
 		da.clickElement(create,"Create");
 
 

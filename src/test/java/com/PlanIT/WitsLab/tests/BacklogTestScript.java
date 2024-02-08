@@ -56,7 +56,7 @@ public class BacklogTestScript extends BaseTestSuite {
 			backlog.inputDescription("User should able to create new >> account");
 
 			backlog.clickOnCreateButton();
-
+			Thread.sleep(5000);
 			WebElement createdIssueName = backlog.getAllIssue(issueName);
 			das.uiText_validation(createdIssueName.getText(), issueName);
 			Assert.assertEquals(createdIssueName.getText(), issueName);

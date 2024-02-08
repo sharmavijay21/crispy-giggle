@@ -147,7 +147,7 @@ public class DriverActions{
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			
-	      chromeOptions.addArguments("--headless");
+//	      chromeOptions.addArguments("--headless");
 	        
 	        
 //			chromeOptions.addArguments("--incognito");

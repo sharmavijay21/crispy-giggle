@@ -11,10 +11,10 @@ public class ProjectAndBoardDashboardOR {
 	public WebElement projectHeader;
 
 
-	@FindBy(xpath="//div[text()=' Create New Project']")
+	@FindBy(xpath="//div[text()='Create New Project']")
 	protected WebElement createNewProject;
 
-	@FindBy(xpath = "//input[@placeholder='Enter Title']")
+	@FindBy(xpath = "//input[@placeholder='Enter Project Title']")
 	protected WebElement projectName;
 
 	@FindBy(xpath = "//textarea[@name='description']")
@@ -35,7 +35,7 @@ public class ProjectAndBoardDashboardOR {
 	protected WebElement projectCancelButton;
 
 
-	@FindBy(xpath = "//span[text()='Choose..']")
+	@FindBy(xpath = "//span[text()='Choose Type']")
 	protected WebElement type;
 
 	@FindBy(xpath = "(//div[text()='Engineering-IT'])[2]")
