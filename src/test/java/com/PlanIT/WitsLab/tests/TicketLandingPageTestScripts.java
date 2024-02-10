@@ -36,7 +36,7 @@ public class TicketLandingPageTestScripts extends BaseTestSuite {
 			das.clickElement(createdIssue, "CreatedIssue");
 
 			TicketLandingPage ticketLandingPage = new TicketLandingPage(das);
-
+			Thread.sleep(3000);
 		
 			ticketLandingPage.selectUpdatePriority("Medium");
 			String priorityText = ticketLandingPage.getTextUpdatedPriority();
